@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
-import { normalise, parseJpsTime, type RawRecord } from "../src/lib/jps";
-import { assessHouse, assessStation, assessTrust, levelFromThresholds, ratePerHour, shouldNotify } from "../src/lib/assess";
+import { normalise, parseHistory, parseJpsTime, type RawRecord } from "../src/lib/jps";
+import { assessHouse, assessStation, assessTrust, decideNotify, levelFromThresholds, ratePerHour, usualHigh, type NotifyState } from "../src/lib/assess";
 import { compose, forSpeech, hhmm, verify } from "../src/lib/messages";
 import { nearest } from "../src/lib/geo";
-import type { Lang, Station } from "../src/lib/types";
+import type { Lang, Level, Station } from "../src/lib/types";
 
 const NOW = new Date("2026-11-25T20:02:00+08:00");
 const raw = JSON.parse(readFileSync(new URL("./fixtures/jps-20261125T2002.json", import.meta.url), "utf8")) as RawRecord[];
@@ -109,20 +109,69 @@ describe("rate and ETA", () => {
 });
 
 describe("when to notify", () => {
-  it("notifies on any rise at once", () => {
-    expect(shouldNotify("NORMAL", "ALERT", 1)).toBe(true);
-    expect(shouldNotify("ALERT", "DANGER", 1)).toBe(true);
+  const T0 = Date.parse("2026-11-25T08:00:00+08:00");
+  const Q = 15 * 60_000;
+  /** run a sequence of levels, one per 15-minute reading; return which readings sent a message */
+  function run(levels: (Level | "UNKNOWN")[], start: NotifyState = {}) {
+    let st = start;
+    const sent: number[] = [];
+    levels.forEach((l, i) => {
+      const d = decideNotify(st, l, T0 + i * Q);
+      if (d.send) sent.push(i);
+      st = d.state;
+    });
+    return sent;
+  }
+  it("stays quiet when the first reading is normal", () => expect(run(["NORMAL", "NORMAL"])).toEqual([]));
+  it("sends every rise at once", () => expect(run(["NORMAL", "ALERT", "WARNING", "DANGER"])).toEqual([1, 2, 3]));
+  it("waits an hour before saying it went down", () =>
+    expect(run(["NORMAL", "ALERT", "NORMAL", "NORMAL", "NORMAL", "NORMAL"])).toEqual([1, 5]));
+  it("does not re-send a tidal alert that comes back within 12 hours", () => {
+    const tide = ["NORMAL", "ALERT", "ALERT", ...Array(6).fill("NORMAL"), "ALERT", "ALERT"] as Level[];
+    expect(run(tide)).toEqual([1, 6]); // alert, all-clear after an hour; the second alert is not repeated
   });
-  it("waits two ticks before an all-clear or step down", () => {
-    expect(shouldNotify("WARNING", "ALERT", 1)).toBe(false);
-    expect(shouldNotify("WARNING", "ALERT", 2)).toBe(true);
-    expect(shouldNotify("ALERT", "NORMAL", 2)).toBe(true);
-  });
+  it("does send a rise higher than anything sent recently", () =>
+    expect(run(["NORMAL", "ALERT", ...Array(5).fill("NORMAL"), "WARNING"] as Level[])).toEqual([1, 5, 7]));
+  it("going down, sends only the all-clear", () =>
+    expect(run(["NORMAL", "DANGER", ...Array(5).fill("WARNING"), ...Array(5).fill("ALERT"), ...Array(4).fill("NORMAL")] as Level[])).toEqual([1, 15]));
   it("tells you when the sensor goes quiet during a flood, not during calm", () => {
-    expect(shouldNotify("WARNING", "UNKNOWN", 1)).toBe(true);
-    expect(shouldNotify("NORMAL", "UNKNOWN", 1)).toBe(false);
+    expect(run(["NORMAL", "WARNING", "UNKNOWN"])).toEqual([1, 2]);
+    expect(run(["NORMAL", "UNKNOWN"])).toEqual([]);
   });
-  it("does not repeat", () => expect(shouldNotify("ALERT", "ALERT", 5)).toBe(false));
+  it("does not repeat a level", () => expect(run(["NORMAL", "ALERT", "ALERT", "ALERT"])).toEqual([1]));
+  it("skips a routine alert, but never a routine danger", () => {
+    expect(decideNotify({ last: "NORMAL" }, "ALERT", T0, true).send).toBe(false);
+    expect(decideNotify({ last: "NORMAL" }, "WARNING", T0, true).send).toBe(false);
+    expect(decideNotify({ last: "NORMAL" }, "DANGER", T0, true).send).toBe(true);
+  });
+  it("a skipped rise leaves the family's picture unchanged, so no all-clear follows", () => {
+    const a = decideNotify({ last: "NORMAL" }, "ALERT", T0, true);
+    expect(a.state.last).toBe("NORMAL");
+    let st = a.state;
+    let sent = 0;
+    for (let i = 1; i <= 6; i++) {
+      const d = decideNotify(st, "NORMAL", T0 + i * Q);
+      if (d.send) sent++;
+      st = d.state;
+    }
+    expect(sent).toBe(0);
+  });
+});
+
+describe("usual daily high", () => {
+  const day = (d: number, h: number, v: number): [string, number] => [`2026-11-${String(d).padStart(2, "0")}T${String(h).padStart(2, "0")}:00:00+08:00`, v];
+  const now = new Date("2026-11-25T20:00:00+08:00");
+  it("is the median of earlier days' highs", () => {
+    const h = [day(21, 1, 2.0), day(21, 13, 3.1), day(22, 2, 3.3), day(23, 3, 2.9), day(24, 3, 3.0), day(25, 4, 9)];
+    expect(usualHigh(h, now)).toBe(3.05); // today's 9 m is excluded
+  });
+  it("needs three earlier days", () => expect(usualHigh([day(23, 1, 3), day(24, 1, 3)], now)).toBeNull());
+  it("marks a tide-level alert as routine and a higher one as not", () => {
+    const h = [day(21, 1, 3.4), day(22, 1, 3.45), day(23, 1, 3.4), day(24, 1, 3.5)];
+    const mk = (v: number) => assessStation(st({ level: v, thr: { normal: 1, alert: 3, warning: 4, danger: 5 } }), now, [...h, ["2026-11-25T19:45:00+08:00", v]]);
+    expect(mk(3.45).routine).toBe(true);
+    expect(mk(3.7).routine).toBe(false);
+  });
 });
 
 describe("messages", () => {
@@ -155,5 +204,15 @@ describe("nearest stations", () => {
     expect(n.length).toBeGreaterThan(0);
     expect(n[0].km).toBeLessThan(25);
     for (let i = 1; i < n.length; i++) expect(n[i].km).toBeGreaterThanOrEqual(n[i - 1].km);
+  });
+});
+
+describe("JPS 7-day history", () => {
+  const h = parseHistory(JSON.parse(readFileSync(new URL("./fixtures/jps-history-27571.json", import.meta.url), "utf8")));
+  it("reads thresholds from the record", () => expect(h.thr).toEqual({ normal: 39.69, alert: 41.4, warning: 42.1, danger: 42.4 }));
+  it("keeps 15-minute points, oldest first, with no -9999", () => {
+    expect(h.points.length).toBeGreaterThan(500);
+    for (let i = 1; i < h.points.length; i++) expect(Date.parse(h.points[i][0])).toBeGreaterThan(Date.parse(h.points[i - 1][0]));
+    expect(h.points.every(([t, v]) => /:(00|15|30|45):00\+08:00$/.test(t) && v > -9999)).toBe(true);
   });
 });

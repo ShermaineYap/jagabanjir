@@ -65,6 +65,10 @@ export interface StationStatus {
   ratePerHour: number | null;
   /** rough minutes until danger level at current rate; only when rising */
   etaDangerMin: number | null;
+  /** median of earlier days' highest readings; null with under 3 days of history */
+  usualHigh: number | null;
+  /** above normal, but no higher than it gets most days (e.g. high tide) */
+  routine: boolean;
 }
 
 export interface Watch {
@@ -77,13 +81,15 @@ export interface Watch {
   lang: Lang;
   chatId?: number;
   last?: { level: Level | "UNKNOWN"; at: string };
-  /** level seen on recent ticks, and how many ticks in a row it has held */
-  pending?: { level: Level | "UNKNOWN"; ticks: number };
+  /** notification state carried between ticks (see decideNotify) */
+  notify?: import("./assess").NotifyState;
 }
 
 export interface HouseStatus {
   level: Level | "UNKNOWN";
   /** the station that decided the level */
   decidingId: string | null;
+  /** the deciding station is within its usual daily high */
+  routine: boolean;
   statuses: StationStatus[];
 }

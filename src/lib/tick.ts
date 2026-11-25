@@ -1,11 +1,10 @@
-import { assessHouse, assessStation, shouldNotify } from "./assess";
+import { assessHouse, decideNotify } from "./assess";
+import { detailedStatuses } from "./detail";
 import { fetchSnapshot } from "./jps";
 import { compose, verify } from "./messages";
 import {
   allWatches,
   getSnapshot,
-  historyFor,
-  loadTicks,
   putWatch,
   releaseLock,
   saveTick,
@@ -14,7 +13,7 @@ import {
   type TickBlob,
 } from "./store";
 import { sendTelegram } from "./telegram";
-import type { Snapshot, Watch } from "./types";
+import type { Snapshot, StationStatus, Watch } from "./types";
 
 export const MIN_TICK_GAP_MIN = 10;
 
@@ -58,17 +57,15 @@ export async function runTick(now = new Date(), origin = ""): Promise<TickResult
 async function notifyWatches(snap: Snapshot, now: Date, origin: string) {
   const watches = await allWatches();
   if (watches.length === 0) return { watches: 0, notified: 0, blocked: 0 };
-  const ticks = await loadTicks(now.getTime() - 3 * 3600_000);
   const byId = new Map(snap.stations.map((s) => [s.id, s]));
   let notified = 0;
   let blocked = 0;
   for (const w of watches) {
-    const res = evaluateWatch(w, byId, ticks, now);
+    const res = await evaluateWatch(w, byId, now);
     const next = res.house.level;
-    const held = next === w.pending?.level ? (w.pending.ticks ?? 0) + 1 : 1;
-    const send = shouldNotify(w.last?.level, next, held);
-    const updated: Watch = { ...w, pending: { level: next, ticks: held } };
-    if (send) {
+    const d = decideNotify(w.notify ?? {}, next, now.getTime(), res.house.routine);
+    const updated: Watch = { ...w, notify: d.state };
+    if (d.send) {
       if (res.problems.length > 0) {
         blocked++; // number check failed: never send a message we cannot stand behind
       } else if (w.chatId) {
@@ -84,16 +81,14 @@ async function notifyWatches(snap: Snapshot, now: Date, origin: string) {
   return { watches: watches.length, notified, blocked };
 }
 
-export function evaluateWatch(
-  w: Watch,
-  byId: Map<string, Snapshot["stations"][number]>,
-  ticks: TickBlob[],
-  now: Date,
-) {
-  const statuses = w.stationIds
-    .map((id) => byId.get(id))
-    .filter((s): s is NonNullable<typeof s> => Boolean(s))
-    .map((s) => assessStation(s, now, historyFor(ticks, s.id)));
+export async function evaluateWatch(w: Watch, byId: Map<string, Snapshot["stations"][number]>, now: Date) {
+  const stations = w.stationIds.map((id) => byId.get(id)).filter((s): s is NonNullable<typeof s> => Boolean(s));
+  const detailed = await detailedStatuses(stations, now);
+  return { ...composeFor(w, detailed.map((d) => d.status)), history: Object.fromEntries(detailed.map((d) => [d.status.station.id, d.history])) };
+}
+
+/** Pure: house level and checked message from already-assessed stations. */
+export function composeFor(w: Watch, statuses: StationStatus[]) {
   const house = assessHouse(statuses);
   const deciding = statuses.find((s) => s.station.id === house.decidingId) ?? statuses[0];
   const input = {

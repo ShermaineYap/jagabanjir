@@ -1,0 +1,16 @@
+# Every 15 minutes, ask the live site to refresh river levels and send any alerts.
+# /api/tick is public and runs at most once per 10 minutes, so no secret is needed.
+# Set the repository variable SITE_URL (e.g. https://jagabanjir.vercel.app) in
+# Settings > Secrets and variables > Actions > Variables.
+name: tick
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    if: ${{ vars.SITE_URL != '' }}
+    steps:
+      - run: curl -sS -m 90 --retry 2 "${{ vars.SITE_URL }}/api/tick"

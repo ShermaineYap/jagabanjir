@@ -85,6 +85,48 @@ export function normalise(raw: RawRecord[]): Station[] {
   return out;
 }
 
+const HISTORY_URL =
+  "https://publicinfobanjir.water.gov.my/wp-content/themes/enlighten/query/getwaterlevellast7dayslead.php?extra=0&station=";
+
+export interface JpsHistory {
+  thr: Thresholds | null;
+  /** [ISO time, level] at 15-minute steps, oldest first */
+  points: [string, number][];
+}
+
+/** JPS's own 7-day record for one station (5-minute data, thinned to 15 minutes). */
+export function parseHistory(j: {
+  info?: Record<string, string>;
+  values?: { dt: string; final: string }[];
+}): JpsHistory {
+  const info = j.info ?? {};
+  const thr: Thresholds = {
+    normal: num(info.normal),
+    alert: num(info.alert),
+    warning: num(info.warning),
+    danger: num(info.danger),
+  };
+  const points: [string, number][] = [];
+  for (const r of j.values ?? []) {
+    const v = num(r.final);
+    const t = parseJpsTime(r.dt);
+    if (v === null || !t || !/:(00|15|30|45)$/.test(r.dt)) continue;
+    points.push([t, v]);
+  }
+  const hasThr = thr.alert !== null && thr.warning !== null && thr.danger !== null;
+  return { thr: hasThr ? thr : null, points };
+}
+
+export async function fetchHistory(id: string): Promise<JpsHistory> {
+  const res = await fetch(HISTORY_URL + encodeURIComponent(id), {
+    headers: { "User-Agent": "JagaBanjir/0.1 (student non-commercial project)" },
+    cache: "no-store",
+    signal: AbortSignal.timeout(30_000),
+  });
+  if (!res.ok) throw new Error(`JPS history HTTP ${res.status}`);
+  return parseHistory(await res.json());
+}
+
 export async function fetchSnapshot(): Promise<Snapshot> {
   const res = await fetch(JPS_FEED, {
     headers: { "User-Agent": "JagaBanjir/0.1 (student non-commercial project)" },

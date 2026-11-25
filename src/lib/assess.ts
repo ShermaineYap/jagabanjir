@@ -59,6 +59,31 @@ export function ratePerHour(history: [string, number][], now: Date): number | nu
   return Math.round(((l1 - l0) / hours) * 100) / 100;
 }
 
+/** Margin above the usual daily high before a level counts as unusual. */
+export const ROUTINE_MARGIN_M = 0.05;
+
+const mytDate = (iso: string) => new Date(Date.parse(iso) + 8 * 3600_000).toISOString().slice(0, 10);
+
+/**
+ * The river's usual daily high: the median of each earlier day's highest reading
+ * (Malaysia days, up to 7, today excluded). Needs at least 3 days.
+ * At tidal river mouths this is the normal high tide; inland it sits well below the alert level.
+ */
+export function usualHigh(history: [string, number][], now: Date): number | null {
+  const today = mytDate(now.toISOString());
+  const weekAgo = now.getTime() - 7.5 * 24 * 3600_000;
+  const daily = new Map<string, number>();
+  for (const [t, v] of history) {
+    const d = mytDate(t);
+    if (d >= today || Date.parse(t) < weekAgo) continue;
+    daily.set(d, Math.max(daily.get(d) ?? -Infinity, v));
+  }
+  if (daily.size < 3) return null;
+  const xs = [...daily.values()].sort((a, b) => a - b);
+  const m = Math.floor(xs.length / 2);
+  return xs.length % 2 ? xs[m] : (xs[m - 1] + xs[m]) / 2;
+}
+
 export function assessStation(
   s: Station,
   now: Date,
@@ -88,7 +113,10 @@ export function assessStation(
     rate !== null && rate > 0.01 && toDanger !== null && toDanger > 0
       ? Math.round((toDanger / rate) * 60)
       : null;
-  return { station: s, trust, level, levelSource, disagrees, toDanger, ratePerHour: rate, etaDangerMin };
+  const usual = usualHigh(history, now);
+  const routine =
+    level !== null && level !== "NORMAL" && s.level !== null && usual !== null && s.level <= usual + ROUTINE_MARGIN_M;
+  return { station: s, trust, level, levelSource, disagrees, toDanger, ratePerHour: rate, etaDangerMin, usualHigh: usual, routine };
 }
 
 /**
@@ -105,23 +133,65 @@ export function assessHouse(statuses: StationStatus[]): HouseStatus {
   return {
     level: best?.level ?? "UNKNOWN",
     decidingId: best?.station.id ?? null,
+    routine: best?.routine ?? false,
     statuses,
   };
 }
 
+/** Readings (15 min each) a lower level must hold before we say it went down. */
+export const HOLD_DOWN_TICKS = 4;
+/** Within this window, a rise only notifies if it goes higher than what we already sent. */
+export const COOLDOWN_MS = 12 * 3600_000;
+
+/** What we last told the family, carried between ticks. */
+export interface NotifyState {
+  last?: Level | "UNKNOWN";
+  /** highest level sent within the cooldown window, and when */
+  peak?: { level: Level; at: number };
+  pending?: Level | "UNKNOWN";
+  held?: number;
+}
+
 /**
- * Should we notify? Up-moves notify immediately. Down-moves (including the all-clear)
- * notify only once the lower level has held for two ticks, to stop flapping.
+ * Decide whether to message the family, and return the new state.
+ * - A rise is sent at once, unless we already sent that level or higher in the last 12 h
+ *   (tidal river mouths cross the alert line twice a day; one message is enough).
+ * - Going down, only the all-clear is sent, once the river has been normal for an hour.
+ * - Losing the sensor while the river is up is sent; losing it in calm weather is not.
  */
-export function shouldNotify(
-  prev: Level | "UNKNOWN" | undefined,
+export function decideNotify(
+  s: NotifyState,
   next: Level | "UNKNOWN",
-  nextHeldTicks: number,
-): boolean {
-  if (prev === undefined) return next !== "NORMAL" && next !== "UNKNOWN";
-  if (prev === next) return false;
-  if (next === "UNKNOWN") return prev !== "NORMAL"; // lost the sensor while things were bad
-  if (prev === "UNKNOWN") return next !== "NORMAL";
-  if (rank(next) > rank(prev)) return true;
-  return nextHeldTicks >= 2;
+  nowMs: number,
+  /** the river is within its usual daily high (e.g. a tide); rises below DANGER are not news */
+  routine = false,
+): { send: boolean; state: NotifyState } {
+  const held = next === s.pending ? (s.held ?? 0) + 1 : 1;
+  const peak = s.peak && nowMs - s.peak.at < COOLDOWN_MS ? s.peak : undefined;
+  const base: NotifyState = { ...s, pending: next, held, peak };
+  const sent = (lv: Level | "UNKNOWN"): { send: true; state: NotifyState } => ({
+    send: true,
+    state: {
+      ...base,
+      last: lv,
+      peak: lv !== "UNKNOWN" && lv !== "NORMAL" && (!peak || rank(lv) >= rank(peak.level)) ? { level: lv, at: nowMs } : peak,
+    },
+  });
+  const quiet = (last = s.last): { send: false; state: NotifyState } => ({ send: false, state: { ...base, last } });
+
+  const prev = s.last;
+  if (prev === undefined) return next === "NORMAL" || next === "UNKNOWN" ? quiet(next) : sent(next);
+  if (prev === next) return quiet();
+  if (next === "UNKNOWN") return prev === "NORMAL" || prev === "UNKNOWN" ? quiet(next) : sent(next);
+  if (prev === "UNKNOWN") return next === "NORMAL" ? quiet(next) : sent(next);
+  if (rank(next) > rank(prev)) {
+    // Not sent, and the family's picture (`last`) stays as it was, so no all-clear follows later.
+    if (peak && rank(next) <= rank(peak.level)) return quiet(); // already told them, recently
+    if (routine && next !== "DANGER") return quiet(); // happens most days here
+    return sent(next);
+  }
+  // Going down: only the all-clear is news, and only once it has held for an hour.
+  // (Warning -> alert keeps the family's picture at warning, so the later all-clear still comes.)
+  if (next !== "NORMAL") return quiet();
+  return held >= HOLD_DOWN_TICKS ? sent(next) : quiet();
 }
