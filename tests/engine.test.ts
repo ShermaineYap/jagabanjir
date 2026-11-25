@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import { normalise, parseHistory, parseJpsTime, type RawRecord } from "../src/lib/jps";
-import { assessHouse, assessStation, assessTrust, decideNotify, levelFromThresholds, ratePerHour, usualHigh, type NotifyState } from "../src/lib/assess";
+import { assessHouse, assessStation, assessTrust, decideNotify, isTidal, levelFromThresholds, ratePerHour, usualHigh, type NotifyState } from "../src/lib/assess";
 import { compose, forSpeech, hhmm, verify } from "../src/lib/messages";
 import { nearest } from "../src/lib/geo";
 import type { Lang, Level, Station } from "../src/lib/types";
@@ -166,10 +166,21 @@ describe("usual daily high", () => {
     expect(usualHigh(h, now)).toBe(3.05); // today's 9 m is excluded
   });
   it("needs three earlier days", () => expect(usualHigh([day(23, 1, 3), day(24, 1, 3)], now)).toBeNull());
-  it("marks a tide-level alert as routine and a higher one as not", () => {
-    const h = [day(21, 1, 3.4), day(22, 1, 3.45), day(23, 1, 3.4), day(24, 1, 3.5)];
-    const mk = (v: number) => assessStation(st({ level: v, thr: { normal: 1, alert: 3, warning: 4, danger: 5 } }), now, [...h, ["2026-11-25T19:45:00+08:00", v]]);
-    expect(mk(3.45).routine).toBe(true);
+  // two high tides a day (around 02:00 and 14:00) reaching 3.4 m, alert line at 3 m
+  const tide: [string, number][] = [];
+  for (const d of [20, 21, 22, 23, 24])
+    for (let h = 0; h < 24; h++) tide.push(day(d, h, [1, 2, 13, 14].includes(h) ? 3.4 : 2.2));
+  const thr = { normal: 1, alert: 3, warning: 4, danger: 5 };
+  it("recognises a tide: two rises a day on 3+ days", () => expect(isTidal(tide, now, 3)).toBe(true));
+  it("does not mistake a flood that rose once and stayed up for a tide", () => {
+    const flood: [string, number][] = [];
+    for (const d of [20, 21, 22, 23, 24]) for (let h = 0; h < 24; h++) flood.push(day(d, h, d >= 22 ? 3.6 : 2));
+    expect(isTidal(flood, now, 3)).toBe(false);
+    expect(assessStation(st({ level: 3.5, thr }), now, [...flood, ["2026-11-25T19:45:00+08:00", 3.5]]).routine).toBe(false);
+  });
+  it("marks a tide-height alert as routine, and a higher one as not", () => {
+    const mk = (v: number) => assessStation(st({ level: v, thr }), now, [...tide, ["2026-11-25T19:45:00+08:00", v]]);
+    expect(mk(3.4).routine).toBe(true);
     expect(mk(3.7).routine).toBe(false);
   });
 });

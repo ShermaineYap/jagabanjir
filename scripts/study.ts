@@ -2,7 +2,7 @@
 // Usage: npx tsx scripts/study.ts data/hist tests/fixtures/jps-20261125T2002.json > data/study/backtest.md
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { ROUTINE_MARGIN_M, decideNotify, levelFromThresholds, rank, ratePerHour, usualHigh, type NotifyState } from "../src/lib/assess";
+import { ROUTINE_MARGIN_M, decideNotify, isTidal, levelFromThresholds, rank, ratePerHour, usualHigh, type NotifyState } from "../src/lib/assess";
 import { normalise, type RawRecord } from "../src/lib/jps";
 import type { Level, Station, Thresholds } from "../src/lib/types";
 
@@ -83,19 +83,24 @@ for (const r of recs) {
   // 3) messages: naive = every change of level; ours = shouldNotify with the 2-reading hold
   // usual daily high only changes once a day: compute it per Malaysia date
   const usualByDay = new Map<string, number | null>();
+  const tidalByDay = new Map<string, boolean>();
   let prevNaive: Level | null = null;
   let ns: NotifyState = {};
   let nsNoTide: NotifyState = {};
   let stationMsgs = 0;
   lv.forEach(([t, l], i) => {
     const day = new Date(Date.parse(t) + 8 * 3600_000).toISOString().slice(0, 10);
-    if (!usualByDay.has(day)) usualByDay.set(day, usualHigh(r.v, new Date(t)));
+    if (!usualByDay.has(day)) {
+      const now = new Date(t);
+      usualByDay.set(day, usualHigh(r.v, now));
+      tidalByDay.set(day, isTidal(r.v, now, thr.alert!));
+    }
     const u = usualByDay.get(day)!;
     const counted = u !== null; // only count days where every rule can run
     if (counted) countedDays.add(`${r.id}|${day}`);
     if (prevNaive !== null && l !== prevNaive && counted) naiveMsgs++;
     prevNaive = l;
-    const routine = l !== "NORMAL" && u !== null && r.v[i][1] <= u + ROUTINE_MARGIN_M;
+    const routine = l !== "NORMAL" && tidalByDay.get(day)! && u !== null && r.v[i][1] <= u + ROUTINE_MARGIN_M;
     const d = decideNotify(ns, l, Date.parse(t), routine);
     if (d.send && counted) (ourMsgs++, stationMsgs++);
     ns = d.state;
@@ -105,7 +110,7 @@ for (const r of recs) {
     nsNoTide = d2.state;
   });
   perStation.push(stationMsgs);
-  if (usualByDay.size && [...usualByDay.values()].some((u) => u !== null && u >= thr.alert!)) tidal++;
+  if ([...tidalByDay.values()].some(Boolean)) tidal++;
 
   if (firstDanger > 0) {
     const peak = Math.max(...r.v.map((x) => x[1]));
@@ -139,7 +144,7 @@ console.log(`| + no repeat within 12 h; going down, only the all-clear after 1 h
 console.log(`| + skip alert/warning within the usual daily high (danger always sent) | ${ourMsgs} | ${pw(ourMsgs)} |`);
 const sorted = [...perStation].sort((a, b) => a - b);
 console.log(`\nWith all rules, the median station sent ${sorted[Math.floor(sorted.length / 2)] ?? 0} messages in those days; ${sorted.filter((x) => x === 0).length} of ${sorted.length} sent none; the busiest sent ${sorted.at(-1) ?? 0}.`);
-console.log(`\n${tidal} stations have a usual daily high at or above their alert level (tidal or regulated rivers). The tide rule held back ${routineSuppressed} messages; no danger message was ever held back.`);
+console.log(`\n${tidal} stations showed a tide signature (two rises above alert a day, on 3+ days). The tide rule held back ${routineSuppressed} messages; no danger message was ever held back.`);
 console.log(`\n## Stations that reached danger\n`);
 for (const d of dangerStations.sort((a, b) => a.at.localeCompare(b.at)))
   console.log(`- ${d.at.slice(0, 16).replace("T", " ")} ${d.name}, ${d.state}${d.leadAlertH !== null ? ` — ${f1(d.leadAlertH)} h after first alert` : ""}`);

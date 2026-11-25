@@ -67,7 +67,6 @@ const mytDate = (iso: string) => new Date(Date.parse(iso) + 8 * 3600_000).toISOS
 /**
  * The river's usual daily high: the median of each earlier day's highest reading
  * (Malaysia days, up to 7, today excluded). Needs at least 3 days.
- * At tidal river mouths this is the normal high tide; inland it sits well below the alert level.
  */
 export function usualHigh(history: [string, number][], now: Date): number | null {
   const today = mytDate(now.toISOString());
@@ -82,6 +81,32 @@ export function usualHigh(history: [string, number][], now: Date): number | null
   const xs = [...daily.values()].sort((a, b) => a - b);
   const m = Math.floor(xs.length / 2);
   return xs.length % 2 ? xs[m] : (xs[m - 1] + xs[m]) / 2;
+}
+
+/**
+ * Tide signature: on at least 3 earlier days the river rose above `line` and fell back
+ * twice in the same day (two high tides). A flood rises once and stays up; a tide does not.
+ * A rise only counts if the river was below the line for at least 2 hours before it.
+ */
+export function isTidal(history: [string, number][], now: Date, line: number): boolean {
+  const today = mytDate(now.toISOString());
+  const weekAgo = now.getTime() - 7.5 * 24 * 3600_000;
+  const rises = new Map<string, number>();
+  let belowSince: number | null = null;
+  let above = false;
+  for (const [t, v] of history) {
+    const ms = Date.parse(t);
+    if (ms < weekAgo) continue;
+    if (v < line) {
+      if (above || belowSince === null) belowSince = ms;
+      above = false;
+    } else if (!above) {
+      above = true;
+      const d = mytDate(t);
+      if (belowSince !== null && ms - belowSince >= 2 * 3600_000 && d < today) rises.set(d, (rises.get(d) ?? 0) + 1);
+    }
+  }
+  return [...rises.values()].filter((n) => n >= 2).length >= 3;
 }
 
 export function assessStation(
@@ -113,7 +138,9 @@ export function assessStation(
     rate !== null && rate > 0.01 && toDanger !== null && toDanger > 0
       ? Math.round((toDanger / rate) * 60)
       : null;
-  const usual = usualHigh(history, now);
+  // The usual daily high only matters at tidal gauges; elsewhere a high week is a flood, not a habit.
+  const tidal = s.thr?.alert != null && isTidal(history, now, s.thr.alert);
+  const usual = tidal ? usualHigh(history, now) : null;
   const routine =
     level !== null && level !== "NORMAL" && s.level !== null && usual !== null && s.level <= usual + ROUTINE_MARGIN_M;
   return { station: s, trust, level, levelSource, disagrees, toDanger, ratePerHour: rate, etaDangerMin, usualHigh: usual, routine };
