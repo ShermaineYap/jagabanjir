@@ -1,0 +1,4363 @@
+{
+"johor|batu pahat|empangan bekok": {
+"alert": 18.2,
+"danger": 19.2,
+"jps_id": "2030071",
+"normal": 16.0,
+"warning": 18.7
+},
+"johor|batu pahat|empangan sembrong": {
+"alert": 10.0,
+"danger": 12.0,
+"jps_id": null,
+"normal": 9.0,
+"warning": 11.0
+},
+"johor|batu pahat|sg. bekok di bandar yong peng": {
+"alert": 2.0,
+"danger": 2.74,
+"jps_id": "2031067",
+"normal": 1.6,
+"warning": 2.4
+},
+"johor|batu pahat|sg. bekok di bandar yong peng (f2)": {
+"alert": 2.0,
+"danger": 2.74,
+"jps_id": "27000",
+"normal": 1.6,
+"warning": 2.4
+},
+"johor|batu pahat|sg. bekok di bt. 77 jln. yong peng": {
+"alert": 6.55,
+"danger": 7.16,
+"jps_id": "2130070",
+"normal": 5.0,
+"warning": 6.73
+},
+"johor|batu pahat|sg. lenik di ladang chaah": {
+"alert": 6.0,
+"danger": 7.0,
+"jps_id": "2130001",
+"normal": 4.1,
+"warning": 6.5
+},
+"johor|batu pahat|sg. rengit di rengit": {
+"alert": 2.5,
+"danger": 2.9,
+"jps_id": "25912",
+"normal": 1.0,
+"warning": 2.7
+},
+"johor|batu pahat|sg. rengit di ulu rengit (f2)": {
+"alert": 2.5,
+"danger": 2.9,
+"jps_id": "27033",
+"normal": 1.0,
+"warning": 2.7
+},
+"johor|batu pahat|sg. sembrong di bt. 2 sembrong": {
+"alert": 2.74,
+"danger": 3.66,
+"jps_id": "1931004",
+"normal": 2.1,
+"warning": 3.2
+},
+"johor|batu pahat|sg. sembrong di parit karjo": {
+"alert": 2.0,
+"danger": 2.3,
+"jps_id": "1831480",
+"normal": 1.3,
+"warning": 2.1
+},
+"johor|batu pahat|sg. senggarang di jln. seri menanti (f2)": {
+"alert": 1.3,
+"danger": 1.65,
+"jps_id": "27032",
+"normal": 1.3,
+"warning": 1.45
+},
+"johor|batu pahat|sg. senggarang di senggarang": {
+"alert": 3.0,
+"danger": 3.5,
+"jps_id": "1730082",
+"normal": 2.7,
+"warning": 3.15
+},
+"johor|batu pahat|sg. simpang kanan di parit belemam": {
+"alert": 2.0,
+"danger": 2.5,
+"jps_id": "25913",
+"normal": 1.0,
+"warning": 2.3
+},
+"johor|batu pahat|sg. simpang kanan di parit belemam (f2)": {
+"alert": 1.5,
+"danger": 2.5,
+"jps_id": "27022",
+"normal": 1.0,
+"warning": 2.0
+},
+"johor|batu pahat|sg. simpang kanan di parit besar": {
+"alert": 1.6,
+"danger": 2.0,
+"jps_id": "25914",
+"normal": 0.5,
+"warning": 1.8
+},
+"johor|batu pahat|sg. simpang kiri di parit sulong": {
+"alert": 1.4,
+"danger": 1.8,
+"jps_id": "25916",
+"normal": 0.5,
+"warning": 1.6
+},
+"johor|batu pahat|sg. simpang kiri di sri medan": {
+"alert": 2.0,
+"danger": 2.3,
+"jps_id": "1929065",
+"normal": 1.4,
+"warning": 2.09
+},
+"johor|batu pahat|sg. simpang kiri di tebing tinggi": {
+"alert": 2.0,
+"danger": 3.0,
+"jps_id": "25917",
+"normal": 0.5,
+"warning": 2.5
+},
+"johor|johor bahru|kolam air di nusa duta": {
+"alert": 4.0,
+"danger": 6.0,
+"jps_id": "27228",
+"normal": 3.0,
+"warning": 5.0
+},
+"johor|johor bahru|parit keliling di kg. pasir": {
+"alert": 0.0,
+"danger": 1.0,
+"jps_id": "25929",
+"normal": -0.3,
+"warning": 0.5
+},
+"johor|johor bahru|sg. gelang patah di kg. baru muafakat": {
+"alert": 2.72,
+"danger": 3.22,
+"jps_id": "26050",
+"normal": 0.5,
+"warning": 2.92
+},
+"johor|johor bahru|sg. masai di kg. sepakat": {
+"alert": 4.7,
+"danger": 5.9,
+"jps_id": null,
+"normal": 2.0,
+"warning": 5.3
+},
+"johor|johor bahru|sg. plentong di klinik desa plentong": {
+"alert": 3.0,
+"danger": 4.0,
+"jps_id": "1538001",
+"normal": 1.0,
+"warning": 3.5
+},
+"johor|johor bahru|sg. skudai di kg. laut": {
+"alert": 2.3,
+"danger": 3.0,
+"jps_id": null,
+"normal": 1.0,
+"warning": 2.6
+},
+"johor|johor bahru|sg. tebrau di kg. maju jaya": {
+"alert": 8.2,
+"danger": 9.4,
+"jps_id": "1537001",
+"normal": 7.9,
+"warning": 8.8
+},
+"johor|johor bahru|sg. tebrau di taman sri pandan": {
+"alert": 2.1,
+"danger": 2.9,
+"jps_id": "25737",
+"normal": 1.0,
+"warning": 2.5
+},
+"johor|johor bahru|sg. tiram di kg. bukit dagang": {
+"alert": 2.0,
+"danger": 4.0,
+"jps_id": "27229",
+"normal": 1.0,
+"warning": 3.0
+},
+"johor|kluang|empangan machap": {
+"alert": 17.0,
+"danger": 17.4,
+"jps_id": "1832001",
+"normal": 16.5,
+"warning": 17.1
+},
+"johor|kluang|sg. benut di simpang renggam": {
+"alert": 6.1,
+"danger": 7.0,
+"jps_id": "1833124",
+"normal": 5.0,
+"warning": 6.6
+},
+"johor|kluang|sg. kahang di kg. contoh": {
+"alert": 13.8,
+"danger": 14.5,
+"jps_id": "25900",
+"normal": 10.0,
+"warning": 14.1
+},
+"johor|kluang|sg. paloh di pekan paloh": {
+"alert": 35.0,
+"danger": 37.0,
+"jps_id": "25901",
+"normal": 32.0,
+"warning": 36.0
+},
+"johor|kota tinggi|sg. ayer hitam di kg. mawai": {
+"alert": 3.0,
+"danger": 6.0,
+"jps_id": "25926",
+"normal": 1.0,
+"warning": 5.0
+},
+"johor|kota tinggi|sg. johor di kota tinggi": {
+"alert": 2.0,
+"danger": 2.6,
+"jps_id": "1738001",
+"normal": 0.5,
+"warning": 2.3
+},
+"johor|kota tinggi|sg. johor di rantau panjang": {
+"alert": 7.6,
+"danger": 9.8,
+"jps_id": "1737451",
+"normal": 4.0,
+"warning": 8.7
+},
+"johor|kota tinggi|sg. kepala orang di kg. sri jaya": {
+"alert": 7.0,
+"danger": 8.0,
+"jps_id": "27226",
+"normal": 6.0,
+"warning": 7.5
+},
+"johor|kota tinggi|sg. pungai di punggai": {
+"alert": 1.1,
+"danger": 1.5,
+"jps_id": "26008",
+"normal": 0.0,
+"warning": 1.3
+},
+"johor|kota tinggi|sg. sedili kecil di jamb. sedili kecil (f2)": {
+"alert": 2.0,
+"danger": 2.3,
+"jps_id": "26962",
+"normal": 0.7,
+"warning": 1.7
+},
+"johor|kota tinggi|sg. sedili kecil di sedili kecil": {
+"alert": 1.9,
+"danger": 2.5,
+"jps_id": "25927",
+"normal": 0.7,
+"warning": 2.2
+},
+"johor|kota tinggi|sg. sembilang di kg. sg. sembilang": {
+"alert": 14.5,
+"danger": 16.0,
+"jps_id": "27225",
+"normal": 13.0,
+"warning": 15.0
+},
+"johor|kulai|kolam air di bt. 21 kulai": {
+"alert": 24.0,
+"danger": 25.0,
+"jps_id": "26051",
+"normal": 22.0,
+"warning": 24.5
+},
+"johor|kulai|kolam air di taman aman": {
+"alert": 23.7,
+"danger": 24.7,
+"jps_id": "25904",
+"normal": 23.0,
+"warning": 24.2
+},
+"johor|kulai|sg. pontian besar di kg. sri paya": {
+"alert": 12.0,
+"danger": 14.0,
+"jps_id": null,
+"normal": 9.0,
+"warning": 13.0
+},
+"johor|kulai|sg. siam di kg. sg. siam": {
+"alert": 20.1,
+"danger": 20.7,
+"jps_id": "25902",
+"normal": 19.0,
+"warning": 20.4
+},
+"johor|kulai|sg. siku di kg. murni jaya": {
+"alert": 17.5,
+"danger": 18.1,
+"jps_id": null,
+"normal": 15.0,
+"warning": 17.8
+},
+"johor|kulai|sg. skudai di kg. separa": {
+"alert": 16.0,
+"danger": 17.0,
+"jps_id": "1636002",
+"normal": 14.0,
+"warning": 16.5
+},
+"johor|kulai|sg. ulu pontian besar di kg. melayu bukit batu": {
+"alert": 10.5,
+"danger": 11.5,
+"jps_id": null,
+"normal": 9.0,
+"warning": 11.0
+},
+"johor|mersing|sg. endau di kg. labong": {
+"alert": 1.8,
+"danger": 2.2,
+"jps_id": "2536468",
+"normal": 0.5,
+"warning": 2.0
+},
+"johor|mersing|sg. paya dato": {
+"alert": 1.0,
+"danger": 2.0,
+"jps_id": "27231",
+"normal": 0.0,
+"warning": 1.5
+},
+"johor|mersing|sg. tenglu kecil di kg. tenglu kecil": {
+"alert": 1.2,
+"danger": 1.8,
+"jps_id": "27224",
+"normal": 0.0,
+"warning": 1.5
+},
+"johor|muar|sg. muar di bukit kepong": {
+"alert": 2.0,
+"danger": 3.3,
+"jps_id": "2028001",
+"normal": 1.0,
+"warning": 2.74
+},
+"johor|muar|sg. muar di kg. olak sepam": {
+"alert": 2.0,
+"danger": 2.5,
+"jps_id": "2127001",
+"normal": 1.65,
+"warning": 2.3
+},
+"johor|muar|sg. muar di panchor": {
+"alert": 2.0,
+"danger": 2.5,
+"jps_id": "2127074",
+"normal": 0.52,
+"warning": 2.3
+},
+"johor|muar|sg. sarang buaya di kg. parit tengah": {
+"alert": 2.0,
+"danger": 4.0,
+"jps_id": "26121",
+"normal": 0.5,
+"warning": 3.0
+},
+"johor|muar|sg. terap di kg. parit wahid": {
+"alert": 4.0,
+"danger": 6.0,
+"jps_id": "26120",
+"normal": 1.2,
+"warning": 5.0
+},
+"johor|muar|sg. terap di kg. sg. terap": {
+"alert": 2.15,
+"danger": 2.75,
+"jps_id": "26119",
+"normal": 0.5,
+"warning": 2.5
+},
+"johor|pontian|pintu air parit salleh": {
+"alert": 2.0,
+"danger": 3.0,
+"jps_id": null,
+"normal": 0.0,
+"warning": 2.3
+},
+"johor|pontian|sg. ayer hitam di kg. paya embun": {
+"alert": 4.5,
+"danger": 5.5,
+"jps_id": "25919",
+"normal": 3.5,
+"warning": 5.0
+},
+"johor|pontian|sg. benut di p/a parit salleh (f2)": {
+"alert": 2.0,
+"danger": 3.0,
+"jps_id": "26922",
+"normal": 0.0,
+"warning": 2.3
+},
+"johor|pontian|sg. pontian besar di kg. kabong": {
+"alert": 4.0,
+"danger": 6.0,
+"jps_id": null,
+"normal": 1.2,
+"warning": 5.0
+},
+"johor|pontian|sg. pulai di kg. ulu pulai": {
+"alert": 2.4,
+"danger": 3.0,
+"jps_id": "25750",
+"normal": 0.5,
+"warning": 2.7
+},
+"johor|segamat|sg. genuang": {
+"alert": 8.0,
+"danger": 9.0,
+"jps_id": "25896",
+"normal": 6.0,
+"warning": 8.5
+},
+"johor|segamat|sg. juaseh di ayer panas": {
+"alert": 45.8,
+"danger": 47.0,
+"jps_id": null,
+"normal": 45.0,
+"warning": 46.4
+},
+"johor|segamat|sg. juaseh di felda kemelah": {
+"alert": 27.0,
+"danger": 28.2,
+"jps_id": "2529001",
+"normal": 25.0,
+"warning": 27.6
+},
+"johor|segamat|sg. labis di kg. gatom": {
+"alert": 39.9,
+"danger": 41.1,
+"jps_id": null,
+"normal": 36.0,
+"warning": 40.5
+},
+"johor|segamat|sg. lenik di kangkar chaah": {
+"alert": 12.6,
+"danger": 13.0,
+"jps_id": "2130002",
+"normal": 11.0,
+"warning": 12.72
+},
+"johor|segamat|sg. muar di buloh kasap": {
+"alert": 7.92,
+"danger": 9.14,
+"jps_id": "2526004",
+"normal": 7.3,
+"warning": 8.53
+},
+"johor|segamat|sg. muar di jeti kg. tekam": {
+"alert": 2.5,
+"danger": 4.0,
+"jps_id": "27251",
+"normal": 2.0,
+"warning": 3.5
+},
+"johor|segamat|sg. muar di kg. awat": {
+"alert": 18.95,
+"danger": 19.95,
+"jps_id": "2626003",
+"normal": 18.0,
+"warning": 19.35
+},
+"johor|segamat|sg. segamat di bandar segamat": {
+"alert": 7.92,
+"danger": 9.14,
+"jps_id": "2528002",
+"normal": 5.0,
+"warning": 8.53
+},
+"johor|segamat|sg. segamat di segamat kecil": {
+"alert": 36.1,
+"danger": 37.3,
+"jps_id": "2530001",
+"normal": 34.0,
+"warning": 36.7
+},
+"johor|tangkak|pintu air tanjung agas": {
+"alert": 4.0,
+"danger": 6.0,
+"jps_id": "25909",
+"normal": 1.2,
+"warning": 5.0
+},
+"johor|tangkak|sg. belemang besar di simpang 5 darat": {
+"alert": 4.0,
+"danger": 5.5,
+"jps_id": null,
+"normal": 2.7,
+"warning": 5.0
+},
+"johor|tangkak|sg. kesang di telok rimba": {
+"alert": 2.5,
+"danger": 3.5,
+"jps_id": null,
+"normal": 2.2,
+"warning": 3.0
+},
+"johor|tangkak|sg. senduk": {
+"alert": 0.5,
+"danger": 1.0,
+"jps_id": "25907",
+"normal": 0.1,
+"warning": 0.8
+},
+"johor|tangkak|sg. tangkak di kg. seri ma'amor": {
+"alert": 3.0,
+"danger": 4.0,
+"jps_id": "2225001",
+"normal": 2.0,
+"warning": 3.5
+},
+"kedah|baling|sg. ketil di felda teloi kanan (f2)": {
+"alert": 12.74,
+"danger": 13.34,
+"jps_id": "27345",
+"normal": 11.0,
+"warning": 13.04
+},
+"kedah|baling|sg. ketil di kg. baru (f2)": {
+"alert": 82.2,
+"danger": 83.2,
+"jps_id": "27346",
+"normal": 81.5,
+"warning": 82.8
+},
+"kedah|baling|sg. ketil di kg. bongor (f2)": {
+"alert": 60.0,
+"danger": 62.0,
+"jps_id": "27329",
+"normal": 58.0,
+"warning": 61.0
+},
+"kedah|baling|sg. sedim di kg. sedim (f2)": {
+"alert": 35.0,
+"danger": 36.5,
+"jps_id": "27347",
+"normal": 33.5,
+"warning": 35.75
+},
+"kedah|kota setar|sg. anak bukit di taman aman": {
+"alert": 2.0,
+"danger": 2.6,
+"jps_id": "26048",
+"normal": 1.5,
+"warning": 2.3
+},
+"kedah|kota setar|sg. kedah di ampang jajar mada (f2)": {
+"alert": 1.7,
+"danger": 2.1,
+"jps_id": "28137",
+"normal": -0.5,
+"warning": 1.9
+},
+"kedah|kota setar|sg. kedah di jambatan lebuhraya": {
+"alert": 1.5,
+"danger": 2.1,
+"jps_id": "26168",
+"normal": 1.3,
+"warning": 1.8
+},
+"kedah|kota setar|sg. kedah di jambatan tok pasai (f2)": {
+"alert": 1.6,
+"danger": 2.0,
+"jps_id": "27272",
+"normal": -0.5,
+"warning": 1.8
+},
+"kedah|kuala muda|sg. ketil di jambatan syed omar (f2)": {
+"alert": 12.1,
+"danger": 13.1,
+"jps_id": "27362",
+"normal": 8.0,
+"warning": 12.4
+},
+"kedah|kuala muda|sg. merbok di tanjung dawai (f2)": {
+"alert": 1.3,
+"danger": 1.9,
+"jps_id": "27729",
+"normal": 0.2,
+"warning": 1.6
+},
+"kedah|kuala muda|sg. muda di ampang jajar plsm d/s (f2)": {
+"alert": 1.9,
+"danger": 2.5,
+"jps_id": "27296",
+"normal": -0.2,
+"warning": 2.2
+},
+"kedah|kuala muda|sg. muda di jambatan syed omar": {
+"alert": 12.1,
+"danger": 13.1,
+"jps_id": "5606076",
+"normal": 8.0,
+"warning": 12.4
+},
+"kedah|kuala muda|sg. petani di kg. bkt belah (f2)": {
+"alert": 1.7,
+"danger": 2.1,
+"jps_id": "27327",
+"normal": 0.9,
+"warning": 1.9
+},
+"kedah|kuala muda|tcg sg. kuala muda (f2)": {
+"alert": 1.44,
+"danger": 2.04,
+"jps_id": "27728",
+"normal": 0.1,
+"warning": 1.74
+},
+"kedah|kubang pasu|sg. badak di akademi binaan malaysia (abm) (f2)": {
+"alert": 65.8,
+"danger": 67.0,
+"jps_id": "27299",
+"normal": 64.0,
+"warning": 66.0
+},
+"kedah|kubang pasu|sg. bata di kg. bata": {
+"alert": 8.53,
+"danger": 9.14,
+"jps_id": "6204180",
+"normal": 6.5,
+"warning": 8.83
+},
+"kedah|kubang pasu|sg. laka di kg. padang pasir (f2)": {
+"alert": 21.4,
+"danger": 22.0,
+"jps_id": "27359",
+"normal": 18.5,
+"warning": 21.7
+},
+"kedah|kubang pasu|sg. padang terap di kepala batas": {
+"alert": 3.5,
+"danger": 3.8,
+"jps_id": "6204004",
+"normal": 1.5,
+"warning": 3.59
+},
+"kedah|kubang pasu|sg. padang terap di wang tepus (f2)": {
+"alert": 9.5,
+"danger": 10.1,
+"jps_id": "27353",
+"normal": 8.0,
+"warning": 9.8
+},
+"kedah|kubang pasu|sg. sintok di uum sintok (f2)": {
+"alert": 44.0,
+"danger": 44.5,
+"jps_id": "27343",
+"normal": 42.0,
+"warning": 44.15
+},
+"kedah|kubang pasu|sg. tanjung pauh di terusan utara mada di jitra (f": {
+"alert": 6.9,
+"danger": 7.5,
+"jps_id": "27274",
+"normal": 5.0,
+"warning": 7.2
+},
+"kedah|kulim|sg. jarak di kg. permatang durian (f2)": {
+"alert": 5.2,
+"danger": 5.84,
+"jps_id": "27719",
+"normal": 4.0,
+"warning": 5.5
+},
+"kedah|kulim|sg. kob di kg. baru (f2)": {
+"alert": 36.01,
+"danger": 36.61,
+"jps_id": "27720",
+"normal": 35.0,
+"warning": 36.31
+},
+"kedah|kulim|sg. muda di ladang victoria (f2)": {
+"alert": 6.0,
+"danger": 7.98,
+"jps_id": "28689",
+"normal": 3.14,
+"warning": 7.8
+},
+"kedah|kulim|sg. wang pinang (f2)": {
+"alert": 28.4,
+"danger": 29.0,
+"jps_id": "27724",
+"normal": 24.0,
+"warning": 28.7
+},
+"kedah|langkawi|sg. kuah di kuah (f2)": {
+"alert": 2.0,
+"danger": 2.5,
+"jps_id": "27358",
+"normal": 1.5,
+"warning": 2.2
+},
+"kedah|langkawi|sg. melaka di bukit kemboja (f2)": {
+"alert": 7.86,
+"danger": 8.46,
+"jps_id": "27819",
+"normal": 6.0,
+"warning": 8.16
+},
+"kedah|langkawi|sg. melaka di jambatan sg. melaka (f2)": {
+"alert": 1.8,
+"danger": 2.3,
+"jps_id": "27761",
+"normal": -0.4,
+"warning": 2.0
+},
+"kedah|langkawi|sg. melaka di padang matsirat (f2)": {
+"alert": 3.1,
+"danger": 3.5,
+"jps_id": "27357",
+"normal": 2.9,
+"warning": 3.3
+},
+"kedah|padang terap|sg. durian burung di kota putra (f2)": {
+"alert": 85.0,
+"danger": 90.0,
+"jps_id": "27277",
+"normal": 80.0,
+"warning": 89.0
+},
+"kedah|padang terap|sg. janing di kg. labi (f2)": {
+"alert": 25.7,
+"danger": 26.3,
+"jps_id": "27328",
+"normal": 23.0,
+"warning": 26.0
+},
+"kedah|padang terap|sg. naka di naka": {
+"alert": 32.0,
+"danger": 33.0,
+"jps_id": "6106180",
+"normal": 27.0,
+"warning": 32.5
+},
+"kedah|padang terap|sg. padang sanai di padang sanai (f2)": {
+"alert": 32.1,
+"danger": 32.7,
+"jps_id": "27306",
+"normal": 29.0,
+"warning": 32.4
+},
+"kedah|padang terap|sg. padang terap di kuala nerang (f2)": {
+"alert": 14.61,
+"danger": 15.21,
+"jps_id": "6205180",
+"normal": 12.0,
+"warning": 14.91
+},
+"kedah|padang terap|sg. pedu di jambatan bukit buloh (f2)": {
+"alert": 19.7,
+"danger": 21.3,
+"jps_id": "27278",
+"normal": 16.5,
+"warning": 21.0
+},
+"kedah|padang terap|sg. perik di kg perik (f2)": {
+"alert": 13.0,
+"danger": 14.2,
+"jps_id": "27330",
+"normal": 12.0,
+"warning": 13.5
+},
+"kedah|padang terap|sg. sari di kilang gula padang terap": {
+"alert": 27.0,
+"danger": 28.5,
+"jps_id": null,
+"normal": 25.0,
+"warning": 27.5
+},
+"kedah|pendang|sg. pendang di pekan pendang (f2)": {
+"alert": 2.6,
+"danger": 3.3,
+"jps_id": "27811",
+"normal": 1.8,
+"warning": 3.1
+},
+"kedah|pendang|sg. pendang di pondok chegar": {
+"alert": 19.0,
+"danger": 20.0,
+"jps_id": "5905181",
+"normal": 16.5,
+"warning": 19.3
+},
+"kedah|pendang|sg. titi kerbau di kubur panjang (f2)": {
+"alert": 3.4,
+"danger": 4.0,
+"jps_id": "27303",
+"normal": 2.0,
+"warning": 3.7
+},
+"kedah|pokok sena|sg. nawa di kg. pokok sena lama (f2)": {
+"alert": 10.5,
+"danger": 11.0,
+"jps_id": "28309",
+"normal": 9.0,
+"warning": 10.7
+},
+"kedah|sik|sg. chapar di sek. keb. sri ampang (f2)": {
+"alert": 71.4,
+"danger": 72.0,
+"jps_id": "27297",
+"normal": 69.0,
+"warning": 71.7
+},
+"kedah|sik|sg. chepir di ulu jerai namek (f2)": {
+"alert": 43.0,
+"danger": 44.6,
+"jps_id": "27283",
+"normal": 41.0,
+"warning": 44.0
+},
+"kedah|sik|sg. muda di titi nami (f2)": {
+"alert": 56.5,
+"danger": 57.5,
+"jps_id": "27737",
+"normal": 54.0,
+"warning": 57.0
+},
+"kedah|sik|sg. sok di gulau (f2)": {
+"alert": 74.2,
+"danger": 75.0,
+"jps_id": "27305",
+"normal": 70.0,
+"warning": 74.6
+},
+"kedah|yan|sg. gurun di kg. perupok": {
+"alert": 3.0,
+"danger": 3.5,
+"jps_id": "26171",
+"normal": 1.2,
+"warning": 3.25
+},
+"kedah|yan|sg. singkir di kg. singkir genting (f2)": {
+"alert": 7.8,
+"danger": 8.5,
+"jps_id": "28155",
+"normal": 6.0,
+"warning": 8.1
+},
+"kelantan|bachok|sg. melor di jambatan melor (f2)": {
+"alert": 7.0,
+"danger": 9.0,
+"jps_id": "26296",
+"normal": 6.0,
+"warning": 8.0
+},
+"kelantan|gua musang|sg. aring di jalan felda aring (f1)": {
+"alert": 68.0,
+"danger": 72.0,
+"jps_id": null,
+"normal": 62.0,
+"warning": 70.0
+},
+"kelantan|gua musang|sg. galas di kg. lembaga (f1)": {
+"alert": 83.7,
+"danger": 87.9,
+"jps_id": null,
+"normal": 82.4,
+"warning": 85.6
+},
+"kelantan|gua musang|sg. galas di kg. pulai (f1)": {
+"alert": 108.1,
+"danger": 109.7,
+"jps_id": null,
+"normal": 107.8,
+"warning": 108.9
+},
+"kelantan|gua musang|sg. galas di limau kasturi (f1)": {
+"alert": 58.0,
+"danger": 61.0,
+"jps_id": "5020030",
+"normal": 53.0,
+"warning": 60.0
+},
+"kelantan|gua musang|sg. lebir di kuala koh (f1)": {
+"alert": 67.0,
+"danger": 75.0,
+"jps_id": "4824001",
+"normal": 62.0,
+"warning": 71.0
+},
+"kelantan|gua musang|sg. nenggiri di belatop (f1)": {
+"alert": 676.0,
+"danger": 680.0,
+"jps_id": null,
+"normal": 605.5,
+"warning": 678.0
+},
+"kelantan|gua musang|sg. nenggiri di bertam (f1)": {
+"alert": 53.7,
+"danger": 58.1,
+"jps_id": null,
+"normal": 50.4,
+"warning": 56.2
+},
+"kelantan|jeli|sg. lanas di air lanas (f1)": {
+"alert": 28.5,
+"danger": 29.5,
+"jps_id": null,
+"normal": 27.0,
+"warning": 29.0
+},
+"kelantan|jeli|sg. pergau di air bol (f1)": {
+"alert": 71.3,
+"danger": 74.7,
+"jps_id": null,
+"normal": 70.0,
+"warning": 73.0
+},
+"kelantan|jeli|sg. pergau di jambatan jerimbong, kuala balah (f1)": {
+"alert": 50.8,
+"danger": 55.7,
+"jps_id": null,
+"normal": 48.2,
+"warning": 53.6
+},
+"kelantan|jeli|sg. pergau di kg. lawar (f1)": {
+"alert": 101.0,
+"danger": 103.0,
+"jps_id": null,
+"normal": 95.0,
+"warning": 102.0
+},
+"kelantan|kota bharu|sg. kelantan di kg. salor (f1)": {
+"alert": 9.0,
+"danger": 10.6,
+"jps_id": null,
+"normal": 1.0,
+"warning": 9.8
+},
+"kelantan|kota bharu|sg. kelantan di kuala besar (f1)": {
+"alert": 1.5,
+"danger": 1.85,
+"jps_id": null,
+"normal": 1.3,
+"warning": 1.7
+},
+"kelantan|kota bharu|sg. kelantan di tambatan d'raja (f1)": {
+"alert": 3.0,
+"danger": 5.0,
+"jps_id": null,
+"normal": 1.0,
+"warning": 4.0
+},
+"kelantan|kuala krai|sg. galas di dabong (f1)": {
+"alert": 35.0,
+"danger": 38.0,
+"jps_id": "5320038",
+"normal": 28.0,
+"warning": 37.0
+},
+"kelantan|kuala krai|sg. kelantan di kuala krai (f1)": {
+"alert": 20.0,
+"danger": 25.0,
+"jps_id": "5521044",
+"normal": 17.0,
+"warning": 22.5
+},
+"kelantan|kuala krai|sg. lebir di kg. karangan (f1)": {
+"alert": 27.0,
+"danger": 34.0,
+"jps_id": null,
+"normal": 19.0,
+"warning": 33.0
+},
+"kelantan|kuala krai|sg. lebir di kg. manik urai (f1)": {
+"alert": 30.0,
+"danger": 33.0,
+"jps_id": null,
+"normal": 19.1,
+"warning": 32.0
+},
+"kelantan|kuala krai|sg. lebir di kg. tualang (f1)": {
+"alert": 35.0,
+"danger": 43.0,
+"jps_id": "5222052",
+"normal": 23.0,
+"warning": 38.0
+},
+"kelantan|kuala krai|sg. nal di kg. sungai nal (f1)": {
+"alert": 23.5,
+"danger": 25.0,
+"jps_id": null,
+"normal": 21.0,
+"warning": 24.0
+},
+"kelantan|kuala krai|sg. pahi di kg. pahi (f1)": {
+"alert": 28.0,
+"danger": 32.0,
+"jps_id": null,
+"normal": 17.8,
+"warning": 30.0
+},
+"kelantan|machang|sg. kelantan di kg. temangan (f1)": {
+"alert": 14.0,
+"danger": 17.5,
+"jps_id": null,
+"normal": 12.0,
+"warning": 15.5
+},
+"kelantan|pasir mas|empangan bukit kwong (f1)": {
+"alert": 17.22,
+"danger": 17.72,
+"jps_id": null,
+"normal": 16.76,
+"warning": 17.37
+},
+"kelantan|pasir mas|sg. golok di rantau panjang (f1)": {
+"alert": 7.0,
+"danger": 9.0,
+"jps_id": null,
+"normal": 5.0,
+"warning": 8.0
+},
+"kelantan|pasir mas|sg. kelantan di air mulih (f1)": {
+"alert": 9.0,
+"danger": 10.65,
+"jps_id": "6021065",
+"normal": 4.0,
+"warning": 9.82
+},
+"kelantan|pasir mas|sg. kelantan di jambatan tendong (f2)": {
+"alert": 4.0,
+"danger": 6.0,
+"jps_id": "27133",
+"normal": 3.0,
+"warning": 5.0
+},
+"kelantan|pasir puteh|sg. buaya ikat di kg. pulau lima (f2)": {
+"alert": 2.0,
+"danger": 4.0,
+"jps_id": "26292",
+"normal": 1.0,
+"warning": 3.0
+},
+"kelantan|pasir puteh|sg. semerak di pasir puteh (f1)": {
+"alert": 2.5,
+"danger": 3.2,
+"jps_id": null,
+"normal": 2.0,
+"warning": 3.0
+},
+"kelantan|pasir puteh|sg. semerak di tok bali (f2)": {
+"alert": 2.5,
+"danger": 4.0,
+"jps_id": "26289",
+"normal": 0.0,
+"warning": 3.0
+},
+"kelantan|tanah merah|sg. golok di kg. jenob (f1)": {
+"alert": 21.5,
+"danger": 23.5,
+"jps_id": null,
+"normal": 19.0,
+"warning": 22.5
+},
+"kelantan|tanah merah|sg. kelantan di kusial (f1)": {
+"alert": 12.0,
+"danger": 16.0,
+"jps_id": null,
+"normal": 7.0,
+"warning": 14.0
+},
+"kelantan|tanah merah|sg. kelantan di kusial baru (f1)": {
+"alert": 12.0,
+"danger": 16.0,
+"jps_id": null,
+"normal": 7.0,
+"warning": 14.0
+},
+"kelantan|tumpat|sg. golok di kuala jambu (f1)": {
+"alert": 2.0,
+"danger": 3.0,
+"jps_id": null,
+"normal": 0.7,
+"warning": 2.5
+},
+"kelantan|tumpat|sg. kelantan di kg. kok majid (f1)": {
+"alert": 1.2,
+"danger": 1.8,
+"jps_id": null,
+"normal": 0.4,
+"warning": 1.6
+},
+"melaka|alor gajah|empangan durian tunggal (f2)": {
+"alert": 30.0,
+"danger": 33.0,
+"jps_id": "26209",
+"normal": 27.0,
+"warning": 31.0
+},
+"melaka|alor gajah|pintu air durian tunggal d/s (f2)": {
+"alert": 3.7,
+"danger": 4.0,
+"jps_id": "27596",
+"normal": 3.0,
+"warning": 3.79
+},
+"melaka|alor gajah|pintu air durian tunggal u/s (f2)": {
+"alert": 3.7,
+"danger": 4.0,
+"jps_id": "27595",
+"normal": 3.0,
+"warning": 3.79
+},
+"melaka|alor gajah|sg. batang melaka di gadek (f2)": {
+"alert": 20.2,
+"danger": 20.8,
+"jps_id": "26214",
+"normal": 19.0,
+"warning": 20.5
+},
+"melaka|alor gajah|sg. batang melaka di jambatan tebong (f2)": {
+"alert": 39.0,
+"danger": 41.0,
+"jps_id": "26204",
+"normal": 36.0,
+"warning": 40.0
+},
+"melaka|alor gajah|sg. batang tampin di tanjung rimau (f2)": {
+"alert": 26.3,
+"danger": 27.3,
+"jps_id": "26208",
+"normal": 25.0,
+"warning": 26.7
+},
+"melaka|alor gajah|sg. durian tunggal di bt. 11 air resam (f2)": {
+"alert": 6.5,
+"danger": 7.5,
+"jps_id": "26206",
+"normal": 5.0,
+"warning": 7.0
+},
+"melaka|alor gajah|sg. melaka di melaka pindah (f2)": {
+"alert": 11.3,
+"danger": 11.9,
+"jps_id": "27597",
+"normal": 10.0,
+"warning": 11.48
+},
+"melaka|alor gajah|sg. melaka di pantai belimbing (f2)": {
+"alert": 3.5,
+"danger": 5.2,
+"jps_id": "26205",
+"normal": 2.3,
+"warning": 4.8
+},
+"melaka|alor gajah|sg. siput di jamb. sg. simpang ampat (f2)": {
+"alert": 24.2,
+"danger": 25.0,
+"jps_id": "27598",
+"normal": 23.0,
+"warning": 24.5
+},
+"melaka|alor gajah|sg. siput di kg. sg. siput (f2)": {
+"alert": 7.4,
+"danger": 7.85,
+"jps_id": null,
+"normal": 5.0,
+"warning": 7.65
+},
+"melaka|jasin|empangan jus (f2)": {
+"alert": 74.0,
+"danger": 77.0,
+"jps_id": "26212",
+"normal": 71.0,
+"warning": 75.0
+},
+"melaka|jasin|pintu air kuala kesang (f2)": {
+"alert": 4.0,
+"danger": 7.0,
+"jps_id": "26213",
+"normal": 1.0,
+"warning": 5.0
+},
+"melaka|jasin|sg. ayer panas di tehel (rhn)": {
+"alert": 3.0,
+"danger": 5.0,
+"jps_id": "25754",
+"normal": 1.0,
+"warning": 4.0
+},
+"melaka|jasin|sg. bemban di bemban (f2)": {
+"alert": 7.4,
+"danger": 8.0,
+"jps_id": "26561",
+"normal": 5.0,
+"warning": 7.7
+},
+"melaka|jasin|sg. chohong di chohong (f2)": {
+"alert": 12.8,
+"danger": 13.4,
+"jps_id": "27592",
+"normal": 11.3,
+"warning": 12.98
+},
+"melaka|jasin|sg. kesang di rumah pam telok rimba (f2)": {
+"alert": 5.0,
+"danger": 5.6,
+"jps_id": "27700",
+"normal": 2.2,
+"warning": 5.3
+},
+"melaka|jasin|sg. kesang di selandar (f2)": {
+"alert": 45.0,
+"danger": 48.0,
+"jps_id": "26210",
+"normal": 42.0,
+"warning": 46.0
+},
+"melaka|melaka tengah|barrage sungai melaka d/s (f2)": {
+"alert": 1.0,
+"danger": 4.0,
+"jps_id": "26202",
+"normal": -2.0,
+"warning": 2.0
+},
+"melaka|melaka tengah|barrage sungai melaka u/s (f2)": {
+"alert": 3.0,
+"danger": 6.0,
+"jps_id": "26200",
+"normal": -1.0,
+"warning": 4.0
+},
+"melaka|melaka tengah|pintu air cheng d/s (f2)": {
+"alert": 2.2,
+"danger": 3.5,
+"jps_id": "2222007",
+"normal": 1.7,
+"warning": 2.29
+},
+"melaka|melaka tengah|pintu air cheng u/s (f2)": {
+"alert": 2.2,
+"danger": 3.5,
+"jps_id": "2222006",
+"normal": 1.7,
+"warning": 2.85
+},
+"melaka|melaka tengah|pintu air klebang besar d/s (f2)": {
+"alert": 1.4,
+"danger": 2.0,
+"jps_id": "27702",
+"normal": 0.5,
+"warning": 1.58
+},
+"melaka|melaka tengah|pintu air klebang besar u/s (f2)": {
+"alert": 1.4,
+"danger": 2.0,
+"jps_id": "27701",
+"normal": 0.5,
+"warning": 1.58
+},
+"melaka|melaka tengah|pintu air sg. duyong (f2)": {
+"alert": 1.2,
+"danger": 1.8,
+"jps_id": "27705",
+"normal": 0.25,
+"warning": 1.38
+},
+"melaka|melaka tengah|sg. putat di kg. sg. putat (f2)": {
+"alert": 3.0,
+"danger": 5.0,
+"jps_id": "26173",
+"normal": 1.0,
+"warning": 4.0
+},
+"negeri sembilan|jelebu|sg. kenaboi di kg. chennah (f2)": {
+"alert": 113.5,
+"danger": 114.5,
+"jps_id": "27590",
+"normal": 112.0,
+"warning": 114.0
+},
+"negeri sembilan|jelebu|sg. triang di kg. chenor (f1)": {
+"alert": 115.5,
+"danger": 116.5,
+"jps_id": null,
+"normal": 113.0,
+"warning": 115.8
+},
+"negeri sembilan|jempol|sg. serting di kg. datok johan (f1)": {
+"alert": 73.5,
+"danger": 74.5,
+"jps_id": null,
+"normal": 72.0,
+"warning": 74.0
+},
+"negeri sembilan|kuala pilah|sg. muar di ampang tinggi": {
+"alert": 79.5,
+"danger": 80.5,
+"jps_id": "26690",
+"normal": 77.0,
+"warning": 80.0
+},
+"negeri sembilan|kuala pilah|sg. muar di kg. berembang (f2)": {
+"alert": 62.0,
+"danger": 63.0,
+"jps_id": "27129",
+"normal": 61.8,
+"warning": 62.3
+},
+"negeri sembilan|port dickson|sg. linggi di sua betong": {
+"alert": 4.8,
+"danger": 6.8,
+"jps_id": "2519421",
+"normal": 3.8,
+"warning": 5.8
+},
+"negeri sembilan|port dickson|sg. linggi di tanjung agas (f2)": {
+"alert": 1.5,
+"danger": 2.5,
+"jps_id": "27117",
+"normal": 0.0,
+"warning": 2.0
+},
+"negeri sembilan|port dickson|sg. lukut di kg. paya (f2)": {
+"alert": 1.2,
+"danger": 1.6,
+"jps_id": "27114",
+"normal": 0.4,
+"warning": 1.4
+},
+"negeri sembilan|port dickson|sg. sunggala di kg. sawah sunggala (f2)": {
+"alert": 3.6,
+"danger": 4.0,
+"jps_id": "27118",
+"normal": 1.8,
+"warning": 3.8
+},
+"negeri sembilan|rembau|sg. pedas di kg. pilin": {
+"alert": 11.0,
+"danger": 12.0,
+"jps_id": "2520032",
+"normal": 10.0,
+"warning": 11.3
+},
+"negeri sembilan|rembau|sg. pedas di kg. pilin (f2)": {
+"alert": 11.0,
+"danger": 12.0,
+"jps_id": "27121",
+"normal": 10.0,
+"warning": 11.3
+},
+"negeri sembilan|rembau|sg. rembau di dataran shahbandar (f2)": {
+"alert": 4.0,
+"danger": 5.0,
+"jps_id": "27128",
+"normal": 1.1,
+"warning": 4.5
+},
+"negeri sembilan|rembau|sg. rembau di titian bintangor": {
+"alert": 4.2,
+"danger": 4.8,
+"jps_id": "2421001",
+"normal": 3.9,
+"warning": 4.5
+},
+"negeri sembilan|rembau|sg. rembau di titian bintangor (f2)": {
+"alert": 4.2,
+"danger": 4.8,
+"jps_id": "27122",
+"normal": 3.9,
+"warning": 4.5
+},
+"negeri sembilan|seremban|sg. batang benar di pekan nilai (f2)": {
+"alert": 18.0,
+"danger": 19.0,
+"jps_id": "27103",
+"normal": 16.4,
+"warning": 18.5
+},
+"negeri sembilan|seremban|sg. lenggeng di pekan lenggeng (f2)": {
+"alert": 61.0,
+"danger": 63.0,
+"jps_id": "27101",
+"normal": 59.61,
+"warning": 62.0
+},
+"negeri sembilan|seremban|sg. linggi di dusun nyiur (f2)": {
+"alert": 45.5,
+"danger": 46.5,
+"jps_id": "27096",
+"normal": 45.0,
+"warning": 46.0
+},
+"negeri sembilan|seremban|sg. linggi di kg. mantau (f2)": {
+"alert": 34.0,
+"danger": 35.0,
+"jps_id": "27092",
+"normal": 32.0,
+"warning": 34.3
+},
+"negeri sembilan|seremban|sg. simen di ladang kombok (f2)": {
+"alert": 26.0,
+"danger": 27.5,
+"jps_id": "27095",
+"normal": 22.13,
+"warning": 26.8
+},
+"negeri sembilan|tampin|sg. gemas di bukit jalor (f2)": {
+"alert": 15.0,
+"danger": 17.0,
+"jps_id": "27175",
+"normal": 6.8,
+"warning": 16.0
+},
+"negeri sembilan|tampin|sg. gemas di kg. tiong (f2)": {
+"alert": 25.3,
+"danger": 26.2,
+"jps_id": "27168",
+"normal": 19.0,
+"warning": 25.8
+},
+"negeri sembilan|tampin|sg. gemencheh di empang sg. dua": {
+"alert": 37.5,
+"danger": 39.0,
+"jps_id": "2524003",
+"normal": 36.5,
+"warning": 38.3
+},
+"negeri sembilan|tampin|sg. gemencheh di empang sg. dua (f2)": {
+"alert": 37.5,
+"danger": 39.0,
+"jps_id": "27169",
+"normal": 36.5,
+"warning": 38.3
+},
+"pahang|bentong|jam. persimpangan bentong barat di sg. benus (n)": {
+"alert": 88.5,
+"danger": 89.7,
+"jps_id": "28072",
+"normal": 88.1,
+"warning": 89.0
+},
+"pahang|bentong|sg. bentong di kuala marong (f1)": {
+"alert": 88.0,
+"danger": 89.0,
+"jps_id": "27547",
+"normal": 86.0,
+"warning": 88.3
+},
+"pahang|bentong|sg. semantan di kg. lengkong": {
+"alert": 51.0,
+"danger": 53.0,
+"jps_id": "3420132",
+"normal": 49.0,
+"warning": 52.0
+},
+"pahang|bentong|sg. semantan di kg. lengkong (f1)": {
+"alert": 51.0,
+"danger": 53.0,
+"jps_id": "27546",
+"normal": 49.0,
+"warning": 52.0
+},
+"pahang|bentong|sg. telemong di telemong (f1)": {
+"alert": 98.1,
+"danger": 100.0,
+"jps_id": null,
+"normal": 92.0,
+"warning": 98.6
+},
+"pahang|bentong|sg. triang di tmn. agropolitan chemomoi (f1)": {
+"alert": 51.86,
+"danger": 53.66,
+"jps_id": null,
+"normal": 50.0,
+"warning": 52.46
+},
+"pahang|bera|sg. bera di jam. sg. bera (f1)": {
+"alert": 24.0,
+"danger": 26.0,
+"jps_id": null,
+"normal": 21.0,
+"warning": 25.0
+},
+"pahang|bera|sg. pahang di waterfront (f1)": {
+"alert": 26.0,
+"danger": 28.0,
+"jps_id": null,
+"normal": 24.0,
+"warning": 27.0
+},
+"pahang|bera|sg. serting di jam. pdg. gudang (f1)": {
+"alert": 30.5,
+"danger": 31.5,
+"jps_id": null,
+"normal": 28.2,
+"warning": 31.0
+},
+"pahang|bera|sg. triang di jamb. keretapi (f1)": {
+"alert": 33.5,
+"danger": 34.5,
+"jps_id": "27531",
+"normal": 31.0,
+"warning": 33.8
+},
+"pahang|cameron highlands|hulu sg. ringlet": {
+"alert": 1196.0,
+"danger": 1196.8,
+"jps_id": "26154",
+"normal": 1194.12,
+"warning": 1196.5
+},
+"pahang|cameron highlands|sg. bertam di jambatan kebun": {
+"alert": 1008.0,
+"danger": 1010.22,
+"jps_id": null,
+"normal": 1007.0,
+"warning": 1009.02
+},
+"pahang|cameron highlands|sg. bertam di pos leryar (f1)": {
+"alert": 536.0,
+"danger": 538.0,
+"jps_id": null,
+"normal": 533.0,
+"warning": 537.0
+},
+"pahang|cameron highlands|sg. ikan": {
+"alert": 1278.7,
+"danger": 1279.3,
+"jps_id": "4514035",
+"normal": 1277.5,
+"warning": 1279.0
+},
+"pahang|cameron highlands|sg. ikan (f1)": {
+"alert": 1278.7,
+"danger": 1279.3,
+"jps_id": "27528",
+"normal": 1277.5,
+"warning": 1279.0
+},
+"pahang|cameron highlands|sg. telom di blue valley (f1)": {
+"alert": 1399.2,
+"danger": 1400.0,
+"jps_id": null,
+"normal": 1398.4,
+"warning": 1399.6
+},
+"pahang|jerantut|sg. pahang di jerantut feri (f1)": {
+"alert": 45.0,
+"danger": 49.0,
+"jps_id": null,
+"normal": 41.0,
+"warning": 47.0
+},
+"pahang|jerantut|sg. pahang di kuala tembeling": {
+"alert": 49.0,
+"danger": 53.0,
+"jps_id": "27977",
+"normal": 45.0,
+"warning": 51.0
+},
+"pahang|jerantut|sg. pahang di kuala tembeling (f1)": {
+"alert": 49.0,
+"danger": 53.0,
+"jps_id": "27366",
+"normal": 45.0,
+"warning": 51.0
+},
+"pahang|jerantut|sg. pahang di paya gintong (f1)": {
+"alert": 41.0,
+"danger": 45.0,
+"jps_id": null,
+"normal": 37.0,
+"warning": 43.0
+},
+"pahang|jerantut|sg. tembeling di kg. merting (f1)": {
+"alert": 56.0,
+"danger": 60.0,
+"jps_id": null,
+"normal": 52.0,
+"warning": 58.0
+},
+"pahang|jerantut|sg. tembeling di kuala tahan": {
+"alert": 64.0,
+"danger": 68.0,
+"jps_id": "4324001",
+"normal": 60.0,
+"warning": 66.0
+},
+"pahang|kuantan|sg. belat di sri damai": {
+"alert": 3.0,
+"danger": 5.0,
+"jps_id": "3432001",
+"normal": 1.5,
+"warning": 4.0
+},
+"pahang|kuantan|sg. cherating di cherating": {
+"alert": 3.0,
+"danger": 4.0,
+"jps_id": "3133001",
+"normal": 1.5,
+"warning": 3.3
+},
+"pahang|kuantan|sg. kenau di sg. rimau (f2)": {
+"alert": 34.0,
+"danger": 36.0,
+"jps_id": "27515",
+"normal": 32.0,
+"warning": 35.0
+},
+"pahang|kuantan|sg. kuantan di bukit kenau": {
+"alert": 20.0,
+"danger": 21.5,
+"jps_id": "27835",
+"normal": 17.0,
+"warning": 20.75
+},
+"pahang|kuantan|sg. kuantan di kuantan by pass (f2)": {
+"alert": 3.0,
+"danger": 3.5,
+"jps_id": "27514",
+"normal": 0.5,
+"warning": 3.15
+},
+"pahang|kuantan|sg. kuantan di pasir kemudi": {
+"alert": 4.6,
+"danger": 8.2,
+"jps_id": "3831001",
+"normal": 2.0,
+"warning": 6.4
+},
+"pahang|kuantan|sg. lepar di jam. gelugor (f1)": {
+"alert": 28.5,
+"danger": 30.0,
+"jps_id": null,
+"normal": 27.0,
+"warning": 29.25
+},
+"pahang|kuantan|sg. rimau di sg. lembing": {
+"alert": 34.0,
+"danger": 36.0,
+"jps_id": "3929001",
+"normal": 32.0,
+"warning": 35.0
+},
+"pahang|kuantan|sg. soi di jln. pekan-kuantan (n)": {
+"alert": 3.5,
+"danger": 5.0,
+"jps_id": "28073",
+"normal": 2.0,
+"warning": 4.0
+},
+"pahang|lipis|sg. jelai di bukit betong": {
+"alert": 70.0,
+"danger": 72.0,
+"jps_id": "4219001",
+"normal": 66.0,
+"warning": 71.0
+},
+"pahang|lipis|sg. jelai di bukit betong (f1)": {
+"alert": 70.0,
+"danger": 72.0,
+"jps_id": "27550",
+"normal": 66.0,
+"warning": 71.0
+},
+"pahang|lipis|sg. jelai di jeram bungor (f1)": {
+"alert": 58.0,
+"danger": 62.0,
+"jps_id": "27551",
+"normal": 55.0,
+"warning": 60.0
+},
+"pahang|lipis|sg. jelai di jeti lipis (f1)": {
+"alert": 62.0,
+"danger": 65.5,
+"jps_id": null,
+"normal": 59.0,
+"warning": 64.0
+},
+"pahang|lipis|sg. jelai di kuala medang (f1)": {
+"alert": 82.5,
+"danger": 84.5,
+"jps_id": null,
+"normal": 79.5,
+"warning": 83.5
+},
+"pahang|lipis|sg. tanum di jam. chegar perah (f1)": {
+"alert": 96.5,
+"danger": 98.0,
+"jps_id": null,
+"normal": 94.95,
+"warning": 97.25
+},
+"pahang|maran|bandar maran di sg. maran (f1)": {
+"alert": 23.0,
+"danger": 25.0,
+"jps_id": null,
+"normal": 21.3,
+"warning": 24.0
+},
+"pahang|maran|sg. jempol di jengka 5 (f1)": {
+"alert": 29.0,
+"danger": 31.0,
+"jps_id": null,
+"normal": 27.4,
+"warning": 30.0
+},
+"pahang|maran|sg. jengka di jam. kg. awah (f1)": {
+"alert": 28.9,
+"danger": 29.4,
+"jps_id": null,
+"normal": 27.8,
+"warning": 29.2
+},
+"pahang|maran|sg. kundang di jam. sg. kundang (f1)": {
+"alert": 19.0,
+"danger": 23.0,
+"jps_id": null,
+"normal": 17.14,
+"warning": 21.0
+},
+"pahang|maran|sg. luit di kg. subuh (f1)": {
+"alert": 25.5,
+"danger": 27.5,
+"jps_id": null,
+"normal": 24.0,
+"warning": 26.0
+},
+"pahang|maran|sg. pahang di kg. chenor (f1)": {
+"alert": 20.7,
+"danger": 23.5,
+"jps_id": "27552",
+"normal": 16.8,
+"warning": 22.1
+},
+"pahang|pekan|sg. mentiga di jam. chini (f1)": {
+"alert": 15.0,
+"danger": 16.0,
+"jps_id": null,
+"normal": 12.5,
+"warning": 15.5
+},
+"pahang|pekan|sg. pahang di kuala sg. chini (f1)": {
+"alert": 14.27,
+"danger": 14.9,
+"jps_id": null,
+"normal": 11.0,
+"warning": 14.46
+},
+"pahang|pekan|sg. pahang di paloh hinai": {
+"alert": 9.4,
+"danger": 10.3,
+"jps_id": "3431099",
+"normal": 6.5,
+"warning": 9.67
+},
+"pahang|pekan|sg. pahang tua di pahang tua (f1)": {
+"alert": 7.0,
+"danger": 9.0,
+"jps_id": "27533",
+"normal": 5.5,
+"warning": 8.0
+},
+"pahang|raub|kg. chalit (n)": {
+"alert": 122.0,
+"danger": 124.0,
+"jps_id": "28674",
+"normal": 121.0,
+"warning": 123.0
+},
+"pahang|raub|sg. dong di kg. peruas (f1)": {
+"alert": 133.6,
+"danger": 135.0,
+"jps_id": null,
+"normal": 132.5,
+"warning": 134.16
+},
+"pahang|raub|sg. gali @ jam.sg. gali (laluan 8) (n)": {
+"alert": 121.0,
+"danger": 122.8,
+"jps_id": "28192",
+"normal": 120.5,
+"warning": 122.0
+},
+"pahang|raub|sg. lipis di batu malim": {
+"alert": 114.0,
+"danger": 114.8,
+"jps_id": "4017001",
+"normal": 113.2,
+"warning": 114.24
+},
+"pahang|raub|sg. lipis di batu malim (f1)": {
+"alert": 114.0,
+"danger": 114.8,
+"jps_id": null,
+"normal": 113.2,
+"warning": 114.24
+},
+"pahang|rompin|jam. sg. keratong di kg. lubuk batu (n)": {
+"alert": 17.0,
+"danger": 19.0,
+"jps_id": "28320",
+"normal": 13.0,
+"warning": 18.0
+},
+"pahang|rompin|jamb. sg pontian (n)": {
+"alert": 2.5,
+"danger": 4.0,
+"jps_id": "28656",
+"normal": 0.5,
+"warning": 3.5
+},
+"pahang|rompin|kg. sg. puteri (n)": {
+"alert": 2.0,
+"danger": 3.2,
+"jps_id": "28070",
+"normal": 1.4,
+"warning": 2.8
+},
+"pahang|rompin|middle sg. kepasing (n)": {
+"alert": 25.0,
+"danger": 27.0,
+"jps_id": "28071",
+"normal": 22.0,
+"warning": 26.0
+},
+"pahang|rompin|sg. anak endau di kg. denai (f2)": {
+"alert": 1.5,
+"danger": 3.5,
+"jps_id": "27520",
+"normal": 0.17,
+"warning": 3.1
+},
+"pahang|rompin|sg. anak endau di rumah pam setajam (f2)": {
+"alert": 3.5,
+"danger": 5.7,
+"jps_id": "27516",
+"normal": 2.5,
+"warning": 4.5
+},
+"pahang|rompin|sg. endau di kastam tg. gemok (f2)": {
+"alert": 3.2,
+"danger": 3.8,
+"jps_id": "27521",
+"normal": 1.0,
+"warning": 3.38
+},
+"pahang|rompin|sg. keratong di jam. bahau keratong (rhn)": {
+"alert": 20.0,
+"danger": 23.0,
+"jps_id": "25885",
+"normal": 18.0,
+"warning": 22.0
+},
+"pahang|rompin|sg. keratong di kg. rekoh (f2)": {
+"alert": 26.0,
+"danger": 28.0,
+"jps_id": "27500",
+"normal": 25.0,
+"warning": 27.0
+},
+"pahang|rompin|sg. pukin": {
+"alert": 44.0,
+"danger": 45.0,
+"jps_id": "2630001",
+"normal": 40.8,
+"warning": 44.3
+},
+"pahang|rompin|sg. rompin di kg kurnia (n)": {
+"alert": 1.5,
+"danger": 2.0,
+"jps_id": "28655",
+"normal": 0.5,
+"warning": 1.7
+},
+"pahang|rompin|sg. rompin di kg. aur (f2)": {
+"alert": 14.0,
+"danger": 16.0,
+"jps_id": "27513",
+"normal": 11.0,
+"warning": 15.0
+},
+"pahang|rompin|sg. rompin di kg. kerpal (f2)": {
+"alert": 2.0,
+"danger": 2.8,
+"jps_id": "27492",
+"normal": 1.2,
+"warning": 2.4
+},
+"pahang|temerloh|kg. paya kechik (n)": {
+"alert": 32.98,
+"danger": 33.98,
+"jps_id": "28077",
+"normal": 32.48,
+"warning": 33.48
+},
+"pahang|temerloh|sg. belengu di kg. belengu (n)": {
+"alert": 29.7,
+"danger": 30.3,
+"jps_id": "28653",
+"normal": 28.0,
+"warning": 30.0
+},
+"pahang|temerloh|sg. pahang di kuala krau (f1)": {
+"alert": 36.5,
+"danger": 40.0,
+"jps_id": null,
+"normal": 34.5,
+"warning": 38.5
+},
+"pahang|temerloh|sg. pahang di lubuk pasu (f1)": {
+"alert": 29.0,
+"danger": 33.0,
+"jps_id": "27530",
+"normal": 26.0,
+"warning": 31.0
+},
+"pahang|temerloh|sg. semantan di jam. keretapi mentakab (f1)": {
+"alert": 33.5,
+"danger": 37.0,
+"jps_id": null,
+"normal": 31.5,
+"warning": 35.5
+},
+"pahang|temerloh|sg. semantan di kg. mempateh": {
+"alert": 43.5,
+"danger": 46.0,
+"jps_id": "26550",
+"normal": 41.0,
+"warning": 45.0
+},
+"perak|bagan datuk|sg. perak di pasang api": {
+"alert": 1.8,
+"danger": 2.5,
+"jps_id": "3907104",
+"normal": -1.0,
+"warning": 2.2
+},
+"perak|hilir perak|sg. bidor di changkat jong": {
+"alert": 3.1,
+"danger": 3.5,
+"jps_id": "3901001",
+"normal": 2.0,
+"warning": 3.22
+},
+"perak|hulu perak|sg. perak di kuala kenderong": {
+"alert": 111.8,
+"danger": 111.9,
+"jps_id": "5411066",
+"normal": 110.0,
+"warning": 111.85
+},
+"perak|hulu perak|sg. rui di jam. jln. raya perak (rhn)": {
+"alert": 165.4,
+"danger": 165.9,
+"jps_id": "25790",
+"normal": 165.1,
+"warning": 165.5
+},
+"perak|hulu perak|tasik temengor di banding": {
+"alert": 247.0,
+"danger": 248.38,
+"jps_id": "5513001",
+"normal": 240.0,
+"warning": 247.69
+},
+"perak|kampar|sg. kampar di kg. baru kuala dipang (rhn)": {
+"alert": 22.0,
+"danger": 23.4,
+"jps_id": null,
+"normal": 21.41,
+"warning": 22.2
+},
+"perak|kerian|sg. kurau di kolam air bukit merah": {
+"alert": 9.0,
+"danger": 9.14,
+"jps_id": null,
+"normal": 8.68,
+"warning": 9.04
+},
+"perak|kerian|sg. samagagah di samagagah": {
+"alert": 1.8,
+"danger": 2.3,
+"jps_id": "5005005",
+"normal": 1.0,
+"warning": 2.1
+},
+"perak|kinta|sg. chemor di kg. cik zainal (rhn)": {
+"alert": 74.2,
+"danger": 75.5,
+"jps_id": null,
+"normal": 73.65,
+"warning": 74.8
+},
+"perak|kinta|sg. kinta di kuala pari": {
+"alert": 35.0,
+"danger": 36.0,
+"jps_id": "4610118",
+"normal": 30.8,
+"warning": 35.3
+},
+"perak|kinta|sg. kinta di tanjung rambutan": {
+"alert": 66.5,
+"danger": 67.8,
+"jps_id": "4611002",
+"normal": 65.0,
+"warning": 67.15
+},
+"perak|kinta|sg. raia di keramat pulai": {
+"alert": 44.5,
+"danger": 45.0,
+"jps_id": null,
+"normal": 43.0,
+"warning": 44.75
+},
+"perak|kuala kangsar|sg. perak di pekan manong (rhn)": {
+"alert": 25.0,
+"danger": 26.85,
+"jps_id": "25786",
+"normal": 24.42,
+"warning": 25.6
+},
+"perak|kuala kangsar|sg. plus di kg. lintang": {
+"alert": 54.0,
+"danger": 54.8,
+"jps_id": "4911077",
+"normal": 52.0,
+"warning": 54.24
+},
+"perak|larut matang dan selama|sg. ara di kg. batu 20": {
+"alert": 23.5,
+"danger": 24.0,
+"jps_id": "5007401",
+"normal": 20.0,
+"warning": 23.8
+},
+"perak|larut matang dan selama|sg. ijok di bekalan ijok": {
+"alert": 35.0,
+"danger": 35.5,
+"jps_id": "5108005",
+"normal": 29.0,
+"warning": 35.3
+},
+"perak|larut matang dan selama|sg. ijok di titi ijok perak (rhn)": {
+"alert": 10.5,
+"danger": 12.7,
+"jps_id": "25789",
+"normal": 9.8,
+"warning": 11.7
+},
+"perak|larut matang dan selama|sg. kerian di selama perak (rhn)": {
+"alert": 11.0,
+"danger": 12.6,
+"jps_id": "25971",
+"normal": 10.0,
+"warning": 11.8
+},
+"perak|larut matang dan selama|sg. kurau di bt. 14 batu kurau": {
+"alert": 24.0,
+"danger": 25.4,
+"jps_id": "4907020",
+"normal": 23.5,
+"warning": 24.7
+},
+"perak|larut matang dan selama|sg. kurau di pondok tanjung": {
+"alert": 13.5,
+"danger": 14.2,
+"jps_id": "5007020",
+"normal": 11.2,
+"warning": 13.8
+},
+"perak|larut matang dan selama|sg. mengkuang di kg. sg. kuning": {
+"alert": 19.5,
+"danger": 20.0,
+"jps_id": "5207406",
+"normal": 17.4,
+"warning": 19.8
+},
+"perak|larut matang dan selama|sg. selama di kg. gua petai": {
+"alert": 13.5,
+"danger": 14.5,
+"jps_id": "5207403",
+"normal": 12.3,
+"warning": 14.0
+},
+"perak|muallim|sg. slim di slim river": {
+"alert": 24.9,
+"danger": 25.4,
+"jps_id": "3814159",
+"normal": 23.5,
+"warning": 25.2
+},
+"perak|perak tengah|sg. perak di kg. gajah": {
+"alert": 6.5,
+"danger": 7.0,
+"jps_id": "4109094",
+"normal": 5.5,
+"warning": 6.7
+},
+"perak|perak tengah|sg. perak di parit": {
+"alert": 19.8,
+"danger": 21.6,
+"jps_id": "4409092",
+"normal": 18.0,
+"warning": 20.7
+},
+"perak|perak tengah|sg. perak di teluk sena": {
+"alert": 11.0,
+"danger": 12.0,
+"jps_id": "4209093",
+"normal": 9.5,
+"warning": 11.5
+},
+"perlis|arau|sg. arau di istana (f2)": {
+"alert": 8.5,
+"danger": 9.3,
+"jps_id": "26362",
+"normal": 5.7,
+"warning": 8.9
+},
+"perlis|arau|sg. arau di kolam sg. jernih (f2)": {
+"alert": 21.5,
+"danger": 22.3,
+"jps_id": "26361",
+"normal": 20.7,
+"warning": 22.0
+},
+"perlis|arau|sg. gial di balik guar (f2)": {
+"alert": 13.5,
+"danger": 15.0,
+"jps_id": "26445",
+"normal": 12.5,
+"warning": 14.0
+},
+"perlis|kangar|sg. perlis di padang katong (f2)": {
+"alert": 3.0,
+"danger": 3.8,
+"jps_id": "27791",
+"normal": 2.5,
+"warning": 3.4
+},
+"perlis|kangar|sg. repoh di kg. repoh (f2)": {
+"alert": 4.3,
+"danger": 4.6,
+"jps_id": "6402436",
+"normal": 3.3,
+"warning": 4.4
+},
+"perlis|padang besar|sg. chuchoh di kg. chantik (f2)": {
+"alert": 37.5,
+"danger": 38.5,
+"jps_id": "27766",
+"normal": 35.5,
+"warning": 37.8
+},
+"perlis|padang besar|sg. jarum di kg. masjid": {
+"alert": 33.0,
+"danger": 33.6,
+"jps_id": "6602004",
+"normal": 30.0,
+"warning": 33.3
+},
+"pulau pinang|barat daya pulau pinang|sg. ara": {
+"alert": 1.65,
+"danger": 2.0,
+"jps_id": "5302407",
+"normal": 0.5,
+"warning": 1.8
+},
+"pulau pinang|barat daya pulau pinang|sg. keluang di bayan lepas (f2)": {
+"alert": 2.5,
+"danger": 3.0,
+"jps_id": "27674",
+"normal": 0.0,
+"warning": 2.8
+},
+"pulau pinang|seberang perai selatan|muara sg. jawi (f2)": {
+"alert": 0.6,
+"danger": 1.0,
+"jps_id": "27631",
+"normal": 0.0,
+"warning": 0.8
+},
+"pulau pinang|seberang perai selatan|sg. jawi di kg. sethu (f2)": {
+"alert": 4.0,
+"danger": 4.5,
+"jps_id": "27628",
+"normal": 0.0,
+"warning": 4.3
+},
+"pulau pinang|seberang perai selatan|sg. kerian di kg. tok mandin (f2)": {
+"alert": 4.0,
+"danger": 4.2,
+"jps_id": "27784",
+"normal": 0.0,
+"warning": 4.1
+},
+"pulau pinang|seberang perai selatan|tidal control gate kebun baru (f2)": {
+"alert": 2.0,
+"danger": 3.0,
+"jps_id": "27630",
+"normal": 0.0,
+"warning": 2.5
+},
+"pulau pinang|seberang perai tengah|sg. juru di jps spt (f2)": {
+"alert": 1.9,
+"danger": 2.5,
+"jps_id": "27620",
+"normal": 0.3,
+"warning": 2.1
+},
+"pulau pinang|seberang perai tengah|sg. kulim di kg. labuh banting (f2)": {
+"alert": 2.0,
+"danger": 2.7,
+"jps_id": "27625",
+"normal": 0.0,
+"warning": 2.5
+},
+"pulau pinang|seberang perai utara|rumah pam taman limbungan": {
+"alert": 1.3,
+"danger": 1.8,
+"jps_id": null,
+"normal": 0.3,
+"warning": 1.5
+},
+"pulau pinang|seberang perai utara|sg. lahar endin di pejabat jps spu (f2)": {
+"alert": 2.0,
+"danger": 3.0,
+"jps_id": "27667",
+"normal": 0.68,
+"warning": 2.5
+},
+"pulau pinang|seberang perai utara|sg. muda di bumbung lima (f2)": {
+"alert": 3.5,
+"danger": 4.1,
+"jps_id": "27661",
+"normal": 0.0,
+"warning": 3.8
+},
+"pulau pinang|seberang perai utara|sg. muda di pinang tunggal (f2)": {
+"alert": 5.5,
+"danger": 6.5,
+"jps_id": "27285",
+"normal": 3.0,
+"warning": 6.0
+},
+"pulau pinang|seberang perai utara|sg. perai di desa murni sg. dua (f2)": {
+"alert": 2.0,
+"danger": 2.5,
+"jps_id": "27663",
+"normal": 0.0,
+"warning": 2.3
+},
+"pulau pinang|seberang perai utara|sg. tembus di pintu air sg. tembus (f2)": {
+"alert": 1.3,
+"danger": 1.6,
+"jps_id": "27665",
+"normal": 0.0,
+"warning": 1.4
+},
+"pulau pinang|seberang perai utara|sg.muda di bumbung lima": {
+"alert": 3.5,
+"danger": 4.1,
+"jps_id": null,
+"normal": 2.1,
+"warning": 3.8
+},
+"pulau pinang|timur laut pulau pinang|kolam sg. dondang": {
+"alert": 21.0,
+"danger": 21.5,
+"jps_id": "5302004",
+"normal": 19.5,
+"warning": 21.2
+},
+"pulau pinang|timur laut pulau pinang|kolam takungan sg. dondang m/s (f2)": {
+"alert": 21.0,
+"danger": 21.5,
+"jps_id": "27608",
+"normal": 0.0,
+"warning": 21.2
+},
+"pulau pinang|timur laut pulau pinang|kolam takungan sg. dondang u/s (f2)": {
+"alert": 21.0,
+"danger": 22.0,
+"jps_id": "27609",
+"normal": 0.0,
+"warning": 21.5
+},
+"pulau pinang|timur laut pulau pinang|muara sg. pinang s18 (f2)": {
+"alert": 1.0,
+"danger": 2.0,
+"jps_id": "27613",
+"normal": 0.0,
+"warning": 1.5
+},
+"pulau pinang|timur laut pulau pinang|sg. air itam di jalan scotland (f2)": {
+"alert": 6.5,
+"danger": 7.5,
+"jps_id": "27607",
+"normal": 0.0,
+"warning": 7.0
+},
+"pulau pinang|timur laut pulau pinang|sg. air itam di lorong batu lanchang (f2)": {
+"alert": 5.2,
+"danger": 6.0,
+"jps_id": "27587",
+"normal": 4.0,
+"warning": 5.5
+},
+"pulau pinang|timur laut pulau pinang|sg. dua di kg. dua bukit (f2)": {
+"alert": 2.5,
+"danger": 3.2,
+"jps_id": "27612",
+"normal": 0.0,
+"warning": 2.8
+},
+"pulau pinang|timur laut pulau pinang|sg. pinang di jalan p. ramlee": {
+"alert": 2.0,
+"danger": 2.7,
+"jps_id": "5403043",
+"normal": 0.45,
+"warning": 2.35
+},
+"pulau pinang|timur laut pulau pinang|sg. pinang di jalan p.ramlee (f2)": {
+"alert": 2.0,
+"danger": 3.0,
+"jps_id": "27606",
+"normal": 0.45,
+"warning": 2.5
+},
+"sabah|keningau|sg. pegalan di ansip": {
+"alert": 239.5,
+"danger": 241.5,
+"jps_id": "5261002",
+"normal": 237.5,
+"warning": 240.5
+},
+"sabah|kinabatangan|sg. kinabatangan di barek manis": {
+"alert": 4.5,
+"danger": 6.5,
+"jps_id": "5478003",
+"normal": 1.5,
+"warning": 5.5
+},
+"sabah|kota belud|sg. wariu di bridge no. 2 sabah (rhn)": {
+"alert": null,
+"danger": 30.36,
+"jps_id": "26311",
+"normal": 26.09,
+"warning": null
+},
+"sabah|tawau|sg. kalabakan di kalabakan (rhn)": {
+"alert": 2.0,
+"danger": 3.99,
+"jps_id": "26318",
+"normal": 0.02,
+"warning": 3.0
+},
+"sarawak|betong|betong": {
+"alert": 4.86,
+"danger": 5.76,
+"jps_id": null,
+"normal": 2.8,
+"warning": 5.16
+},
+"sarawak|betong|kaki wong": {
+"alert": 5.13,
+"danger": 6.33,
+"jps_id": "26128",
+"normal": -0.84,
+"warning": 5.73
+},
+"sarawak|betong|nanga lubau": {
+"alert": 9.32,
+"danger": 10.92,
+"jps_id": "1415001",
+"normal": 1.25,
+"warning": 10.32
+},
+"sarawak|betong|nanga samu": {
+"alert": 7.49,
+"danger": 9.79,
+"jps_id": "1515401",
+"normal": 4.2,
+"warning": 8.09
+},
+"sarawak|betong|roban": {
+"alert": 4.6,
+"danger": 5.2,
+"jps_id": null,
+"normal": 2.77,
+"warning": 5.0
+},
+"sarawak|betong|sebatan": {
+"alert": 9.0,
+"danger": 10.2,
+"jps_id": "26584",
+"normal": 7.1,
+"warning": 9.6
+},
+"sarawak|bintulu|bintulu kastam wharf": {
+"alert": 1.0,
+"danger": 2.1,
+"jps_id": "3130005",
+"normal": 0.5,
+"warning": 1.6
+},
+"sarawak|bintulu|kuala binyo": {
+"alert": 5.2,
+"danger": 6.0,
+"jps_id": "3035001",
+"normal": 2.6,
+"warning": 5.8
+},
+"sarawak|bintulu|kuala tatau": {
+"alert": 0.75,
+"danger": 1.35,
+"jps_id": null,
+"normal": -0.4,
+"warning": 1.05
+},
+"sarawak|bintulu|muput": {
+"alert": 6.5,
+"danger": 8.5,
+"jps_id": "2629401",
+"normal": 0.0,
+"warning": 7.5
+},
+"sarawak|bintulu|rumah abua": {
+"alert": 9.31,
+"danger": 11.31,
+"jps_id": "2830401",
+"normal": 1.69,
+"warning": 10.4
+},
+"sarawak|bintulu|rumah along": {
+"alert": 5.0,
+"danger": 7.0,
+"jps_id": "3236001",
+"normal": 1.88,
+"warning": 6.0
+},
+"sarawak|bintulu|sebauh": {
+"alert": 1.27,
+"danger": 1.97,
+"jps_id": "3132023",
+"normal": 0.22,
+"warning": 1.57
+},
+"sarawak|bintulu|sungai sebatang": {
+"alert": 3.26,
+"danger": 4.26,
+"jps_id": null,
+"normal": 2.5,
+"warning": 4.0
+},
+"sarawak|bintulu|sungai sibiu": {
+"alert": 3.3,
+"danger": 5.3,
+"jps_id": "3130001",
+"normal": 0.07,
+"warning": 4.3
+},
+"sarawak|bintulu|sungai similajau": {
+"alert": 8.0,
+"danger": 12.0,
+"jps_id": "3533401",
+"normal": 4.0,
+"warning": 9.0
+},
+"sarawak|bintulu|tatau town": {
+"alert": 1.93,
+"danger": 2.97,
+"jps_id": "2828025",
+"normal": 0.25,
+"warning": 2.38
+},
+"sarawak|bintulu|tubau": {
+"alert": 6.2,
+"danger": 7.5,
+"jps_id": "3137021",
+"normal": 3.0,
+"warning": 6.8
+},
+"sarawak|kapit|belaga": {
+"alert": 47.3,
+"danger": 52.0,
+"jps_id": "2737103",
+"normal": 41.06,
+"warning": 50.9
+},
+"sarawak|kapit|gaat b": {
+"alert": 42.5,
+"danger": 46.5,
+"jps_id": "1834002",
+"normal": 32.0,
+"warning": 44.5
+},
+"sarawak|kapit|giam pasang b": {
+"alert": 5.0,
+"danger": 6.0,
+"jps_id": "2737002",
+"normal": 3.0,
+"warning": 5.5
+},
+"sarawak|kapit|kapit town": {
+"alert": 11.9,
+"danger": 15.3,
+"jps_id": "2029003",
+"normal": 10.0,
+"warning": 14.55
+},
+"sarawak|kapit|nanga entawau": {
+"alert": 11.3,
+"danger": 12.8,
+"jps_id": "1836042",
+"normal": 6.2,
+"warning": 12.3
+},
+"sarawak|kapit|nanga sebatu": {
+"alert": 11.0,
+"danger": 15.0,
+"jps_id": null,
+"normal": 5.0,
+"warning": 14.0
+},
+"sarawak|kapit|punan bah b": {
+"alert": 9.0,
+"danger": 11.0,
+"jps_id": "2333002",
+"normal": 5.37,
+"warning": 10.0
+},
+"sarawak|kapit|sambop b": {
+"alert": 15.86,
+"danger": 19.12,
+"jps_id": "2939002",
+"normal": 6.0,
+"warning": 16.85
+},
+"sarawak|kapit|song b": {
+"alert": 10.59,
+"danger": 12.59,
+"jps_id": "2025012",
+"normal": 5.59,
+"warning": 11.59
+},
+"sarawak|kuching|aman 5 bridge": {
+"alert": 37.4,
+"danger": 38.0,
+"jps_id": "1102002",
+"normal": 31.2,
+"warning": 37.58
+},
+"sarawak|kuching|barrage": {
+"alert": 2.8,
+"danger": 3.2,
+"jps_id": "1504001",
+"normal": 0.06,
+"warning": 2.92
+},
+"sarawak|kuching|batu kawa bridge": {
+"alert": 2.5,
+"danger": 4.2,
+"jps_id": "1502005",
+"normal": 0.68,
+"warning": 3.0
+},
+"sarawak|kuching|batu kitang telemetry": {
+"alert": 3.0,
+"danger": 5.0,
+"jps_id": "1402048",
+"normal": 1.85,
+"warning": 4.5
+},
+"sarawak|kuching|bau bridge": {
+"alert": 12.46,
+"danger": 12.86,
+"jps_id": "1401006",
+"normal": 5.1,
+"warning": 12.58
+},
+"sarawak|kuching|buan bidi": {
+"alert": 16.47,
+"danger": 18.07,
+"jps_id": "1301002",
+"normal": 11.51,
+"warning": 17.07
+},
+"sarawak|kuching|buso": {
+"alert": 8.0,
+"danger": 10.7,
+"jps_id": "1401402",
+"normal": 1.0,
+"warning": 10.2
+},
+"sarawak|kuching|central park": {
+"alert": 2.5,
+"danger": 3.5,
+"jps_id": "1503434",
+"normal": 0.2,
+"warning": 3.0
+},
+"sarawak|kuching|desa wira": {
+"alert": 2.5,
+"danger": 3.5,
+"jps_id": "1502402",
+"normal": 0.35,
+"warning": 3.0
+},
+"sarawak|kuching|kampung git": {
+"alert": 12.29,
+"danger": 13.29,
+"jps_id": "1302078",
+"normal": 5.0,
+"warning": 12.79
+},
+"sarawak|kuching|kampung rayu": {
+"alert": 10.3,
+"danger": 11.5,
+"jps_id": "1601001",
+"normal": 2.3,
+"warning": 10.9
+},
+"sarawak|kuching|kampung salak": {
+"alert": 3.4,
+"danger": 3.8,
+"jps_id": "1602402",
+"normal": -0.4,
+"warning": 3.6
+},
+"sarawak|kuching|kuala maong": {
+"alert": 2.0,
+"danger": 2.8,
+"jps_id": "1502435",
+"normal": 0.25,
+"warning": 2.4
+},
+"sarawak|kuching|malihah": {
+"alert": 6.8,
+"danger": 7.4,
+"jps_id": "1502004",
+"normal": 2.8,
+"warning": 7.1
+},
+"sarawak|kuching|padungan": {
+"alert": 2.6,
+"danger": 3.3,
+"jps_id": "1503014",
+"normal": 0.5,
+"warning": 2.81
+},
+"sarawak|kuching|rtb bau": {
+"alert": 12.46,
+"danger": 12.86,
+"jps_id": "1401403",
+"normal": 8.5,
+"warning": 12.58
+},
+"sarawak|kuching|satok b": {
+"alert": 2.4,
+"danger": 2.8,
+"jps_id": "1503015",
+"normal": -0.3,
+"warning": 2.52
+},
+"sarawak|kuching|sungai opar": {
+"alert": 15.83,
+"danger": 16.43,
+"jps_id": "1400002",
+"normal": 11.8,
+"warning": 16.01
+},
+"sarawak|kuching|sungai pedid": {
+"alert": 20.53,
+"danger": 21.13,
+"jps_id": "1200002",
+"normal": 14.25,
+"warning": 20.71
+},
+"sarawak|kuching|sungai tengah": {
+"alert": 7.1,
+"danger": 7.7,
+"jps_id": "1502006",
+"normal": 4.35,
+"warning": 7.4
+},
+"sarawak|kuching|ulu batang kayan": {
+"alert": 13.0,
+"danger": 15.0,
+"jps_id": "1599001",
+"normal": 3.0,
+"warning": 14.0
+},
+"sarawak|limbang|batu danau (rhn)": {
+"alert": 5.0,
+"danger": 6.0,
+"jps_id": "26599",
+"normal": 3.5,
+"warning": 5.4
+},
+"sarawak|limbang|lubok piasau ii": {
+"alert": 1.2,
+"danger": 2.2,
+"jps_id": null,
+"normal": 0.8,
+"warning": 1.5
+},
+"sarawak|limbang|nanga insungai": {
+"alert": 8.2,
+"danger": 11.5,
+"jps_id": "4448001",
+"normal": 6.5,
+"warning": 9.1
+},
+"sarawak|limbang|sundar": {
+"alert": 3.2,
+"danger": 3.6,
+"jps_id": "4852002",
+"normal": 2.0,
+"warning": 3.4
+},
+"sarawak|miri|batu niah bazaar": {
+"alert": 2.62,
+"danger": 5.22,
+"jps_id": null,
+"normal": 0.38,
+"warning": 4.72
+},
+"sarawak|miri|bekenu": {
+"alert": 1.0,
+"danger": 1.5,
+"jps_id": null,
+"normal": 0.5,
+"warning": 1.2
+},
+"sarawak|miri|benawa": {
+"alert": 6.0,
+"danger": 8.0,
+"jps_id": "4043059",
+"normal": 3.5,
+"warning": 7.0
+},
+"sarawak|miri|kuala tutong": {
+"alert": 2.5,
+"danger": 2.9,
+"jps_id": null,
+"normal": 0.7,
+"warning": 2.7
+},
+"sarawak|miri|lio matu": {
+"alert": 7.0,
+"danger": 9.0,
+"jps_id": "3152011",
+"normal": 0.8,
+"warning": 8.0
+},
+"sarawak|miri|long akah": {
+"alert": 9.0,
+"danger": 11.0,
+"jps_id": "3347003",
+"normal": 2.15,
+"warning": 10.0
+},
+"sarawak|miri|long jegan": {
+"alert": 10.5,
+"danger": 12.0,
+"jps_id": "3541033",
+"normal": 5.0,
+"warning": 11.5
+},
+"sarawak|miri|long lama": {
+"alert": 14.15,
+"danger": 15.45,
+"jps_id": "3744009",
+"normal": 7.65,
+"warning": 15.15
+},
+"sarawak|miri|long panai": {
+"alert": 6.5,
+"danger": 8.0,
+"jps_id": "3945017",
+"normal": 2.0,
+"warning": 7.5
+},
+"sarawak|miri|long teru": {
+"alert": 6.0,
+"danger": 8.0,
+"jps_id": "3842034",
+"normal": 5.0,
+"warning": 7.0
+},
+"sarawak|miri|miri did": {
+"alert": 2.5,
+"danger": 3.0,
+"jps_id": "4440060",
+"normal": 1.4,
+"warning": 2.7
+},
+"sarawak|mukah|daro": {
+"alert": 5.3,
+"danger": 5.9,
+"jps_id": "2514005",
+"normal": 3.2,
+"warning": 5.6
+},
+"sarawak|mukah|kuala balingian": {
+"alert": 0.8,
+"danger": 1.4,
+"jps_id": "3025001",
+"normal": -0.16,
+"warning": 1.1
+},
+"sarawak|mukah|matu": {
+"alert": 1.74,
+"danger": 3.34,
+"jps_id": null,
+"normal": 1.2,
+"warning": 2.64
+},
+"sarawak|mukah|mid bruit": {
+"alert": 4.8,
+"danger": 5.3,
+"jps_id": "2613401",
+"normal": 3.3,
+"warning": 5.1
+},
+"sarawak|mukah|oya water works": {
+"alert": 4.0,
+"danger": 5.0,
+"jps_id": "2818001",
+"normal": 1.4,
+"warning": 4.5
+},
+"sarawak|mukah|sungai dausan": {
+"alert": 6.0,
+"danger": 6.6,
+"jps_id": "2516001",
+"normal": 4.0,
+"warning": 6.3
+},
+"sarawak|samarahan|8th mile": {
+"alert": 7.04,
+"danger": 9.45,
+"jps_id": "26614",
+"normal": 5.2,
+"warning": 8.64
+},
+"sarawak|samarahan|asajaya water intake": {
+"alert": 3.62,
+"danger": 4.72,
+"jps_id": "1506401",
+"normal": 1.65,
+"warning": 4.12
+},
+"sarawak|samarahan|gedong": {
+"alert": 4.82,
+"danger": 6.3,
+"jps_id": null,
+"normal": 1.9,
+"warning": 5.9
+},
+"sarawak|samarahan|kampung entingan": {
+"alert": 2.0,
+"danger": 3.0,
+"jps_id": null,
+"normal": 1.0,
+"warning": 2.5
+},
+"sarawak|samarahan|kampung mang": {
+"alert": 2.0,
+"danger": 3.0,
+"jps_id": null,
+"normal": 1.5,
+"warning": 2.5
+},
+"sarawak|samarahan|mid sungai kuap": {
+"alert": 3.0,
+"danger": 3.8,
+"jps_id": "1503009",
+"normal": 0.6,
+"warning": 3.3
+},
+"sarawak|sarikei|ambas": {
+"alert": 6.92,
+"danger": 7.92,
+"jps_id": "1915401",
+"normal": 3.18,
+"warning": 7.42
+},
+"sarawak|sarikei|bintangor": {
+"alert": 2.48,
+"danger": 3.3,
+"jps_id": "2116030",
+"normal": 0.3,
+"warning": 2.6
+},
+"sarawak|sarikei|nanga ayam": {
+"alert": 18.45,
+"danger": 19.45,
+"jps_id": "1918401",
+"normal": 7.2,
+"warning": 18.95
+},
+"sarawak|sarikei|sarikei did": {
+"alert": 2.7,
+"danger": 3.3,
+"jps_id": "2115008",
+"normal": 0.3,
+"warning": 3.0
+},
+"sarawak|serian|batu gong": {
+"alert": 4.56,
+"danger": 6.5,
+"jps_id": "1304439",
+"normal": 2.41,
+"warning": 5.9
+},
+"sarawak|serian|kampung lintang panchor": {
+"alert": 5.5,
+"danger": 6.5,
+"jps_id": "26575",
+"normal": 3.0,
+"warning": 6.0
+},
+"sarawak|serian|krusen": {
+"alert": 15.2,
+"danger": 17.4,
+"jps_id": "1004001",
+"normal": 11.93,
+"warning": 16.8
+},
+"sarawak|serian|serian": {
+"alert": 8.3,
+"danger": 9.0,
+"jps_id": "1105027",
+"normal": 3.8,
+"warning": 8.6
+},
+"sarawak|sibu|durin bazaar": {
+"alert": 3.5,
+"danger": 4.5,
+"jps_id": "2119017",
+"normal": 2.5,
+"warning": 3.8
+},
+"sarawak|sibu|express terminal": {
+"alert": 2.5,
+"danger": 2.9,
+"jps_id": "2218004",
+"normal": 0.8,
+"warning": 2.62
+},
+"sarawak|sibu|jabatan laut": {
+"alert": 2.3,
+"danger": 2.9,
+"jps_id": null,
+"normal": 1.3,
+"warning": 2.48
+},
+"sarawak|sibu|kanowit town": {
+"alert": 4.59,
+"danger": 5.59,
+"jps_id": "2121001",
+"normal": 1.8,
+"warning": 4.89
+},
+"sarawak|sibu|lebaan": {
+"alert": 3.4,
+"danger": 4.9,
+"jps_id": null,
+"normal": 2.1,
+"warning": 4.15
+},
+"sarawak|sibu|nanga kabah": {
+"alert": 6.29,
+"danger": 7.79,
+"jps_id": "2023001",
+"normal": 1.34,
+"warning": 7.04
+},
+"sarawak|sibu|nanga lemai b": {
+"alert": 2.8,
+"danger": 3.8,
+"jps_id": null,
+"normal": 1.8,
+"warning": 3.1
+},
+"sarawak|sibu|nanga machan b": {
+"alert": 8.0,
+"danger": 10.0,
+"jps_id": "2020001",
+"normal": 3.0,
+"warning": 9.0
+},
+"sarawak|sibu|permai jaya": {
+"alert": 3.1,
+"danger": 3.7,
+"jps_id": "18971",
+"normal": 2.0,
+"warning": 3.4
+},
+"sarawak|sibu|rantau panjang b": {
+"alert": 2.0,
+"danger": 2.6,
+"jps_id": "2418014",
+"normal": 0.6,
+"warning": 2.18
+},
+"sarawak|sibu|sarawak maritime": {
+"alert": 2.8,
+"danger": 3.3,
+"jps_id": "2218005",
+"normal": 0.6,
+"warning": 2.95
+},
+"sarawak|sibu|selangau b": {
+"alert": 16.9,
+"danger": 17.9,
+"jps_id": null,
+"normal": 12.0,
+"warning": 17.2
+},
+"sarawak|sibu|stabau": {
+"alert": 3.5,
+"danger": 4.3,
+"jps_id": "2218007",
+"normal": 2.4,
+"warning": 3.74
+},
+"sarawak|sibu|stapang b": {
+"alert": 12.2,
+"danger": 14.2,
+"jps_id": "2321001",
+"normal": 9.5,
+"warning": 13.2
+},
+"sarawak|sibu|sungai bidut": {
+"alert": 2.8,
+"danger": 3.4,
+"jps_id": null,
+"normal": 1.4,
+"warning": 2.98
+},
+"sarawak|sibu|sungai merah": {
+"alert": 2.8,
+"danger": 3.1,
+"jps_id": "2318427",
+"normal": 1.11,
+"warning": 3.0
+},
+"sarawak|sibu|sungai salim b": {
+"alert": 2.65,
+"danger": 3.1,
+"jps_id": null,
+"normal": 2.0,
+"warning": 2.8
+},
+"sarawak|sibu|sungai teku": {
+"alert": 2.6,
+"danger": 3.2,
+"jps_id": "2318005",
+"normal": 1.6,
+"warning": 2.78
+},
+"sarawak|sibu|tamin": {
+"alert": 7.0,
+"danger": 8.5,
+"jps_id": "2520052",
+"normal": 5.0,
+"warning": 7.5
+},
+"sarawak|sibu|ulu sungai merah": {
+"alert": 2.2,
+"danger": 2.5,
+"jps_id": null,
+"normal": 1.6,
+"warning": 2.29
+},
+"sarawak|sri aman|bau sungai": {
+"alert": 16.0,
+"danger": 20.0,
+"jps_id": "1519001",
+"normal": 13.3,
+"warning": 17.0
+},
+"sarawak|sri aman|engkilili jkr wharf": {
+"alert": 8.8,
+"danger": 9.79,
+"jps_id": "26127",
+"normal": 6.0,
+"warning": 9.43
+},
+"sarawak|sri aman|entebar": {
+"alert": 31.9,
+"danger": 33.5,
+"jps_id": "26579",
+"normal": 26.0,
+"warning": 32.1
+},
+"sarawak|sri aman|pantu": {
+"alert": 4.9,
+"danger": 6.3,
+"jps_id": "1111008",
+"normal": 1.8,
+"warning": 5.58
+},
+"sarawak|sri aman|sri aman telemetry": {
+"alert": 4.9,
+"danger": 5.5,
+"jps_id": null,
+"normal": 3.0,
+"warning": 5.2
+},
+"selangor|gombak|empangan klang gate d/s (f2)": {
+"alert": 62.0,
+"danger": 63.0,
+"jps_id": "28338",
+"normal": 60.06,
+"warning": 62.5
+},
+"selangor|gombak|sg. bakau di country homes (f2)": {
+"alert": 18.0,
+"danger": 20.0,
+"jps_id": "28341",
+"normal": 15.79,
+"warning": 19.0
+},
+"selangor|gombak|sg. batu di batu caves": {
+"alert": 51.0,
+"danger": 52.0,
+"jps_id": "3216067",
+"normal": 48.9,
+"warning": 51.5
+},
+"selangor|gombak|sg. batu di batu caves (f2)": {
+"alert": 51.0,
+"danger": 52.0,
+"jps_id": "27918",
+"normal": 49.0,
+"warning": 51.5
+},
+"selangor|gombak|sg. batu di saluran masuk empangan batu (f2)": {
+"alert": 105.0,
+"danger": 106.0,
+"jps_id": "28328",
+"normal": 104.78,
+"warning": 105.5
+},
+"selangor|gombak|sg. gombak batu 10, gombak (f2)": {
+"alert": 76.2,
+"danger": 78.0,
+"jps_id": "28323",
+"normal": 74.63,
+"warning": 77.0
+},
+"selangor|gombak|sg. gombak di batu 10": {
+"alert": 76.7,
+"danger": 77.3,
+"jps_id": null,
+"normal": 76.4,
+"warning": 77.0
+},
+"selangor|gombak|sg. gombak di hospital jheoa (f2)": {
+"alert": 105.0,
+"danger": 107.0,
+"jps_id": "28334",
+"normal": 101.79,
+"warning": 106.0
+},
+"selangor|gombak|sg. gombak di kg tanguit (f2)": {
+"alert": 55.7,
+"danger": 56.5,
+"jps_id": "28335",
+"normal": 54.93,
+"warning": 56.0
+},
+"selangor|gombak|sg. gombak di kg. melayu seri kundang (f2)": {
+"alert": 22.7,
+"danger": 23.7,
+"jps_id": "28340",
+"normal": 21.23,
+"warning": 23.2
+},
+"selangor|gombak|sg. gong di country homes rawang": {
+"alert": 18.5,
+"danger": 19.5,
+"jps_id": "3315038",
+"normal": 15.8,
+"warning": 19.0
+},
+"selangor|gombak|sg. kemensah di kg. kemensah": {
+"alert": 61.0,
+"danger": 62.0,
+"jps_id": "26557",
+"normal": 60.0,
+"warning": 61.5
+},
+"selangor|gombak|sg. kuang di kg. melayu seri kundang": {
+"alert": 22.7,
+"danger": 23.7,
+"jps_id": "3215080",
+"normal": 20.8,
+"warning": 23.2
+},
+"selangor|gombak|sg. rawang di rawang tin": {
+"alert": 28.2,
+"danger": 28.8,
+"jps_id": null,
+"normal": 27.9,
+"warning": 28.5
+},
+"selangor|gombak|sg. rawang di taman tun teja": {
+"alert": 34.3,
+"danger": 35.3,
+"jps_id": "3315042",
+"normal": 32.8,
+"warning": 34.8
+},
+"selangor|gombak|sg. rawang di tmn. tun teja (f2)": {
+"alert": 35.5,
+"danger": 37.4,
+"jps_id": "27851",
+"normal": 32.95,
+"warning": 36.8
+},
+"selangor|hulu langat|jalan seri tanjung (f2)": {
+"alert": 34.5,
+"danger": 35.9,
+"jps_id": "27573",
+"normal": null,
+"warning": 35.0
+},
+"selangor|hulu langat|sg. ampang di kg. lembah jaya utara": {
+"alert": 63.2,
+"danger": 63.8,
+"jps_id": "3117482",
+"normal": 60.0,
+"warning": 63.5
+},
+"selangor|hulu langat|sg. balak di kg. baru balakong": {
+"alert": 37.3,
+"danger": 37.9,
+"jps_id": null,
+"normal": 37.0,
+"warning": 37.6
+},
+"selangor|hulu langat|sg. beranang di kg. sesapan batu rembau": {
+"alert": 34.0,
+"danger": 35.0,
+"jps_id": "26556",
+"normal": 32.5,
+"warning": 34.5
+},
+"selangor|hulu langat|sg. jelok di taman ttdi grove": {
+"alert": 35.85,
+"danger": 36.45,
+"jps_id": null,
+"normal": 35.1,
+"warning": 36.15
+},
+"selangor|hulu langat|sg. kantan": {
+"alert": 28.5,
+"danger": 29.1,
+"jps_id": null,
+"normal": 27.25,
+"warning": 28.8
+},
+"selangor|hulu langat|sg. langat di batu 12": {
+"alert": 41.4,
+"danger": 42.4,
+"jps_id": "3017082",
+"normal": 39.4,
+"warning": 42.1
+},
+"selangor|hulu langat|sg. langat di batu 12, hulu langat (f2)": {
+"alert": 41.4,
+"danger": 42.4,
+"jps_id": "27571",
+"normal": 39.69,
+"warning": 42.1
+},
+"selangor|hulu langat|sg. langat di batu 15": {
+"alert": 55.3,
+"danger": 55.9,
+"jps_id": "3018104",
+"normal": 52.1,
+"warning": 55.6
+},
+"selangor|hulu langat|sg. langat di batu 20": {
+"alert": 89.8,
+"danger": 90.4,
+"jps_id": "3118104",
+"normal": 86.8,
+"warning": 90.1
+},
+"selangor|hulu langat|sg. langat di batu 20, hulu langat (f2)": {
+"alert": 89.8,
+"danger": 90.4,
+"jps_id": "28372",
+"normal": 88.45,
+"warning": 90.1
+},
+"selangor|hulu langat|sg. langat di batu 9, hulu langat (f2)": {
+"alert": 38.6,
+"danger": 39.6,
+"jps_id": "28371",
+"normal": 36.71,
+"warning": 39.1
+},
+"selangor|hulu langat|sg. langat di empangan langat d/s (f2)": {
+"alert": 160.5,
+"danger": 162.0,
+"jps_id": "28374",
+"normal": 158.67,
+"warning": 161.0
+},
+"selangor|hulu langat|sg. langat di taman west country kajang": {
+"alert": 21.4,
+"danger": 22.4,
+"jps_id": null,
+"normal": 19.65,
+"warning": 21.9
+},
+"selangor|hulu langat|sg. langat di tnb pangsun": {
+"alert": 132.9,
+"danger": 133.9,
+"jps_id": "3218101",
+"normal": 131.9,
+"warning": 133.4
+},
+"selangor|hulu langat|sg. lui di kg. sg. lui": {
+"alert": 77.3,
+"danger": 78.3,
+"jps_id": "3118103",
+"normal": 76.8,
+"warning": 77.8
+},
+"selangor|hulu langat|sg. semenyih di jalan seri tanjung": {
+"alert": 34.0,
+"danger": 35.0,
+"jps_id": "2918080",
+"normal": 31.0,
+"warning": 34.5
+},
+"selangor|hulu langat|sg. semenyih di kg. pasir": {
+"alert": 48.8,
+"danger": 50.3,
+"jps_id": "3018103",
+"normal": 48.3,
+"warning": 49.8
+},
+"selangor|hulu langat|sg. semenyih di pekan bangi lama": {
+"alert": 15.7,
+"danger": 16.7,
+"jps_id": "2817180",
+"normal": 13.7,
+"warning": 16.2
+},
+"selangor|hulu selangor|sg. batang kali di batang kali": {
+"alert": 35.2,
+"danger": 35.8,
+"jps_id": "3416027",
+"normal": 34.0,
+"warning": 35.5
+},
+"selangor|hulu selangor|sg. bernam di jambatan skc": {
+"alert": 18.1,
+"danger": 19.1,
+"jps_id": "3813001",
+"normal": 16.6,
+"warning": 18.6
+},
+"selangor|hulu selangor|sg. bernam di kg. sg. selisek": {
+"alert": 26.1,
+"danger": 27.1,
+"jps_id": "3714080",
+"normal": 23.0,
+"warning": 26.8
+},
+"selangor|hulu selangor|sg. bernam di tanjung malim": {
+"alert": 40.6,
+"danger": 41.1,
+"jps_id": "3615003",
+"normal": 38.3,
+"warning": 40.9
+},
+"selangor|hulu selangor|sg. guntong di kg. sungai buaya": {
+"alert": 18.0,
+"danger": 19.0,
+"jps_id": "3315040",
+"normal": 15.0,
+"warning": 18.5
+},
+"selangor|hulu selangor|sg. kerling di kerling": {
+"alert": 47.6,
+"danger": 48.3,
+"jps_id": "3516026",
+"normal": 45.0,
+"warning": 47.9
+},
+"selangor|hulu selangor|sg. selangor di ampang pecah": {
+"alert": 51.3,
+"danger": 51.9,
+"jps_id": "3516025",
+"normal": 50.1,
+"warning": 51.6
+},
+"selangor|hulu selangor|sg. selangor di kg. timah": {
+"alert": 18.8,
+"danger": 19.8,
+"jps_id": "3415001",
+"normal": 17.5,
+"warning": 19.3
+},
+"selangor|hulu selangor|sg. serendah di serendah": {
+"alert": 35.8,
+"danger": 36.4,
+"jps_id": "3316029",
+"normal": 34.0,
+"warning": 36.1
+},
+"selangor|klang|sg. binjai di pekan meru": {
+"alert": 3.8,
+"danger": 4.2,
+"jps_id": null,
+"normal": 2.8,
+"warning": 4.0
+},
+"selangor|klang|sg. kapar kechil di kg. perepat, kapar": {
+"alert": 0.6,
+"danger": 1.5,
+"jps_id": null,
+"normal": 0.0,
+"warning": 1.0
+},
+"selangor|klang|sg. klang di bandar klang": {
+"alert": 2.4,
+"danger": 3.0,
+"jps_id": null,
+"normal": 2.2,
+"warning": 2.7
+},
+"selangor|klang|sg. klang di kg. lombong": {
+"alert": 2.0,
+"danger": 4.0,
+"jps_id": "27233",
+"normal": 1.0,
+"warning": 3.0
+},
+"selangor|klang|sg. klang di taman sri muda": {
+"alert": 4.4,
+"danger": 5.0,
+"jps_id": "3015084",
+"normal": 2.8,
+"warning": 4.7
+},
+"selangor|klang|sg. rasau di taman desa kemuning": {
+"alert": 2.6,
+"danger": 3.0,
+"jps_id": null,
+"normal": 1.5,
+"warning": 2.8
+},
+"selangor|klang|sg. rasau di tugu keris": {
+"alert": 3.3,
+"danger": 3.9,
+"jps_id": "3015089",
+"normal": 1.7,
+"warning": 3.6
+},
+"selangor|kuala langat|p/a kg. teluk pulai": {
+"alert": 1.3,
+"danger": 1.9,
+"jps_id": null,
+"normal": 0.7,
+"warning": 1.6
+},
+"selangor|kuala langat|rs batu 8": {
+"alert": 3.5,
+"danger": 4.5,
+"jps_id": "25939",
+"normal": 0.1,
+"warning": 4.0
+},
+"selangor|kuala langat|sg. kundang di kg. kundang": {
+"alert": 2.8,
+"danger": 3.8,
+"jps_id": "2615180",
+"normal": 1.8,
+"warning": 3.3
+},
+"selangor|kuala langat|sg. langat di bukit changgang": {
+"alert": 3.3,
+"danger": 4.2,
+"jps_id": null,
+"normal": 1.9,
+"warning": 3.8
+},
+"selangor|kuala langat|sg. langat di jps sg. manggis": {
+"alert": 2.2,
+"danger": 3.2,
+"jps_id": "2815180",
+"normal": 0.5,
+"warning": 2.7
+},
+"selangor|kuala selangor|p/a pekan tg. karang": {
+"alert": 2.0,
+"danger": 2.3,
+"jps_id": null,
+"normal": 1.8,
+"warning": 2.2
+},
+"selangor|kuala selangor|p/a sg. yu 1": {
+"alert": 1.8,
+"danger": 2.3,
+"jps_id": null,
+"normal": 1.5,
+"warning": 2.0
+},
+"selangor|kuala selangor|sg. buloh di parit mahang": {
+"alert": 3.5,
+"danger": 4.5,
+"jps_id": "3313070",
+"normal": 1.0,
+"warning": 4.0
+},
+"selangor|kuala selangor|sg. kajang di tg. karang": {
+"alert": 1.0,
+"danger": 2.0,
+"jps_id": "27237",
+"normal": 0.5,
+"warning": 1.5
+},
+"selangor|kuala selangor|sg. selangor di kg. asahan": {
+"alert": 3.22,
+"danger": 3.54,
+"jps_id": null,
+"normal": 0.2,
+"warning": 3.38
+},
+"selangor|kuala selangor|sg. selangor di kg. lubuk jaya": {
+"alert": 1.75,
+"danger": 2.5,
+"jps_id": null,
+"normal": 1.5,
+"warning": 2.0
+},
+"selangor|kuala selangor|sg. selangor di rantau panjang": {
+"alert": 6.8,
+"danger": 7.8,
+"jps_id": "3414032",
+"normal": 4.5,
+"warning": 7.3
+},
+"selangor|kuala selangor|sg. selangor di teluk penyamun (jeti)": {
+"alert": 2.1,
+"danger": 3.1,
+"jps_id": null,
+"normal": 1.3,
+"warning": 2.6
+},
+"selangor|kuala selangor|sg. sembilang di kg. bukit kerayong": {
+"alert": 4.0,
+"danger": 5.0,
+"jps_id": "27236",
+"normal": 3.5,
+"warning": 4.5
+},
+"selangor|petaling|sg. bakul di kg. budiman": {
+"alert": 7.4,
+"danger": 8.0,
+"jps_id": "26039",
+"normal": 7.1,
+"warning": 7.7
+},
+"selangor|petaling|sg. buloh di paya jaras": {
+"alert": 23.7,
+"danger": 25.2,
+"jps_id": "3115080",
+"normal": 22.0,
+"warning": 24.3
+},
+"selangor|petaling|sg. damansara di kg. melayu subang": {
+"alert": 16.4,
+"danger": 17.4,
+"jps_id": "3115084",
+"normal": 14.6,
+"warning": 16.9
+},
+"selangor|petaling|sg. damansara di ttdi jaya": {
+"alert": 7.3,
+"danger": 8.3,
+"jps_id": "3015083",
+"normal": 3.5,
+"warning": 7.8
+},
+"selangor|petaling|sg. kayu ara di taman mayang": {
+"alert": 17.0,
+"danger": 18.0,
+"jps_id": "3115083",
+"normal": 14.5,
+"warning": 17.5
+},
+"selangor|petaling|sg. klang di puchong drop": {
+"alert": 9.0,
+"danger": 10.0,
+"jps_id": "3015001",
+"normal": 7.5,
+"warning": 9.5
+},
+"selangor|petaling|sg. kuyoh di seri kembangan": {
+"alert": 38.5,
+"danger": 40.0,
+"jps_id": "3017107",
+"normal": 36.5,
+"warning": 39.0
+},
+"selangor|petaling|sg. penchala di kg. gandhi": {
+"alert": 13.0,
+"danger": 15.0,
+"jps_id": "3016080",
+"normal": 10.3,
+"warning": 14.0
+},
+"selangor|sabak bernam|sg. bernam di rimba kdr": {
+"alert": 1.7,
+"danger": 2.3,
+"jps_id": null,
+"normal": 1.0,
+"warning": 2.0
+},
+"selangor|sabak bernam|sg. bernam di sg. air tawar": {
+"alert": 4.3,
+"danger": 4.9,
+"jps_id": "3808001",
+"normal": 1.0,
+"warning": 4.6
+},
+"selangor|sepang|sg. jenderam di jenderam hulu": {
+"alert": 11.0,
+"danger": 12.3,
+"jps_id": "25945",
+"normal": 8.9,
+"warning": 12.0
+},
+"selangor|sepang|sg. jijan di taman desa merpati": {
+"alert": 11.4,
+"danger": 12.0,
+"jps_id": null,
+"normal": 11.1,
+"warning": 11.7
+},
+"selangor|sepang|sg. labu di kg. labu lanjut (masjid klia)": {
+"alert": 7.0,
+"danger": 9.0,
+"jps_id": "2816113",
+"normal": 4.1,
+"warning": 8.0
+},
+"selangor|sepang|sg. labu di kg. salak tinggi": {
+"alert": 8.2,
+"danger": 9.2,
+"jps_id": "2717134",
+"normal": 7.0,
+"warning": 8.7
+},
+"selangor|sepang|sg. langat di dengkil": {
+"alert": 6.4,
+"danger": 7.5,
+"jps_id": "2816041",
+"normal": 3.9,
+"warning": 6.9
+},
+"selangor|sepang|sg. langat di jenderam hilir": {
+"alert": 10.4,
+"danger": 11.0,
+"jps_id": null,
+"normal": 7.4,
+"warning": 10.7
+},
+"terengganu|besut|sg. besut di jambatan jerteh": {
+"alert": 6.0,
+"danger": 8.5,
+"jps_id": "5724003",
+"normal": 2.3,
+"warning": 7.0
+},
+"terengganu|besut|sg. besut di jambatan keruak": {
+"alert": 33.0,
+"danger": 35.0,
+"jps_id": "5424001",
+"normal": 28.5,
+"warning": 34.0
+},
+"terengganu|besut|sg. besut di jambatan keruak (f2)": {
+"alert": 33.0,
+"danger": 35.0,
+"jps_id": "27200",
+"normal": 28.5,
+"warning": 34.0
+},
+"terengganu|besut|sg. besut di kg. la": {
+"alert": 19.8,
+"danger": 21.8,
+"jps_id": "5524001",
+"normal": 16.5,
+"warning": 20.8
+},
+"terengganu|besut|sg. keluang di kg. tembila (f2)": {
+"alert": 3.0,
+"danger": 5.0,
+"jps_id": "27203",
+"normal": 1.0,
+"warning": 4.0
+},
+"terengganu|dungun|sg dungun di pasir raja (f2)": {
+"alert": 37.2,
+"danger": 38.7,
+"jps_id": "27206",
+"normal": 35.7,
+"warning": 37.7
+},
+"terengganu|dungun|sg. dungun di jam. jerangau (rhn)": {
+"alert": 10.9,
+"danger": 12.5,
+"jps_id": "25531",
+"normal": 5.0,
+"warning": 11.7
+},
+"terengganu|dungun|sg. dungun di jambatan jerangau": {
+"alert": 10.0,
+"danger": 12.5,
+"jps_id": "4832011",
+"normal": 5.0,
+"warning": 11.5
+},
+"terengganu|dungun|sg. dungun di kg. pasir raja": {
+"alert": 37.2,
+"danger": 38.7,
+"jps_id": "5624002",
+"normal": 35.7,
+"warning": 37.7
+},
+"terengganu|dungun|sg. dungun di kuala jengai (f2)": {
+"alert": 19.5,
+"danger": 21.0,
+"jps_id": "27207",
+"normal": 14.0,
+"warning": 20.0
+},
+"terengganu|hulu terengganu|empangan puah (f1)": {
+"alert": 296.0,
+"danger": 298.0,
+"jps_id": null,
+"normal": 287.0,
+"warning": 297.0
+},
+"terengganu|hulu terengganu|pulau ilo (f1)": {
+"alert": 145.0,
+"danger": 147.0,
+"jps_id": null,
+"normal": 138.0,
+"warning": 146.0
+},
+"terengganu|hulu terengganu|sg. berang di kg. menerong (f1)": {
+"alert": 23.5,
+"danger": 24.5,
+"jps_id": "27962",
+"normal": 20.0,
+"warning": 24.0
+},
+"terengganu|hulu terengganu|sg. peneh di felda mengkawang": {
+"alert": 36.5,
+"danger": 38.5,
+"jps_id": null,
+"normal": 35.0,
+"warning": 37.5
+},
+"terengganu|hulu terengganu|sg. peneh di kg. felda mengkawang (f1)": {
+"alert": 36.5,
+"danger": 38.5,
+"jps_id": null,
+"normal": 35.0,
+"warning": 37.5
+},
+"terengganu|hulu terengganu|sg. telemong di kuala ping (f1)": {
+"alert": 17.7,
+"danger": 19.7,
+"jps_id": "5229048",
+"normal": 16.5,
+"warning": 18.7
+},
+"terengganu|hulu terengganu|sg. terengganu di jambatan kuala berang (f1)": {
+"alert": 9.0,
+"danger": 13.0,
+"jps_id": null,
+"normal": 4.5,
+"warning": 11.0
+},
+"terengganu|hulu terengganu|sg. terengganu di kg. dura (f1)": {
+"alert": 12.0,
+"danger": 14.5,
+"jps_id": "5029034",
+"normal": 8.0,
+"warning": 13.0
+},
+"terengganu|hulu terengganu|sg. terengganu di kg. tanggol (f1)": {
+"alert": 8.0,
+"danger": 9.8,
+"jps_id": null,
+"normal": 2.0,
+"warning": 9.0
+},
+"terengganu|hulu terengganu|sg. tersat di kg. sekayu (f1)": {
+"alert": 19.0,
+"danger": 21.0,
+"jps_id": null,
+"normal": 18.0,
+"warning": 20.0
+},
+"terengganu|kemaman|muara sg. kemaman di kg. geliga (f2)": {
+"alert": 3.0,
+"danger": 5.0,
+"jps_id": "26675",
+"normal": 1.0,
+"warning": 4.0
+},
+"terengganu|kemaman|sg. cherul di jambatan ban ho": {
+"alert": 17.0,
+"danger": 19.0,
+"jps_id": "4131001",
+"normal": 10.0,
+"warning": 18.0
+},
+"terengganu|kemaman|sg. kemaman di jamb. air putih (f2)": {
+"alert": 12.5,
+"danger": 14.0,
+"jps_id": "27192",
+"normal": 9.0,
+"warning": 13.0
+},
+"terengganu|kemaman|sg. kemaman di kg. rantau panjang (f2)": {
+"alert": 10.0,
+"danger": 12.0,
+"jps_id": "27196",
+"normal": 4.0,
+"warning": 11.0
+},
+"terengganu|kemaman|sg. kemaman di rumah pam paya paman": {
+"alert": 3.0,
+"danger": 4.0,
+"jps_id": "4233453",
+"normal": 1.4,
+"warning": 3.5
+},
+"terengganu|kemaman|sg. mas di kg. sg. mas (f2)": {
+"alert": 31.0,
+"danger": 32.0,
+"jps_id": "27197",
+"normal": 27.0,
+"warning": 31.5
+},
+"terengganu|kemaman|sg. tebak di jambatan tebak (f2)": {
+"alert": 17.5,
+"danger": 18.5,
+"jps_id": "27193",
+"normal": 15.0,
+"warning": 18.0
+},
+"terengganu|kemaman|sg. tumpat di kg. baru kemasik": {
+"alert": 1.6,
+"danger": 2.7,
+"jps_id": "25822",
+"normal": 1.0,
+"warning": 1.9
+},
+"terengganu|kuala nerus|parit utama di padang kemunting (f1)": {
+"alert": 3.2,
+"danger": 3.8,
+"jps_id": null,
+"normal": 1.5,
+"warning": 3.6
+},
+"terengganu|kuala nerus|sg. nerus di kg. jeram": {
+"alert": 2.0,
+"danger": 3.7,
+"jps_id": "25823",
+"normal": null,
+"warning": 3.2
+},
+"terengganu|kuala terengganu|sg. terengganu di bukit tumbuh (f1)": {
+"alert": 1.6,
+"danger": 2.5,
+"jps_id": null,
+"normal": 0.5,
+"warning": 2.0
+},
+"terengganu|kuala terengganu|sg. terengganu di drawbridge (f1)": {
+"alert": 1.4,
+"danger": 1.8,
+"jps_id": null,
+"normal": 0.3,
+"warning": 1.6
+},
+"terengganu|kuala terengganu|sg. terengganu di muzium terengganu (f1)": {
+"alert": 1.6,
+"danger": 2.4,
+"jps_id": null,
+"normal": 0.5,
+"warning": 2.0
+},
+"terengganu|kuala terengganu|sg. terengganu di rumah pam pulau bahagia (f1)": {
+"alert": 2.0,
+"danger": 4.0,
+"jps_id": null,
+"normal": 1.5,
+"warning": 3.0
+},
+"terengganu|marang|sg. marang di jamb. pengkalan berangan (f2)": {
+"alert": 2.0,
+"danger": 2.7,
+"jps_id": "27216",
+"normal": 1.0,
+"warning": 2.4
+},
+"terengganu|marang|sg. marang di jambatan pengkalan berangan": {
+"alert": 2.0,
+"danger": 2.7,
+"jps_id": "5031001",
+"normal": 1.0,
+"warning": 2.4
+},
+"terengganu|setiu|sg. guntung di jambatan guntung (f2)": {
+"alert": 11.0,
+"danger": 13.0,
+"jps_id": "27214",
+"normal": 8.5,
+"warning": 12.0
+},
+"terengganu|setiu|sg. nerus di kg. bukit": {
+"alert": 10.5,
+"danger": 13.2,
+"jps_id": null,
+"normal": 6.0,
+"warning": 12.0
+},
+"terengganu|setiu|sg. nerus di kg. bukit (f1)": {
+"alert": 10.5,
+"danger": 13.2,
+"jps_id": null,
+"normal": 6.0,
+"warning": 12.0
+},
+"terengganu|setiu|sg. nerus di kg. langkap (f1)": {
+"alert": 19.5,
+"danger": 21.0,
+"jps_id": "5428040",
+"normal": 17.0,
+"warning": 20.0
+},
+"terengganu|setiu|sg. setiu di jambatan che selamah (f2)": {
+"alert": 4.0,
+"danger": 6.0,
+"jps_id": "26678",
+"normal": 3.0,
+"warning": 5.0
+},
+"terengganu|setiu|sg. setiu di jambatan penarik (f2)": {
+"alert": 2.5,
+"danger": 4.5,
+"jps_id": "27211",
+"normal": 2.0,
+"warning": 3.0
+},
+"terengganu|setiu|sg. setiu di jambatan permaisuri": {
+"alert": 7.6,
+"danger": 8.8,
+"jps_id": "5527024",
+"normal": 5.5,
+"warning": 8.3
+},
+"terengganu|setiu|sg. setiu di kg. besut": {
+"alert": 16.0,
+"danger": 17.5,
+"jps_id": "5426003",
+"normal": 13.3,
+"warning": 17.0
+},
+"terengganu|setiu|sg. setiu di kg. besut (rhn)": {
+"alert": 16.0,
+"danger": 17.5,
+"jps_id": "25318",
+"normal": 13.3,
+"warning": 17.0
+},
+"terengganu|setiu|sg. setiu di kg. mangkuk (f2)": {
+"alert": 1.0,
+"danger": 2.0,
+"jps_id": "26677",
+"normal": 0.0,
+"warning": 1.5
+},
+"terengganu|setiu|sg. terengganu di stewong jatuh (f1)": {
+"alert": 45.0,
+"danger": 47.0,
+"jps_id": null,
+"normal": 42.0,
+"warning": 46.0
+},
+"wilayah persekutuan kuala lumpur|gombak (wpkl)|empangan klang gates": {
+"alert": 96.5,
+"danger": 97.0,
+"jps_id": "3217002",
+"normal": 94.0,
+"warning": 96.65
+},
+"wilayah persekutuan kuala lumpur|gombak (wpkl)|sg. batu di saluran keluar empangan batu (f2)": {
+"alert": 68.0,
+"danger": 69.2,
+"jps_id": "26419",
+"normal": 60.0,
+"warning": 68.5
+},
+"wilayah persekutuan kuala lumpur|gombak (wpkl)|sg. gombak di gombak barrage (f2)": {
+"alert": 49.17,
+"danger": 51.17,
+"jps_id": "27370",
+"normal": 35.0,
+"warning": 50.17
+},
+"wilayah persekutuan kuala lumpur|gombak (wpkl)|sg. gombak di gombak km. 11 dua (f2)": {
+"alert": 60.0,
+"danger": 62.0,
+"jps_id": "26409",
+"normal": 58.0,
+"warning": 61.0
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|empangan batu (f2)": {
+"alert": 103.5,
+"danger": 107.3,
+"jps_id": "26507",
+"normal": 102.7,
+"warning": 104.5
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|empangan klang (f2)": {
+"alert": 96.5,
+"danger": 97.0,
+"jps_id": "26511",
+"normal": 94.0,
+"warning": 96.65
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|saluran keluar kolam takungan flat sri johor (f2)": {
+"alert": 31.66,
+"danger": 32.66,
+"jps_id": null,
+"normal": 27.5,
+"warning": 32.16
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|saluran masuk kolam takungan flat sri johor (f2)": {
+"alert": 32.8,
+"danger": 34.8,
+"jps_id": "26394",
+"normal": 27.0,
+"warning": 33.8
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. batu di jinjang (f2)": {
+"alert": 49.88,
+"danger": 50.38,
+"jps_id": "26528",
+"normal": 49.5,
+"warning": 50.18
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. batu di kg. batu muda (f2)": {
+"alert": 41.81,
+"danger": 42.81,
+"jps_id": null,
+"normal": 39.7,
+"warning": 42.31
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. batu di kg. muda (f2)": {
+"alert": 47.0,
+"danger": 48.9,
+"jps_id": "26420",
+"normal": 43.0,
+"warning": 48.0
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. batu di sentul (f2)": {
+"alert": 31.67,
+"danger": 32.67,
+"jps_id": "26513",
+"normal": 30.0,
+"warning": 31.97
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. batu di taman sri kuching (f2)": {
+"alert": 35.64,
+"danger": 37.74,
+"jps_id": "26421",
+"normal": 33.0,
+"warning": 36.64
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. bunus di jln. tun razak": {
+"alert": 35.0,
+"danger": 36.0,
+"jps_id": "3117403",
+"normal": 31.0,
+"warning": 35.5
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. bunus di kg. air panas (f2)": {
+"alert": 42.2,
+"danger": 43.2,
+"jps_id": "26518",
+"normal": 39.3,
+"warning": 42.7
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. bunus di sri rampai (f2)": {
+"alert": 45.5,
+"danger": 47.3,
+"jps_id": "26352",
+"normal": 42.0,
+"warning": 46.5
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. gombak di jalan putra pwtc (f2)": {
+"alert": 28.61,
+"danger": 30.61,
+"jps_id": "26411",
+"normal": 26.22,
+"warning": 29.61
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. gombak di jalan tun razak (f2)": {
+"alert": 30.31,
+"danger": 31.31,
+"jps_id": "26534",
+"normal": 29.0,
+"warning": 30.81
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. gombak di jln. parlimen": {
+"alert": 28.98,
+"danger": 30.98,
+"jps_id": "3116439",
+"normal": 25.0,
+"warning": 29.98
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. gombak di kg. padang balang (f2)": {
+"alert": 40.24,
+"danger": 41.24,
+"jps_id": "26403",
+"normal": 39.3,
+"warning": 40.74
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. kayu ara di kg. sg. penchala (f2)": {
+"alert": 39.88,
+"danger": 41.48,
+"jps_id": "26402",
+"normal": 39.0,
+"warning": 40.88
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. kerayong di jalan kuari (f2)": {
+"alert": 64.04,
+"danger": 65.04,
+"jps_id": "26399",
+"normal": 60.0,
+"warning": 64.54
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. kerayong di kg. cheras baru (f2)": {
+"alert": 62.65,
+"danger": 64.65,
+"jps_id": "26506",
+"normal": 61.0,
+"warning": 63.65
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. kerayong di razak mansion (f2)": {
+"alert": 27.5,
+"danger": 29.5,
+"jps_id": "26382",
+"normal": 26.0,
+"warning": 28.5
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. kerayong di taman shamelin perkasa (f2)": {
+"alert": 40.34,
+"danger": 41.84,
+"jps_id": "26388",
+"normal": 37.0,
+"warning": 41.34
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. keroh di komuter segambut (f2)": {
+"alert": 37.02,
+"danger": 39.32,
+"jps_id": "26424",
+"normal": 35.0,
+"warning": 38.32
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. keroh di taman cuepacs (f2)": {
+"alert": 39.0,
+"danger": 40.0,
+"jps_id": "26516",
+"normal": 38.0,
+"warning": 39.3
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. klang di bukit putra (f2)": {
+"alert": 24.7,
+"danger": 26.7,
+"jps_id": "26413",
+"normal": 18.0,
+"warning": 26.2
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. klang di jalan ang seng (f2)": {
+"alert": 23.5,
+"danger": 25.6,
+"jps_id": "26350",
+"normal": 19.0,
+"warning": 24.5
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. klang di jalan tun razak (f2)": {
+"alert": 33.0,
+"danger": 34.0,
+"jps_id": "26376",
+"normal": 28.0,
+"warning": 33.5
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. klang di jambatan petaling": {
+"alert": 16.81,
+"danger": 18.81,
+"jps_id": "3016002",
+"normal": 14.0,
+"warning": 17.81
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. klang di jambatan petaling (f2)": {
+"alert": 16.81,
+"danger": 18.81,
+"jps_id": "26519",
+"normal": 14.0,
+"warning": 17.81
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. klang di jambatan sulaiman (f2)": {
+"alert": 26.0,
+"danger": 28.5,
+"jps_id": "26523",
+"normal": 23.0,
+"warning": 27.25
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. klang di jambatan tun perak": {
+"alert": 27.95,
+"danger": 29.95,
+"jps_id": "3116435",
+"normal": 25.0,
+"warning": 28.95
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. klang di jambatan tun perak (f2)": {
+"alert": 27.95,
+"danger": 29.95,
+"jps_id": "26530",
+"normal": 25.0,
+"warning": 28.95
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. klang di kg. berembang": {
+"alert": 37.0,
+"danger": 39.0,
+"jps_id": "3114114",
+"normal": 34.0,
+"warning": 38.0
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. klang di kg. berembang (f2)": {
+"alert": 37.0,
+"danger": 39.0,
+"jps_id": "26533",
+"normal": 34.0,
+"warning": 38.0
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. klang di leboh pasar": {
+"alert": 28.77,
+"danger": 30.77,
+"jps_id": "3116074",
+"normal": 24.0,
+"warning": 29.77
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. klang di leboh pasar (f2)": {
+"alert": 28.77,
+"danger": 30.77,
+"jps_id": "26508",
+"normal": 24.0,
+"warning": 29.77
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. klang di lembah keramat (f2)": {
+"alert": 45.17,
+"danger": 47.17,
+"jps_id": "26517",
+"normal": 44.75,
+"warning": 46.17
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. kuyoh di lrt bukit jalil (f2)": {
+"alert": 31.15,
+"danger": 33.05,
+"jps_id": "26353",
+"normal": 27.0,
+"warning": 32.05
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. midah di lebuhraya kl-seremban (f2)": {
+"alert": 33.3,
+"danger": 34.3,
+"jps_id": "26415",
+"normal": 29.0,
+"warning": 33.8
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. toba di segambut bahagia tnb (f2)": {
+"alert": 41.3,
+"danger": 42.8,
+"jps_id": "26393",
+"normal": 39.0,
+"warning": 42.3
+},
+"wilayah persekutuan kuala lumpur|kuala lumpur|sg. toba di segambut dalam (f2)": {
+"alert": 45.5,
+"danger": 47.1,
+"jps_id": "26396",
+"normal": 44.0,
+"warning": 46.5
+},
+"wilayah persekutuan labuan|labuan|empangan bukit kuda (f2)": {
+"alert": 17.5,
+"danger": 18.0,
+"jps_id": "5352101",
+"normal": 17.0,
+"warning": 17.8
+},
+"wilayah persekutuan labuan|labuan|empangan kerupang (f2)": {
+"alert": 16.9,
+"danger": 17.5,
+"jps_id": null,
+"normal": 16.05,
+"warning": 17.3
+},
+"wilayah persekutuan labuan|labuan|sg. bangat di kg. sg. bangat (f2)": {
+"alert": 1.0,
+"danger": 2.2,
+"jps_id": null,
+"normal": 0.6,
+"warning": 1.8
+},
+"wilayah persekutuan labuan|labuan|waterfront d/s (f2)": {
+"alert": 1.0,
+"danger": 1.5,
+"jps_id": null,
+"normal": 0.6,
+"warning": 1.25
+},
+"wilayah persekutuan labuan|labuan|waterfront u/s (f2)": {
+"alert": 1.0,
+"danger": 1.8,
+"jps_id": "26274",
+"normal": 0.1,
+"warning": 1.5
+}
+}

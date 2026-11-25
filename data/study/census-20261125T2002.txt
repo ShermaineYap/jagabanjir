@@ -1,0 +1,39 @@
+stations 1306
+trust {
+  live: '631 (48.3%)',
+  broken: '436 (33.4%)',
+  stale: '162 (12.4%)',
+  suspect: '57 (4.4%)',
+  delayed: '20 (1.5%)'
+}
+reasons {
+  fresh: 631,
+  no_reading: 275,
+  old: 162,
+  far_below_alert: 48,
+  late: 20,
+  zero: 9,
+  jps_error: 161
+}
+with coordinates 1304
+with published thresholds 577
+agreement with JPS label (live, thresholds known) 490 disagree 1
+  disagree: Sg. Buloh di Parit Mahang SELANGOR 3.5 { normal: 1, alert: 3.5, warning: 4, danger: 4.5 } jps NORMAL ours ALERT
+trusted above normal { DANGER: 19, WARNING: 14, ALERT: 25 }
+UNTRUSTED stations still showing a coloured alarm on the JPS map 37 { broken: 19, stale: 18 }
+trusted share by state
+  JOHOR: 81/195
+  KEDAH: 58/132
+  KELANTAN: 24/40
+  MELAKA: 25/37
+  NEGERI SEMBILAN: 28/53
+  PAHANG: 66/129
+  PERAK: 29/83
+  PERLIS: 6/34
+  PULAU PINANG: 23/57
+  SABAH: 16/55
+  SARAWAK: 101/153
+  SELANGOR: 102/186
+  TERENGGANU: 45/70
+  WILAYAH PERSEKUTUAN KUALA LUMPUR: 42/77
+  WILAYAH PERSEKUTUAN LABUAN: 5/5
