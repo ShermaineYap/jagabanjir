@@ -1,39 +1,40 @@
 stations 1306
 trust {
-  live: '631 (48.3%)',
+  live: '621 (47.5%)',
   broken: '436 (33.4%)',
-  stale: '162 (12.4%)',
-  suspect: '57 (4.4%)',
-  delayed: '20 (1.5%)'
+  stale: '151 (11.6%)',
+  suspect: '79 (6.0%)',
+  delayed: '19 (1.5%)'
 }
 reasons {
-  fresh: 631,
+  fresh: 621,
   no_reading: 275,
-  old: 162,
-  far_below_alert: 48,
-  late: 20,
+  old: 151,
+  far_below_alert: 70,
+  late: 19,
   zero: 9,
   jps_error: 161
 }
 with coordinates 1304
-with published thresholds 577
-agreement with JPS label (live, thresholds known) 490 disagree 1
+with published thresholds 894
+agreement with JPS label (live, thresholds known) 619 disagree 2
+  disagree: Sg. Bernam di Jambatan S.K.C (F2) SELANGOR 18.6 { normal: null, alert: 18.1, warning: 18.6, danger: 19.1 } jps ALERT ours WARNING
   disagree: Sg. Buloh di Parit Mahang SELANGOR 3.5 { normal: 1, alert: 3.5, warning: 4, danger: 4.5 } jps NORMAL ours ALERT
-trusted above normal { DANGER: 19, WARNING: 14, ALERT: 25 }
+trusted above normal { DANGER: 19, WARNING: 15, ALERT: 24 }
 UNTRUSTED stations still showing a coloured alarm on the JPS map 37 { broken: 19, stale: 18 }
 trusted share by state
-  JOHOR: 81/195
-  KEDAH: 58/132
-  KELANTAN: 24/40
+  JOHOR: 80/195
+  KEDAH: 57/132
+  KELANTAN: 23/40
   MELAKA: 25/37
   NEGERI SEMBILAN: 28/53
-  PAHANG: 66/129
-  PERAK: 29/83
+  PAHANG: 65/129
+  PERAK: 28/83
   PERLIS: 6/34
   PULAU PINANG: 23/57
   SABAH: 16/55
-  SARAWAK: 101/153
-  SELANGOR: 102/186
-  TERENGGANU: 45/70
-  WILAYAH PERSEKUTUAN KUALA LUMPUR: 42/77
+  SARAWAK: 99/153
+  SELANGOR: 100/186
+  TERENGGANU: 44/70
+  WILAYAH PERSEKUTUAN KUALA LUMPUR: 41/77
   WILAYAH PERSEKUTUAN LABUAN: 5/5

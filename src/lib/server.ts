@@ -19,8 +19,9 @@ export async function freshSnapshot(origin = ""): Promise<Snapshot> {
   return (await getSnapshot()) ?? snap!;
 }
 
+/** Quick assessment for many stations: only the last hour of our own log (for the jump check). */
 export async function statusesFor(snap: Snapshot, ids: string[] | null, now = new Date()): Promise<StationStatus[]> {
-  const ticks = await loadTicks(now.getTime() - 26 * 3600_000);
+  const ticks = await loadTicks(now.getTime() - 65 * 60_000);
   const pool = ids ? snap.stations.filter((s) => ids.includes(s.id)) : snap.stations;
   return pool.map((s) => assessStation(s, now, historyFor(ticks, s.id)));
 }

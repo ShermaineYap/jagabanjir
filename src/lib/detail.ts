@@ -24,7 +24,8 @@ export async function jpsHistory(id: string): Promise<JpsHistory | null> {
  * Falls back to our own 15-minute log when JPS history is unavailable.
  */
 export async function detailedStatuses(stations: Station[], now = new Date()) {
-  const ticks = await loadTicks(now.getTime() - 26 * 3600_000);
+  // our own log is only a fallback when JPS history is down; load it lazily
+  let ticks: Awaited<ReturnType<typeof loadTicks>> | null = null;
   const out: { status: StationStatus; history: [string, number][] }[] = [];
   await Promise.all(
     stations.map(async (s, i) => {
@@ -33,7 +34,7 @@ export async function detailedStatuses(stations: Station[], now = new Date()) {
       // make sure the live reading is the last point
       if (s.level !== null && s.updated && (pts.length === 0 || Date.parse(pts[pts.length - 1][0]) < Date.parse(s.updated)))
         pts = [...pts, [s.updated, s.level]];
-      if (pts.length < 2) pts = historyFor(ticks, s.id);
+      if (pts.length < 2) pts = historyFor((ticks ??= await loadTicks(now.getTime() - 26 * 3600_000)), s.id);
       const st: Station = s.thr || !h?.thr ? s : { ...s, thr: h.thr };
       const day = pts.filter(([t]) => now.getTime() - Date.parse(t) <= 24 * 3600_000);
       out[i] = { status: assessStation(st, now, pts), history: day };

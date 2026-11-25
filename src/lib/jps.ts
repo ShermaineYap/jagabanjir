@@ -1,10 +1,13 @@
 import type { Level, Snapshot, Station, Thresholds, Trend } from "./types";
 import thresholdsJson from "../data/thresholds.json";
+import thresholdsById from "../data/thresholds-by-id.json";
 
 export const JPS_FEED =
   "https://publicinfobanjir.water.gov.my/wp-content/themes/enlighten/data/latestreadingstrendabc.json";
 
 const THRESHOLDS = thresholdsJson as Record<string, Thresholds & { jps_id: string | null }>;
+/** From each gauge's own JPS 7-day record; fills gaps in the state tables. */
+const THRESHOLDS_BY_ID = thresholdsById as Record<string, Thresholds>;
 
 /** Raw record from the JPS map feed. Keys are short; only the ones we verified are typed. */
 export interface RawRecord {
@@ -64,7 +67,7 @@ export function normalise(raw: RawRecord[]): Station[] {
     if (!r.i || !r.i.includes("WL")) continue;
     const lat = num(r.c);
     const lon = num(r.d);
-    const t = THRESHOLDS[thresholdKey(r.f, r.e, r.b)];
+    const t = THRESHOLDS[thresholdKey(r.f, r.e, r.b)] ?? THRESHOLDS_BY_ID[r.a];
     out.push({
       id: r.a,
       name: r.b.trim(),

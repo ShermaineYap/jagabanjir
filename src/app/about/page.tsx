@@ -32,8 +32,10 @@ export default function About() {
           is not sent.
         </li>
         <li>
-          <strong>Send once.</strong> One message when the level rises, one when it is back to normal (after holding for
-          two readings, so a wobbling river does not spam the family).
+          <strong>Send only what is news.</strong> A rise is sent at once, unless that level was already sent in the
+          last 12 hours. Going down, only the all-clear is sent, after an hour of normal readings. At tidal river mouths,
+          alert and warning at normal high-tide height are routine. Danger is always sent. On a week of JPS records this
+          cut messages by 38%, and the typical gauge sent none.
         </li>
       </ol>
 
@@ -48,12 +50,13 @@ export default function About() {
           nearest gauge stays normal.
         </li>
         <li>
-          The &ldquo;time to danger&rdquo; figure is a straight line through the last hour of readings. It is a rough
-          guide, not a forecast.
+          The &ldquo;time to danger&rdquo; figure is a straight line through the last hour of readings. Tested on a week
+          of JPS records, it was within 30% of the real time in 43.5% of cases, usually early. It is a rough guide, not a
+          forecast.
         </li>
         <li>
-          About 730 gauges have no published thresholds. For those, JagaBanjir shows the label JPS itself gives the
-          reading, and says so.
+          About 410 gauges have no thresholds in JPS&apos;s tables or records. For those, JagaBanjir shows the label
+          JPS itself gives the reading, and says so.
         </li>
         <li>The Chinese and Tamil messages should be checked by more native speakers before wide use.</li>
       </ul>
