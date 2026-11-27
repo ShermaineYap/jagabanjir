@@ -1,0 +1,9 @@
+[
+ "Last week, more than two and a half thousand Malaysians slept in flood relief centres. For some families, the warning arrives as a forwarded WhatsApp message, after the water is already at the door.",
+ "Malaysia measures its rivers every fifteen minutes. But when we checked, the government's open data feed had stopped in February 2024. And of about thirteen hundred live river gauges, only half were sending readings you could trust. Dozens showed an alarm on data that was stale, faulty, or set to zero.",
+ "JagaBanjir watches the river by your parents' house. Search for the kampung, pick the nearest gauges, each one labelled live, late, stale, broken or suspect. Then name the house, and choose their language.",
+ "You get one page and one message, in Malay, Chinese, Tamil or English, with three things to do. Every number is checked against the J P S reading before it is sent. Forward it on WhatsApp, or get it on Telegram.",
+ "These are real readings from Sungai Langat at Bukit Changgang, this week. JagaBanjir's rules would have sent five messages in fifty hours. The evening alert came eight hours before the river reached danger.",
+ "We tested the rules on a week of records from seven hundred and thirty five gauges. Rivers went from first alert to danger in a median of ninety minutes. Our rules cut messages by thirty eight percent, and never held back a danger warning.",
+ "It is not an official warning. It is for the family member who is not there. JagaBanjir. Try it at jagabanjir dot vercel dot app."
+]
