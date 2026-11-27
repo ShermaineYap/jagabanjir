@@ -29,7 +29,7 @@ Backtest of the rules on JPS's own 7-day records, 735 gauges, 18–25 Nov 2026 (
 ## How it works
 
 ```
-every 15 min  GitHub Actions ──► /api/tick (public, runs at most once per 10 min)
+every 15 min  cron-job.org ──► /api/tick (public, runs at most once per 10 min)
                                    │ fetch JPS live feed (1,306 gauges)
                                    │ store snapshot (Neon Postgres)
                                    │ for each watched house:
@@ -64,7 +64,7 @@ Without `DATABASE_URL` the app keeps everything in memory, which is fine for loc
 1. Import this repo into Vercel. `vercel.json` pins the Singapore region.
 2. Add Neon Postgres (free plan) from the Vercel Marketplace and connect it to the project; it sets `DATABASE_URL`. The app creates its one table on first use.
 3. Optional, for alerts: create a bot with @BotFather and set `TELEGRAM_BOT_TOKEN`. That is all: the bot's username is read from Telegram, and the webhook is registered automatically on the first tick (or open `/api/telegram` once).
-4. In GitHub: Settings → Secrets and variables → Actions → Variables, add `SITE_URL` = `https://<your-site>`. The `tick` workflow then refreshes every 15 minutes.
+4. Schedule `GET https://<your-site>/api/tick` every 15 minutes with a free cron service (we use cron-job.org). GitHub Actions is included as a backup (set the repository variable `SITE_URL`), but GitHub runs scheduled workflows on quiet repositories only every few hours, so it is not enough on its own.
 
 ## Rebuild the data
 

@@ -39,7 +39,7 @@ Every message carries three things to do at that level, and the line "This is no
 - **Level:** our own reading against published thresholds; it matched JPS's label on 605 of 607 live gauges (the one difference is a reading exactly on the line, where we take the cautious side).
 - **When to message:** a rise is sent at once, unless that level or higher was already sent in the last 12 hours; going down, only the all-clear is sent, after an hour; at tidal gauges, alert and warning within the usual daily high are routine; danger is always sent.
 - **Message check:** fixed templates in four languages. Before sending, every number in the message must match the JPS reading, or the message is not sent.
-- **Stack:** Next.js and TypeScript on Vercel (Singapore), Neon Postgres, Telegram Bot API, GitHub Actions every 15 minutes, Leaflet and OpenStreetMap. 60 unit tests run against the real 25 Nov feed.
+- **Stack:** Next.js and TypeScript on Vercel (Singapore), Neon Postgres, Telegram Bot API, cron-job.org every 15 minutes (GitHub Actions as backup), Leaflet and OpenStreetMap. 60 unit tests run against the real 25 Nov feed.
 
 ### Measured results (backtest on JPS 7-day records, 735 gauges, 18–25 Nov 2026)
 
@@ -86,7 +86,7 @@ Half the work of a safety tool is deciding when *not* to say something: when a s
 
 ## Built with
 
-nextjs, typescript, react, vercel, neon, postgresql, telegram, leaflet, openstreetmap, python, vitest, github-actions
+nextjs, typescript, react, vercel, neon, postgresql, telegram, cron-job.org, leaflet, openstreetmap, python, vitest, github-actions
 
 ## Links
 

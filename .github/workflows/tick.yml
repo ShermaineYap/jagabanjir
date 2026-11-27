@@ -1,4 +1,5 @@
-# Every 15 minutes, ask the live site to refresh river levels and send any alerts.
+# Backup for cron-job.org: ask the live site to refresh river levels and send any alerts.
+# GitHub runs schedules on quiet repositories only every few hours, so this is not the main scheduler.
 # /api/tick is public and runs at most once per 10 minutes, so no secret is needed.
 # Set the repository variable SITE_URL (e.g. https://jagabanjir.vercel.app) in
 # Settings > Secrets and variables > Actions > Variables.
