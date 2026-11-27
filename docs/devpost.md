@@ -27,16 +27,16 @@ Every message carries three things to do at that level, and the line "This is no
 
 ## Originality
 
-- **It checks the sensors before it speaks.** On 25 Nov 2026 at 20:02, only 651 of 1,306 JPS water-level gauges (50%) had a reading recent and plausible enough to act on. 37 gauges still showed an alarm colour on the official map while their data was stale or faulty. JagaBanjir says "can't tell" instead of "normal" when nothing can be trusted.
+- **It checks the sensors before it speaks.** On 25 Nov 2026 at 20:02, only 628 of 1,306 JPS water-level gauges (48%) had a reading recent and plausible enough to act on. 49 gauges still showed an alarm colour on the official map while their data was stale or faulty, including 17 Sabah gauges whose alert, warning and danger levels JPS records as 0 m, so they sit at "Danger" permanently. JagaBanjir says "can't tell" instead of "normal" when nothing can be trusted.
 - **It found that the open-data API is frozen.** All 561 water-level stations on `api.data.gov.my/flood-warning` had a last reading of 23 Feb 2024. Any app built on it shows 21-month-old levels. JagaBanjir reads the live JPS Public InfoBanjir feed instead.
 - **It knows tides from floods.** Some river mouths in Sarawak cross the alert line twice a day with the tide. JagaBanjir recognises that pattern and treats alert and warning at normal high-tide height as routine. Danger is always sent.
 - **One house, one family, their language,** instead of another district-level dashboard.
 
 ## Technical execution
 
-- **Data:** the live JPS map feed (1,306 gauges), thresholds from the 16 JPS state tables and each gauge's own record (894 gauges), and JPS's 7-day record per gauge (5-minute readings, used for the rate of rise, the jump check and the tide check).
+- **Data:** the live JPS map feed (1,306 gauges), thresholds from the 16 JPS state tables and each gauge's own record (877 gauges), and JPS's 7-day record per gauge (5-minute readings, used for the rate of rise, the jump check and the tide check).
 - **Trust check per gauge:** under 75 minutes old = Live; under 6 hours = Late; older = Stale; no reading or JPS "Error" = Broken; exactly 0 m, more than 5 m below its alert level, or a 2 m jump between readings = Suspect.
-- **Level:** our own reading against published thresholds; it matched JPS's label on 617 of 619 live gauges (the one difference is a reading exactly on the line, where we take the cautious side).
+- **Level:** our own reading against published thresholds; it matched JPS's label on 605 of 607 live gauges (the one difference is a reading exactly on the line, where we take the cautious side).
 - **When to message:** a rise is sent at once, unless that level or higher was already sent in the last 12 hours; going down, only the all-clear is sent, after an hour; at tidal gauges, alert and warning within the usual daily high are routine; danger is always sent.
 - **Message check:** fixed templates in four languages. Before sending, every number in the message must match the JPS reading, or the message is not sent.
 - **Stack:** Next.js and TypeScript on Vercel (Singapore), Neon Postgres, Telegram Bot API, GitHub Actions every 15 minutes, Leaflet and OpenStreetMap. 60 unit tests run against the real 25 Nov feed.
@@ -45,7 +45,7 @@ Every message carries three things to do at that level, and the line "This is no
 
 | Measure | Result |
 |---|---|
-| Gauges that reached danger | 53 of 735 |
+| Gauges that reached danger | 52 of 735 |
 | First alert → danger (median, 35 rises) | 1.5 h (middle half: 0.8–2.0 h) |
 | First warning → danger (median, 34 rises) | 0.9 h (0.5–1.5 h) |
 | Messages per gauge per week, every level change | 2.9 |
@@ -75,7 +75,7 @@ Half the work of a safety tool is deciding when *not* to say something: when a s
 - Not an official warning; it complements NADMA and MCMC alerts.
 - A gauge measures one river at one spot. Flash floods from drains and local rain can happen while it reads normal.
 - "Time to danger" is a straight line through the last hour; it is a rough guide, not a forecast (see measured results).
-- About 410 gauges have no thresholds in JPS's tables or records; for those the app shows JPS's own label and says so.
+- About 430 gauges have no usable thresholds in JPS's tables or records; for those the app shows JPS's own label and says so.
 - Chinese and Tamil messages need review by more native speakers.
 
 ## What's next

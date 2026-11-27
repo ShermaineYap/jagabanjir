@@ -58,6 +58,14 @@ describe("trust", () => {
     expect(assessTrust(st({ level: 0 }), NOW).reason).toBe("zero");
     expect(assessTrust(st({ level: 3.17, thr: { normal: 32.95, alert: 35.5, warning: 36.8, danger: 37.4 } }), NOW).reason).toBe("far_below_alert");
   });
+  it("suspect when JPS records the thresholds as 0 m", () => {
+    expect(assessTrust(st({ zeroThr: true, level: 316.9, jps: "DANGER" }), NOW).reason).toBe("zero_thresholds");
+    const meligan = stations.find((s) => s.name.startsWith("Meligan"))!;
+    expect(meligan.zeroThr).toBe(true);
+    expect(assessStation(meligan, NOW).trust.trust).toBe("suspect");
+  });
+  it("ignores thresholds that are all zero", () =>
+    expect(levelFromThresholds(5, st({ thr: { normal: 0, alert: 0, warning: 0, danger: 0 } }))).toBeNull());
   it("suspect on a 2 m jump between readings", () =>
     expect(assessTrust(st({ level: 4.5 }), NOW, 2.1).reason).toBe("jump"));
 });

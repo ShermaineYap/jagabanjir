@@ -43,6 +43,8 @@ export function trustSentence(t: TrustResult): string {
       return "Reads exactly 0 m, which usually means a fault.";
     case "far_below_alert":
       return "Reads more than 5 m below its alert level, which is not physically likely.";
+    case "zero_thresholds":
+      return "JPS has this gauge's alert, warning and danger levels set to 0 m, so its colour on the JPS map is meaningless.";
     case "jump":
       return "Jumped 2 m or more in one reading, which looks like a glitch.";
   }

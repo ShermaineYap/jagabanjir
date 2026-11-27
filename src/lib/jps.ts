@@ -1,6 +1,7 @@
 import type { Level, Snapshot, Station, Thresholds, Trend } from "./types";
 import thresholdsJson from "../data/thresholds.json";
 import thresholdsById from "../data/thresholds-by-id.json";
+import zeroThresholds from "../data/zero-thresholds.json";
 
 export const JPS_FEED =
   "https://publicinfobanjir.water.gov.my/wp-content/themes/enlighten/data/latestreadingstrendabc.json";
@@ -8,6 +9,7 @@ export const JPS_FEED =
 const THRESHOLDS = thresholdsJson as Record<string, Thresholds & { jps_id: string | null }>;
 /** From each gauge's own JPS 7-day record; fills gaps in the state tables. */
 const THRESHOLDS_BY_ID = thresholdsById as Record<string, Thresholds>;
+const ZERO_THRESHOLDS = new Set(zeroThresholds as string[]);
 
 /** Raw record from the JPS map feed. Keys are short; only the ones we verified are typed. */
 export interface RawRecord {
@@ -83,6 +85,7 @@ export function normalise(raw: RawRecord[]): Station[] {
       jps: jpsLevel(r.n ?? ""),
       thr: t ? { normal: t.normal, alert: t.alert, warning: t.warning, danger: t.danger } : null,
       rain: r.x?.trim() || null,
+      ...(ZERO_THRESHOLDS.has(r.a) ? { zeroThr: true } : {}),
     });
   }
   return out;
@@ -116,7 +119,8 @@ export function parseHistory(j: {
     if (v === null || !t || !/:(00|15|30|45)$/.test(r.dt)) continue;
     points.push([t, v]);
   }
-  const hasThr = thr.alert !== null && thr.warning !== null && thr.danger !== null;
+  const hasThr =
+    thr.alert !== null && thr.warning !== null && thr.danger !== null && thr.danger > 0 && thr.alert < thr.danger;
   return { thr: hasThr ? thr : null, points };
 }
 

@@ -16,7 +16,7 @@ export default function About() {
         </li>
         <li>
           <strong>Check each gauge.</strong> A reading is trusted only if it is less than 6 hours old, is not marked faulty,
-          is not exactly 0 m, is not more than 5 m below its alert level, and did not jump 2 m in one reading.
+          is not exactly 0 m, is not more than 5 m below its alert level, did not jump 2 m in one reading, and does not have its alert levels recorded as 0 m (17 gauges in Sabah do, so the JPS map shows them at danger all the time).
         </li>
         <li>
           <strong>Decide for each house.</strong> The house takes the highest level among its trusted gauges, using the
@@ -55,7 +55,7 @@ export default function About() {
           forecast.
         </li>
         <li>
-          About 410 gauges have no thresholds in JPS&apos;s tables or records. For those, JagaBanjir shows the label
+          About 430 gauges have no usable thresholds in JPS&apos;s tables or records. For those, JagaBanjir shows the label
           JPS itself gives the reading, and says so.
         </li>
         <li>The Chinese and Tamil messages should be checked by more native speakers before wide use.</li>

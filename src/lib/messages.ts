@@ -33,7 +33,7 @@ const T: Record<Lang, { tpl: Tpl; footer: string; unit: string }> = {
     unit: "m",
     footer: "Ini bukan amaran rasmi. Ikut arahan Bomba, APM dan polis.",
     tpl: {
-      NORMAL: (i, p) => `✅ ${i.label}: Paras sungai di ${i.station} sudah NORMAL semula (${p.level} m, jam ${p.time}).`,
+      NORMAL: (i, p) => `✅ ${i.label}: Sungai di ${i.station} pada paras NORMAL (${p.level} m, jam ${p.time}).`,
       ALERT: (i, p) =>
         `⚠️ WASPADA — ${i.label}\nSungai di ${i.station} naik ke paras WASPADA: ${p.level} m${p.danger ? ` (paras bahaya ${p.danger} m)` : ""}, jam ${p.time}.\nSediakan sekarang:\n1) Dokumen penting dan ubat dalam beg kalis air\n2) Cas telefon\n3) Alihkan barang ke tempat tinggi`,
       WARNING: (i, p) =>
@@ -48,7 +48,7 @@ const T: Record<Lang, { tpl: Tpl; footer: string; unit: string }> = {
     unit: "米",
     footer: "这不是官方警报。请听从消防局、民防部队和警方的指示。",
     tpl: {
-      NORMAL: (i, p) => `✅ ${i.label}：${i.station} 的河水水位已恢复正常（${p.level}米，${p.time}）。`,
+      NORMAL: (i, p) => `✅ ${i.label}：${i.station} 的河水水位正常（${p.level}米，${p.time}）。`,
       ALERT: (i, p) =>
         `⚠️ 警戒 — ${i.label}\n${i.station} 的河水已上升到警戒水位：${p.level}米${p.danger ? `（危险水位${p.danger}米）` : ""}，时间${p.time}。\n请现在准备：\n1）把重要文件和药物放进防水袋\n2）给手机充电\n3）把物品搬到高处`,
       WARNING: (i, p) =>
@@ -64,7 +64,7 @@ const T: Record<Lang, { tpl: Tpl; footer: string; unit: string }> = {
     footer: "இது அதிகாரப்பூர்வ எச்சரிக்கை அல்ல. தீயணைப்பு, APM, காவல்துறை அறிவுறுத்தல்களைப் பின்பற்றுங்கள்.",
     tpl: {
       NORMAL: (i, p) =>
-        `✅ ${i.label}: ${i.station} ஆற்று நீர்மட்டம் மீண்டும் இயல்பு நிலைக்குத் திரும்பியது (${p.level} மீ., ${p.time}).`,
+        `✅ ${i.label}: ${i.station} ஆற்று நீர்மட்டம் இயல்பு நிலையில் உள்ளது (${p.level} மீ., ${p.time}).`,
       ALERT: (i, p) =>
         `⚠️ விழிப்பு நிலை — ${i.label}\n${i.station} ஆற்று நீர்மட்டம் ${p.time} மணிக்கு ${p.level} மீ. ஆக உயர்ந்துள்ளது${p.danger ? ` (அபாய நிலை ${p.danger} மீ.)` : ""}.\nஇப்போதே தயார் செய்யுங்கள்:\n1) முக்கிய ஆவணங்கள், மருந்துகளை நீர்புகா பையில் வையுங்கள்\n2) கைப்பேசியை சார்ஜ் செய்யுங்கள்\n3) பொருட்களை உயரமான இடத்திற்கு மாற்றுங்கள்`,
       WARNING: (i, p) =>
@@ -79,7 +79,7 @@ const T: Record<Lang, { tpl: Tpl; footer: string; unit: string }> = {
     unit: "m",
     footer: "This is not an official warning. Follow instructions from Bomba, APM and the police.",
     tpl: {
-      NORMAL: (i, p) => `✅ ${i.label}: The river at ${i.station} is back to NORMAL (${p.level} m at ${p.time}).`,
+      NORMAL: (i, p) => `✅ ${i.label}: The river at ${i.station} is at NORMAL level (${p.level} m at ${p.time}).`,
       ALERT: (i, p) =>
         `⚠️ ALERT — ${i.label}\nThe river at ${i.station} has risen to ALERT level: ${p.level} m${p.danger ? ` (danger level ${p.danger} m)` : ""} at ${p.time}.\nGet ready now:\n1) Put documents and medicine in a waterproof bag\n2) Charge your phone\n3) Move belongings up high`,
       WARNING: (i, p) =>

@@ -10,7 +10,7 @@ Malaysia measures about 1,300 river gauges every 15 minutes, but the reading rar
 
 ## What it does differently
 
-- **Checks every sensor before trusting it.** On 25 Nov 2026, 20:02, only 651 of 1,306 JPS water-level gauges had a reading recent and plausible enough to act on, and 37 still showed an alarm colour on stale or faulty data. JagaBanjir labels each gauge Live, Late, Stale, Broken or Suspect, and says "can't tell" rather than "normal" when nothing can be trusted.
+- **Checks every sensor before trusting it.** On 25 Nov 2026, 20:02, only 628 of 1,306 JPS water-level gauges had a reading recent and plausible enough to act on, and 49 still showed an alarm colour on stale, faulty or zero-threshold data. JagaBanjir labels each gauge Live, Late, Stale, Broken or Suspect, and says "can't tell" rather than "normal" when nothing can be trusted.
 - **One house, one family, their language.** Fixed, reviewed templates with three things to do at each level. Every number in a message is checked against the JPS reading; a message that fails is not sent.
 - **Quiet by design.** A rise is sent at once; a repeat within 12 hours is not; going down, only the all-clear is sent, after an hour. At tidal river mouths, alert and warning within the usual daily high tide are treated as routine. Danger is always sent.
 - **Uses the live feed.** The open-data API at `api.data.gov.my/flood-warning` was frozen at 23 Feb 2024 when checked; JagaBanjir reads JPS Public InfoBanjir directly.
@@ -19,9 +19,9 @@ Malaysia measures about 1,300 river gauges every 15 minutes, but the reading rar
 
 Backtest of the rules on JPS's own 7-day records, 735 gauges, 18–25 Nov 2026 (`data/study/backtest-20261125.md`):
 
-- 53 gauges reached danger. From first alert to danger: median 1.5 h (35 rises); from warning: 0.9 h.
+- 52 gauges reached danger. From first alert to danger: median 1.5 h (35 rises); from warning: 0.9 h.
 - Messages per gauge per week: 2.9 if you message every level change, 1.8 with JagaBanjir's rules (−38%). The median gauge sent none; no danger message was held back.
-- Our level matched JPS's own label on 617 of 619 live gauges; both differences sit exactly on a threshold line, where we take the cautious side.
+- Our level matched JPS's own label on 605 of 607 live gauges; both differences sit exactly on a threshold line, where we take the cautious side.
 
 ## How it works
 
@@ -78,7 +78,7 @@ npx tsx scripts/make-replay.ts <history.json> <live-feed.json> <stationId> <from
 - Not an official warning. Follow NADMA, Bomba, APM and police instructions; in an emergency call 999.
 - A gauge measures one river at one spot. Flash floods from drains and local downpours can happen while it reads normal.
 - "Time to danger" is a straight line through the last hour; in the backtest it was within ±30% of the real time in 43.5% of 646 predictions (usually early), so it is shown as a rough guide only.
-- About 410 gauges have no thresholds in JPS's tables or records; for those the app uses JPS's own label and says so.
+- About 430 gauges have no usable thresholds in JPS's tables or records; for those the app uses JPS's own label and says so. 17 Sabah gauges have all thresholds recorded as 0 m; they are marked Suspect.
 - Chinese and Tamil messages need review by more native speakers.
 - JPS data is scraped from public pages at a polite rate; if JPS changes its site, the collector needs updating.
 

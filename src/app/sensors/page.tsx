@@ -180,7 +180,7 @@ export default function Sensors() {
 const DEF: Record<Trust, string> = {
   live: "reported in the last 75 minutes",
   delayed: "last report 75 minutes to 6 hours ago",
-  suspect: "reading looks impossible (0 m, far below normal, or a 2 m jump)",
+  suspect: "reading looks impossible (0 m, far below normal, a 2 m jump) or its thresholds are recorded as 0 m",
   stale: "nothing for more than 6 hours",
   broken: "no level, or JPS marks it faulty",
 };

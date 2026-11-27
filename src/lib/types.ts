@@ -29,6 +29,8 @@ export interface Station {
   jps: Level | "ERROR" | null;
   thr: Thresholds | null;
   rain: string | null;
+  /** JPS records this gauge's alert/warning/danger levels as 0 m, so its map colour means nothing */
+  zeroThr?: boolean;
 }
 
 export interface Snapshot {
@@ -48,6 +50,7 @@ export interface TrustResult {
     | "jps_error"
     | "zero"
     | "far_below_alert"
+    | "zero_thresholds"
     | "jump";
   ageMinutes: number | null;
 }

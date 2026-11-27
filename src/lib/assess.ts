@@ -26,6 +26,7 @@ export function assessTrust(s: Station, now: Date, prevLevel?: number | null): T
   if (s.level === null || age === null) return { trust: "broken", reason: "no_reading", ageMinutes: age };
   if (s.jps === "ERROR") return { trust: "broken", reason: "jps_error", ageMinutes: age };
   if (s.level === 0) return { trust: "suspect", reason: "zero", ageMinutes: age };
+  if (s.zeroThr) return { trust: "suspect", reason: "zero_thresholds", ageMinutes: age };
   if (s.thr?.alert != null && s.thr.alert - s.level > FAR_BELOW_M)
     return { trust: "suspect", reason: "far_below_alert", ageMinutes: age };
   if (prevLevel != null && Math.abs(s.level - prevLevel) >= JUMP_M)
@@ -38,7 +39,7 @@ export function assessTrust(s: Station, now: Date, prevLevel?: number | null): T
 export function levelFromThresholds(level: number, s: Station): Level | null {
   const t = s.thr;
   if (!t || t.alert == null || t.warning == null || t.danger == null) return null;
-  if (!(t.alert <= t.warning && t.warning <= t.danger)) return null;
+  if (!(t.alert <= t.warning && t.warning <= t.danger) || t.danger <= 0 || t.alert === t.danger) return null;
   if (level >= t.danger) return "DANGER";
   if (level >= t.warning) return "WARNING";
   if (level >= t.alert) return "ALERT";
