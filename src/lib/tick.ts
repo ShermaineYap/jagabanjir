@@ -12,7 +12,7 @@ import {
   tryLock,
   type TickBlob,
 } from "./store";
-import { sendTelegram } from "./telegram";
+import { sendTelegram, setWebhook, telegramEnabled } from "./telegram";
 import type { Snapshot, StationStatus, Watch } from "./types";
 
 export const MIN_TICK_GAP_MIN = 10;
@@ -35,7 +35,13 @@ export interface TickResult {
  * Fetch the JPS feed, store it, and notify watches whose level changed.
  * Safe to call from anywhere: a lock stops it running more than once per 10 minutes.
  */
+const gw = globalThis as unknown as { __jbhook?: boolean };
+
 export async function runTick(now = new Date(), origin = ""): Promise<TickResult> {
+  if (!gw.__jbhook && telegramEnabled() && origin.startsWith("https://")) {
+    gw.__jbhook = true;
+    setWebhook(origin).catch(() => (gw.__jbhook = false));
+  }
   const prev = await getSnapshot();
   if (prev && now.getTime() - Date.parse(prev.fetchedAt) < MIN_TICK_GAP_MIN * 60_000)
     return { ran: false, reason: "recent" };

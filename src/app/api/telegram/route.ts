@@ -1,5 +1,6 @@
 import { getWatch, putWatch, allWatches } from "@/lib/store";
-import { sendTelegram } from "@/lib/telegram";
+import { originOf } from "@/lib/server";
+import { sendTelegram, setWebhook, webhookSecret } from "@/lib/telegram";
 
 /**
  * Telegram webhook. Handles:
@@ -7,8 +8,8 @@ import { sendTelegram } from "@/lib/telegram";
  *   /stop             stop all alerts to this chat
  */
 export async function POST(req: Request) {
-  const secret = process.env.TELEGRAM_WEBHOOK_SECRET;
-  if (secret && req.headers.get("x-telegram-bot-api-secret-token") !== secret)
+  const secret = webhookSecret();
+  if (!secret || req.headers.get("x-telegram-bot-api-secret-token") !== secret)
     return new Response("forbidden", { status: 403 });
   const upd = (await req.json().catch(() => null)) as
     | { message?: { chat: { id: number }; text?: string } }
@@ -42,18 +43,8 @@ export async function POST(req: Request) {
   return Response.json({ ok: true });
 }
 
-/** One-off: point Telegram at this webhook. Protected by the webhook secret. */
+/** Point the bot at this site. Safe to call any time; the tick also calls it once per deploy. */
 export async function GET(req: Request) {
-  const u = new URL(req.url);
-  const secret = process.env.TELEGRAM_WEBHOOK_SECRET;
-  const token = process.env.TELEGRAM_BOT_TOKEN;
-  if (!secret || !token || u.searchParams.get("setup") !== secret)
-    return Response.json({ error: "Not configured." }, { status: 403 });
-  const hook = `${u.protocol}//${req.headers.get("x-forwarded-host") ?? u.host}/api/telegram`;
-  const r = await fetch(`https://api.telegram.org/bot${token}/setWebhook`, {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify({ url: hook, secret_token: secret, allowed_updates: ["message"] }),
-  });
-  return Response.json({ hook, telegram: await r.json() });
+  const r = await setWebhook(originOf(req));
+  return Response.json({ ok: r.ok, description: r.description ?? null }, { status: r.ok ? 200 : 400 });
 }

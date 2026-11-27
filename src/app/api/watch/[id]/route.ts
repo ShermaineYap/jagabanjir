@@ -25,7 +25,7 @@ export async function GET(req: Request, { params }: Ctx) {
       message: ev.message,
       checked: ev.problems.length === 0,
       history,
-      telegram: telegramEnabled() && botUsername() ? { bot: botUsername() } : null,
+      telegram: telegramEnabled() ? await botUsername().then((bot) => (bot ? { bot } : null)) : null,
     });
   } catch (e) {
     return Response.json({ error: `Could not reach the JPS river feed: ${String(e)}` }, { status: 502 });

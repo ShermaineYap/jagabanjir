@@ -1,27 +1,44 @@
-import { Redis } from "@upstash/redis";
+import { neon } from "@neondatabase/serverless";
 import type { Snapshot, Watch } from "./types";
 
 /**
- * Small storage layer. Uses Upstash Redis when its env vars are set (production),
+ * Small key-value store. Uses Postgres (Neon, free tier) when DATABASE_URL is set,
  * otherwise an in-process map (local dev and tests).
  *
- * Keys:
+ * One table: kv(k text primary key, v jsonb, exp timestamptz, score double precision)
  *   snap:latest           latest Snapshot
- *   tick:YYYYMMDDHHmm     compact levels for one tick {t, l: {stationId: level}}, 8-day TTL
- *   ticks                 sorted set of tick keys by time
- *   watches               hash watchId -> Watch JSON
+ *   tick:YYYYMMDDHHmm     compact levels for one tick {t, l: {stationId: [time, level]}}, 8-day expiry, score = time
+ *   watch:<id>            one watched house
+ *   jh:<stationId>        cached JPS 7-day history, 10-minute expiry
  *   lock:tick             10-minute lock so /api/tick is safe to call publicly
  */
 
-type Mem = Map<string, { v: unknown; exp?: number }>;
-const g = globalThis as unknown as { __jbmem?: Mem };
+type Mem = Map<string, { v: unknown; exp?: number; score?: number }>;
+const g = globalThis as unknown as { __jbmem?: Mem; __jbready?: Promise<unknown> };
 const mem: Mem = (g.__jbmem ??= new Map());
 
-const url = process.env.UPSTASH_REDIS_REST_URL ?? process.env.KV_REST_API_URL;
-const token = process.env.UPSTASH_REDIS_REST_TOKEN ?? process.env.KV_REST_API_TOKEN;
-const redis = url && token ? new Redis({ url, token }) : null;
+const url = process.env.DATABASE_URL ?? process.env.POSTGRES_URL;
+const sql = url ? neon(url) : null;
 
-export const usingRedis = () => redis !== null;
+export const usingDatabase = () => sql !== null;
+
+async function db() {
+  if (!sql) return null;
+  // the HTTP driver runs one statement per call
+  g.__jbready ??= (async () => {
+    await sql.query(
+      "CREATE TABLE IF NOT EXISTS kv (k text PRIMARY KEY, v jsonb NOT NULL, exp timestamptz, score double precision)",
+    );
+    await sql.query("CREATE INDEX IF NOT EXISTS kv_score ON kv (score) WHERE score IS NOT NULL");
+  })();
+  try {
+    await g.__jbready;
+  } catch (e) {
+    g.__jbready = undefined; // retry on the next call
+    throw e;
+  }
+  return sql;
+}
 
 function memGet<T>(k: string): T | null {
   const e = mem.get(k);
@@ -33,32 +50,52 @@ function memGet<T>(k: string): T | null {
   return e.v as T;
 }
 
+const expAt = (ttlSec?: number) => (ttlSec ? new Date(Date.now() + ttlSec * 1000).toISOString() : null);
+
 export async function getJSON<T>(k: string): Promise<T | null> {
-  if (redis) return (await redis.get<T>(k)) ?? null;
-  return memGet<T>(k);
+  const q = await db();
+  if (!q) return memGet<T>(k);
+  const rows = (await q.query("SELECT v FROM kv WHERE k = $1 AND (exp IS NULL OR exp > now())", [k])) as { v: T }[];
+  return rows[0]?.v ?? null;
 }
 
-export async function setJSON(k: string, v: unknown, ttlSec?: number) {
-  if (redis) {
-    if (ttlSec) await redis.set(k, v, { ex: ttlSec });
-    else await redis.set(k, v);
+export async function setJSON(k: string, v: unknown, ttlSec?: number, score?: number) {
+  const q = await db();
+  if (!q) {
+    mem.set(k, { v, exp: ttlSec ? Date.now() + ttlSec * 1000 : undefined, score });
     return;
   }
-  mem.set(k, { v, exp: ttlSec ? Date.now() + ttlSec * 1000 : undefined });
+  await q.query(
+    `INSERT INTO kv (k, v, exp, score) VALUES ($1, $2::jsonb, $3, $4)
+     ON CONFLICT (k) DO UPDATE SET v = EXCLUDED.v, exp = EXCLUDED.exp, score = EXCLUDED.score`,
+    [k, JSON.stringify(v), expAt(ttlSec), score ?? null],
+  );
+}
+
+async function del(k: string) {
+  const q = await db();
+  if (q) await q.query("DELETE FROM kv WHERE k = $1", [k]);
+  else mem.delete(k);
 }
 
 /** Returns true if we got the lock. */
 export async function tryLock(k: string, ttlSec: number): Promise<boolean> {
-  if (redis) return (await redis.set(k, "1", { nx: true, ex: ttlSec })) === "OK";
-  if (memGet(k)) return false;
-  mem.set(k, { v: "1", exp: Date.now() + ttlSec * 1000 });
-  return true;
+  const q = await db();
+  if (!q) {
+    if (memGet(k)) return false;
+    mem.set(k, { v: 1, exp: Date.now() + ttlSec * 1000 });
+    return true;
+  }
+  const rows = await q.query(
+    `INSERT INTO kv (k, v, exp) VALUES ($1, '1'::jsonb, $2)
+     ON CONFLICT (k) DO UPDATE SET v = EXCLUDED.v, exp = EXCLUDED.exp WHERE kv.exp IS NOT NULL AND kv.exp <= now()
+     RETURNING k`,
+    [k, expAt(ttlSec)],
+  );
+  return (rows as unknown[]).length === 1;
 }
 
-export async function releaseLock(k: string) {
-  if (redis) await redis.del(k);
-  else mem.delete(k);
-}
+export const releaseLock = del;
 
 export interface TickBlob {
   t: string; // ISO fetch time
@@ -68,29 +105,25 @@ export interface TickBlob {
 const TICK_TTL = 8 * 24 * 3600;
 
 export async function saveTick(key: string, blob: TickBlob) {
-  await setJSON(key, blob, TICK_TTL);
-  const score = Date.parse(blob.t);
-  if (redis) {
-    await redis.zadd("ticks", { score, member: key });
-    await redis.zremrangebyscore("ticks", 0, score - TICK_TTL * 1000);
-  } else {
-    const list = memGet<{ k: string; s: number }[]>("ticks") ?? [];
-    list.push({ k: key, s: score });
-    mem.set("ticks", { v: list.filter((x) => x.s > score - TICK_TTL * 1000) });
-  }
+  await setJSON(key, blob, TICK_TTL, Date.parse(blob.t));
+  const q = await db();
+  if (q) await q.query("DELETE FROM kv WHERE exp IS NOT NULL AND exp < now()");
 }
 
 /** Tick blobs since `sinceMs`, oldest first. */
 export async function loadTicks(sinceMs: number): Promise<TickBlob[]> {
-  let keys: string[];
-  if (redis) keys = await redis.zrange<string[]>("ticks", sinceMs, "+inf", { byScore: true });
-  else keys = (memGet<{ k: string; s: number }[]>("ticks") ?? []).filter((x) => x.s >= sinceMs).map((x) => x.k);
-  if (keys.length === 0) return [];
-  if (redis) {
-    const vals = await redis.mget<(TickBlob | null)[]>(...keys);
-    return vals.filter((v): v is TickBlob => v !== null);
+  const q = await db();
+  if (!q) {
+    return [...mem.entries()]
+      .filter(([k, e]) => k.startsWith("tick:") && (e.score ?? 0) >= sinceMs && !(e.exp && e.exp < Date.now()))
+      .sort((a, b) => (a[1].score ?? 0) - (b[1].score ?? 0))
+      .map(([, e]) => e.v as TickBlob);
   }
-  return keys.map((k) => memGet<TickBlob>(k)).filter((v): v is TickBlob => v !== null);
+  const rows = (await q.query(
+    "SELECT v FROM kv WHERE k LIKE 'tick:%' AND score >= $1 AND (exp IS NULL OR exp > now()) ORDER BY score",
+    [sinceMs],
+  )) as { v: TickBlob }[];
+  return rows.map((r) => r.v);
 }
 
 /** Per-station history [readingTime, level] from tick blobs, de-duplicated by reading time. */
@@ -110,34 +143,13 @@ export async function getSnapshot(): Promise<Snapshot | null> {
   return getJSON<Snapshot>("snap:latest");
 }
 
-export async function getWatch(id: string): Promise<Watch | null> {
-  if (redis) return (await redis.hget<Watch>("watches", id)) ?? null;
-  return (memGet<Record<string, Watch>>("watches") ?? {})[id] ?? null;
-}
-
-export async function putWatch(w: Watch) {
-  if (redis) {
-    await redis.hset("watches", { [w.id]: w });
-    return;
-  }
-  const all = memGet<Record<string, Watch>>("watches") ?? {};
-  all[w.id] = w;
-  mem.set("watches", { v: all });
-}
+export const getWatch = (id: string) => getJSON<Watch>(`watch:${id}`);
+export const putWatch = (w: Watch) => setJSON(`watch:${w.id}`, w);
+export const deleteWatch = (id: string) => del(`watch:${id}`);
 
 export async function allWatches(): Promise<Watch[]> {
-  if (redis) {
-    const all = await redis.hgetall<Record<string, Watch>>("watches");
-    return all ? Object.values(all) : [];
-  }
-  return Object.values(memGet<Record<string, Watch>>("watches") ?? {});
-}
-
-export async function deleteWatch(id: string) {
-  if (redis) await redis.hdel("watches", id);
-  else {
-    const all = memGet<Record<string, Watch>>("watches") ?? {};
-    delete all[id];
-    mem.set("watches", { v: all });
-  }
+  const q = await db();
+  if (!q) return [...mem.entries()].filter(([k]) => k.startsWith("watch:")).map(([, e]) => e.v as Watch);
+  const rows = (await q.query("SELECT v FROM kv WHERE k LIKE 'watch:%'")) as { v: Watch }[];
+  return rows.map((r) => r.v);
 }
