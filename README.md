@@ -4,6 +4,9 @@ Watch the river by your parents' house. JagaBanjir follows the JPS river gauge n
 
 Built for the Code for Change hackathon (November 2026).
 
+**Live:** https://jagabanjir.vercel.app  
+**Demo video:** https://youtu.be/zLVwm8dBLnQ
+
 ## Why
 
 Malaysia measures about 1,300 river gauges every 15 minutes, but the reading rarely reaches the person who can act on it: often a son or daughter in another city. Official alerts go to phones inside the flood area. JagaBanjir is for the family member who is somewhere else.

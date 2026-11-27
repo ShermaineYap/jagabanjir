@@ -92,7 +92,7 @@ nextjs, typescript, react, vercel, neon, postgresql, telegram, leaflet, openstre
 
 - Live: https://jagabanjir.vercel.app
 - Code: https://github.com/ShermaineYap/jagabanjir
-- Video: __VIDEO_URL__
+- Video: https://youtu.be/zLVwm8dBLnQ
 
 ## Sources
 
