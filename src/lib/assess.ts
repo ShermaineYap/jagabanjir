@@ -4,8 +4,9 @@ export const LIVE_MAX_MIN = 75;
 export const DELAYED_MAX_MIN = 6 * 60;
 /** A reading this far under the alert level is physically implausible for a river in flood season. */
 export const FAR_BELOW_M = 5;
-/** A change this large between two 15-minute readings is treated as a sensor glitch. */
+/** A reading this far from the median of the previous two hours is treated as a sensor glitch. */
 export const JUMP_M = 2;
+export const JUMP_WINDOW_MS = 2 * 3600_000;
 
 const ORDER: Level[] = ["NORMAL", "ALERT", "WARNING", "DANGER"];
 export const rank = (l: Level) => ORDER.indexOf(l);
@@ -19,7 +20,7 @@ export function ageMinutes(updated: string | null, now: Date): number | null {
 
 /**
  * Decide whether a station's latest reading can be trusted.
- * prevLevel: the reading before the latest one (from our own log), if we have it.
+ * prevLevel: the median of the readings in the two hours before the latest one, if we have any.
  */
 export function assessTrust(s: Station, now: Date, prevLevel?: number | null): TrustResult {
   const age = ageMinutes(s.updated, now);
@@ -110,13 +111,28 @@ export function isTidal(history: [string, number][], now: Date, line: number): b
   return [...rises.values()].filter((n) => n >= 2).length >= 3;
 }
 
+/** Median of the readings in the two hours before `latest` (the latest reading itself excluded). */
+export function recentMedian(history: [string, number][], latest: string | null): number | null {
+  if (!latest) return null;
+  const t1 = Date.parse(latest);
+  const xs = history
+    .filter(([t]) => {
+      const ms = Date.parse(t);
+      return ms < t1 && ms >= t1 - JUMP_WINDOW_MS;
+    })
+    .map(([, v]) => v)
+    .sort((a, b) => a - b);
+  if (xs.length === 0) return null;
+  const m = Math.floor(xs.length / 2);
+  return xs.length % 2 ? xs[m] : (xs[m - 1] + xs[m]) / 2;
+}
+
 export function assessStation(
   s: Station,
   now: Date,
   history: [string, number][] = [],
 ): StationStatus {
-  const prev = history.length >= 2 ? history[history.length - 2][1] : null;
-  const trust = assessTrust(s, now, prev);
+  const trust = assessTrust(s, now, recentMedian(history, s.updated));
   let level: Level | null = null;
   let levelSource: StationStatus["levelSource"] = null;
   let disagrees = false;

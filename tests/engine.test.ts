@@ -68,6 +68,15 @@ describe("trust", () => {
     expect(levelFromThresholds(5, st({ thr: { normal: 0, alert: 0, warning: 0, danger: 0 } }))).toBeNull());
   it("suspect on a 2 m jump between readings", () =>
     expect(assessTrust(st({ level: 4.5 }), NOW, 2.1).reason).toBe("jump"));
+  it("a sensor that leaps 8 m and sticks stays suspect for two hours", () => {
+    const h: [string, number][] = [
+      ["2026-11-25T18:30:00+08:00", 547.7], ["2026-11-25T18:45:00+08:00", 547.7],
+      ["2026-11-25T19:00:00+08:00", 547.6], ["2026-11-25T19:15:00+08:00", 556.1],
+      ["2026-11-25T19:30:00+08:00", 556.1], ["2026-11-25T19:45:00+08:00", 556.1],
+    ];
+    const thr = { normal: 547, alert: 548, warning: 548.5, danger: 549.1 };
+    expect(assessStation(st({ level: 556.1, thr }), NOW, h).trust.reason).toBe("jump");
+  });
 });
 
 describe("levels and the house", () => {
@@ -203,6 +212,11 @@ describe("messages", () => {
         expect(verify(msg, input)).toEqual([]);
         expect(msg).toContain("Rumah Mak");
       });
+  it("handles negative levels (tidal gauges below datum)", () => {
+    const neg = { ...input, level: -0.41, danger: 1.9 };
+    for (const lang of langs) expect(verify(compose(lang, "NORMAL", neg), neg)).toEqual([]);
+    expect(verify("paras -0.48 m", neg)).toEqual(["-0.48"]);
+  });
   it("catches a number that did not come from the source", () => {
     expect(verify("Sungai di 4.80 m", input)).toEqual(["4.80"]);
   });

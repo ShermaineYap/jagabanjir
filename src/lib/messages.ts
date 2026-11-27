@@ -102,6 +102,9 @@ export function compose(lang: Lang, level: Level | "UNKNOWN", input: MessageInpu
   return `${body}\n\n${T[lang].footer}`;
 }
 
+/** A number, with its minus sign when it has one (a hyphen between letters is not a minus). */
+const NUM = /(?<![\p{L}\d])-?\d+(?:\.\d+)?|\d+(?:\.\d+)?/gu;
+
 /** Numbers that may legitimately appear in a message built from this input. */
 function allowedNumbers(input: MessageInput): Set<string> {
   const ok = new Set<string>(["1", "2", "3", "999"]);
@@ -111,7 +114,7 @@ function allowedNumbers(input: MessageInput): Set<string> {
   ok.add(t.slice(0, 2));
   ok.add(t.slice(3, 5));
   // digits that are part of the user's label or the JPS station name are not ours to check
-  for (const src of [input.label, input.station]) for (const n of src.match(/\d+(?:\.\d+)?/g) ?? []) ok.add(n);
+  for (const src of [input.label, input.station]) for (const n of src.match(NUM) ?? []) ok.add(n);
   return ok;
 }
 
@@ -121,7 +124,7 @@ function allowedNumbers(input: MessageInput): Set<string> {
  */
 export function verify(message: string, input: MessageInput): string[] {
   const ok = allowedNumbers(input);
-  const found = message.match(/\d+(?:\.\d+)?/g) ?? [];
+  const found = message.match(NUM) ?? [];
   return found.filter((n) => !ok.has(n));
 }
 
