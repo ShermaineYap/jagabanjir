@@ -4,7 +4,7 @@
 
 ## Inspiration
 
-In the week I built this, more than 2,500 people in Selangor, Perak, Melaka and Negeri Sembilan were sleeping in flood relief centres. Behind many of them is a son or daughter in KL, Penang or overseas who found out from a forwarded WhatsApp message, after the water was already at the porch.
+In the week I built this, more than 2,500 people across five states were sleeping in flood relief centres (JKM, 18 Nov 2026). For some families, the warning arrives as a forwarded WhatsApp message, after the water is already at the door, and the son or daughter who would act on it lives in KL, Penang or overseas.
 
 Malaysia measures its rivers well: about 1,300 JPS water-level gauges report every 15 minutes. Official alerts go to phones inside the flood area. The family member who is *not* there, and who often makes the decisions for elderly parents, gets nothing in time.
 
