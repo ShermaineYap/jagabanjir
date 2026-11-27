@@ -26,7 +26,13 @@ export async function GET(req: Request) {
       if (trusted(s)) b.trusted++;
       if (trusted(s) && s.level && s.level !== "NORMAL") b.raised++;
     }
-    const featured = raised.find((s) => s.station.thr?.danger != null) ?? raised[0] ?? null;
+    // feature a river, not a pump-house sump, pond, dam or water gate
+    const NOT_RIVER = /rumah pam|kolam|empangan|takungan|pintu air|\bp\/a\b|tebatan|lombong/i;
+    const featured =
+      raised.find((s) => s.station.thr?.danger != null && !NOT_RIVER.test(s.station.name)) ??
+      raised.find((s) => s.station.thr?.danger != null) ??
+      raised[0] ??
+      null;
     const fh = featured ? await jpsHistory(featured.station.id) : null;
     const dayAgo = Date.now() - 24 * 3600_000;
     return Response.json({
